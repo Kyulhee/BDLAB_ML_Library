@@ -1,46 +1,107 @@
 import tensorflow as tf
 import numpy as np
 
+'''구분해서 사용할 수 있게 해야 하는 내용 activation function'''
 
-def set_model(x, y, nodes , learning_rate):
+def dense(x, size, scope, activation_fn):
+    '''
+    :param x: 입력 텐서
+    :param size: 출력으로 나와야하는 텐서의 크기
+    :param scope: 텐서의 이름 영역
+    :return: fully connected neural network 레이어
+
+    Default value of fully_connected function
+    (
+    activation_fn=tf.nn.relu,
+    normalizer_fn=None,
+    normalizer_params=None,
+    weights_initializer=initializers.xavier_initializer(),
+    weights_regularizer=None,
+    biases_initializer=tf.zeros_initializer(),
+    biases_regularizer=None,
+    reuse=None,
+    variables_collections=None,
+    outputs_collections=None,
+    trainable=True,
+    scope=None
+    )
+    '''
+
+    return tf.contrib.layers.fully_connected(x, size, activation_fn=activation_fn,scope=scope )
+
+def dense_batch_relu(x, phase, size, scope):
+    '''
+    :param x: 입력 텐서
+    :param phase: 현재 텐서플로우가 학습 중인지 테스트 중인지를 구분한다 phase가 True이면 학습 False이면 테스트
+    :param size: 출력으로 나와야하는 텐서의 크기
+    :param scope: 텐서의 이름 영역
+    :return: fully connected neural network - batch normalization - relu가 적용 된 레이어
+    '''
+    with tf.variable_scope(scope):
+        h1 = tf.contrib.layers.fully_connected(x, size,activation_fn=None,scope='dense')
+        h2 = tf.contrib.layers.batch_norm(h1, center=True, scale=True, is_training=phase,scope='bn')
+        return tf.nn.relu(h2, 'relu')
+
+
+def dense_dropout_relu(x,phase, size, scope, rate=0.5):
+    '''
+    :param x: 입력 텐서
+    :param phase: 현재 텐서플로우가 학습 중인지 테스트 중인지를 구분한다 phase가 True이면 학습 False이면 테스트
+    :param size: 출력으로 나와야하는 텐서의 크기
+    :param scope: 텐서의 이름 영역
+    :param rate: 드랍아웃이 적용 비
+    :return: fully connected neural network - drop out - relu가 적용 된 레이어
+    '''
+    with tf.variable_scope(scope):
+        h1 = tf.contrib.layers.fully_connected(x, size, activation_fn=None, scope='dense')
+        h2 = tf.contrib.layers.dropout(h1, keep_prob=rate , is_training = phase ,scope='do')
+        return tf.nn.relu(h2, 'relu')
+
+
+
+def dense_batch_dropout_relu(x,phase, size, scope, rate=0.5):
+    '''
+    :param x: 입력 텐서
+    :param phase: 현재 텐서플로우가 학습 중인지 테스트 중인지를 구분한다 phase가 True이면 학습 False이면 테스트
+    :param size: 출력으로 나와야하는 텐서의 크기
+    :param scope: 텐서의 이름 영역
+    :param rate: 드랍아웃이 적용 비
+    :return: fully connected neural network - drop out - relu가 적용 된 레이어
+    '''
+    with tf.variable_scope(scope):
+        h1 = tf.contrib.layers.fully_connected(x, size, activation_fn=None, scope='dense')
+        h2 = tf.contrib.layers.batch_norm(h1, center=True, scale=True, is_training=phase,scope='bn')
+        h3 = tf.contrib.layers.dropout(h2, keep_prob=rate , is_training = phase ,scope='do')
+        return tf.nn.relu(h3, 'relu')
+
+def set_model_dropout(x, y, nodes , learning_rate):
+    '''
+    :param x: 입력 데이터
+    :param y: 기댓값
+    :param nodes: 네트워크 레이어의 노드 갯수를 담고 있는 리스트
+    :param learning_rate: 학습 시 사용 될 learning rate
+    :return: 모델에 사용되는 변수들
+    '''
     tf.reset_default_graph()
 
 
     np.random.seed(777)
     keep_prob = tf.placeholder(tf.float32) #0.7 -> 70% 켜진 채로 30% 꺼진 채로
-    weights = []
-    bias = []
-    hidden_layers = []
+    layers = []
 
     X = tf.placeholder(tf.float32, [None, len(x[0])])
     Y = tf.placeholder(tf.float32, [None, len(y[0])])
 
+    phase = tf.placeholder(tf.bool, name='phase')
 
     for i in range(len(nodes)):
         if i == 0:
-            weights.append(tf.get_variable(shape=[len(x[0]),  nodes[i]], name='weight' + str(i), initializer=tf.contrib.layers.xavier_initializer()))
-            bias.append(tf.Variable(tf.random_normal([ nodes[i]]), name='bias' + str(i)))
-            hidden_layers.append(tf.nn.relu(tf.matmul( X,  weights[i]) +  bias[i]))
-            hidden_layers[i] = tf.nn.dropout( hidden_layers[i], keep_prob= keep_prob)
+            layers.append(dense_dropout_relu(X, phase, nodes[i], 'layer'+str(i+1), keep_prob))
         else:
-             weights.append(tf.get_variable(shape=[ nodes[i - 1],  nodes[i]], name='weight' + str(i), initializer=tf.contrib.layers.xavier_initializer()))
-             bias.append(tf.Variable(tf.random_normal([ nodes[i]]), name='bias' + str(i)))
-             hidden_layers.append(tf.nn.relu(tf.matmul( hidden_layers[i - 1],  weights[i]) +  bias[i]))
-             hidden_layers[i] = tf.nn.dropout( hidden_layers[i], keep_prob= keep_prob)
+            layers.append(dense_dropout_relu(layers[i], phase, nodes[i], 'layer'+str(i+1), keep_prob))
 
-    i = len(nodes) - 1
-    weights.append(tf.get_variable(shape=[ nodes[i], len(y[0])], name='weight' + str(i + 1),
-                                    initializer=tf.contrib.layers.xavier_initializer()))
-    bias.append(tf.Variable(tf.random_normal([len(y[0])]), name='bias' + str(i + 1)))
-    logits = tf.matmul(hidden_layers[i],  weights[i + 1]) +  bias[i + 1]
-    #### lable0, label1 ######
-    ####  40,   -1 ######
-
+    logits = dense(layers[-1], len(y[0]), 'logits', 'none')
     hypothesis = tf.nn.softmax(logits)
-    ####   label0 ,label1 #####
-    #### 0,   0.56,  0.44 #####
-
-
 
     cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits= logits, labels= Y))
     train = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost)
@@ -49,20 +110,7 @@ def set_model(x, y, nodes , learning_rate):
     correct_prediction = tf.equal( predicted, tf.argmax( Y, 1))
     accuracy = tf.reduce_mean(tf.cast( correct_prediction, dtype=tf.float32))
 
-    return X , Y , weights, bias,hidden_layers, logits  , hypothesis, cost , train, predicted , correct_prediction , accuracy , keep_prob
-
-
-
-
-
-def dense(x, size, scope):
-    return tf.contrib.layers.fully_connected(x, size, activation_fn=None,scope=scope)
-
-def dense_batch_relu(x, phase, size, scope):
-    with tf.variable_scope(scope):
-        h1 = tf.contrib.layers.fully_connected(x, size,activation_fn=None,scope='dense')
-        h2 = tf.contrib.layers.batch_norm(h1, center=True, scale=True, is_training=phase,scope='bn')
-        return tf.nn.relu(h2, 'relu')
+    return X , Y , layers, logits  , hypothesis, cost , train, predicted , correct_prediction , accuracy , keep_prob
 
 
 def set_model_BN(x, y, nodes, learning_rate) :
@@ -76,15 +124,20 @@ def set_model_BN(x, y, nodes, learning_rate) :
     phase = tf.placeholder(tf.bool, name='phase')
     layers = []
 
-    h1 = dense_batch_relu(X, phase, nodes[0], 'layer1')
-    h2 = dense_batch_relu(h1, phase, nodes[1],'layer2')
-    h3 = dense_batch_relu(h2, phase, nodes[2],'layer3')
-    h4 = dense_batch_relu(h2, phase, nodes[3],'layer4')
-    layers.append(h1)
-    layers.append(h2)
-    layers.append(h3)
-    layers.append(h4)
-    logits = dense(h4, len(y[0]), 'logits')
+    for i in range(len(nodes)):
+        if i == 0:
+            layers.append(dense_batch_relu(X, phase, nodes[i], 'layer'+str(i+1)))
+        else :
+            layers.append(dense_batch_relu(layers[i-1], phase, nodes[i], 'layer'+str(i+1)))
+    # h1 = dense_batch_relu(X, phase, nodes[0], 'layer1')
+    # h2 = dense_batch_relu(h1, phase, nodes[1],'layer2')
+    # h3 = dense_batch_relu(h2, phase, nodes[2],'layer3')
+    # h4 = dense_batch_relu(h2, phase, nodes[3],'layer4')
+    # layers.append(h1)
+    # layers.append(h2)
+    # layers.append(h3)
+    # layers.append(h4)
+    logits = dense(layers[-1], len(y[0]), 'logits', 'none')
     hypothesis = tf.nn.softmax(logits)
     cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits= logits, labels= Y))
     train = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost)
@@ -97,3 +150,123 @@ def set_model_BN(x, y, nodes, learning_rate) :
     accuracy = tf.reduce_mean(tf.cast( correct_prediction, dtype=tf.float32))
 
     return X , Y , layers, logits, phase  , hypothesis, cost , train, predicted , correct_prediction , accuracy , keep_prob
+
+
+def set_model_batch_dropout(x, y, nodes , learning_rate):
+    '''
+    :param x: 입력 데이터
+    :param y: 기댓값
+    :param nodes: 네트워크 레이어의 노드 갯수를 담고 있는 리스트
+    :param learning_rate: 학습 시 사용 될 learning rate
+    :return: 모델에 사용되는 변수들
+    '''
+    tf.reset_default_graph()
+
+
+    np.random.seed(777)
+    keep_prob = tf.placeholder(tf.float32) #0.7 -> 70% 켜진 채로 30% 꺼진 채로
+    layers = []
+
+    X = tf.placeholder(tf.float32, [None, len(x[0])])
+    Y = tf.placeholder(tf.float32, [None, len(y[0])])
+
+    phase = tf.placeholder(tf.bool, name='phase')
+
+    for i in range(len(nodes)):
+        if i == 0:
+            layers.append(dense_batch_dropout_relu(X, phase, nodes[i], 'layer'+str(i+1), keep_prob))
+        else:
+            layers.append(dense_batch_dropout_relu(layers[i], phase, nodes[i], 'layer'+str(i+1), keep_prob))
+
+    logits = dense(layers[-1], len(y[0]), 'logits', 'none')
+    hypothesis = tf.nn.softmax(logits)
+
+    cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits= logits, labels= Y))
+    train = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost)
+
+    predicted = tf.argmax(hypothesis, 1)
+    correct_prediction = tf.equal( predicted, tf.argmax( Y, 1))
+    accuracy = tf.reduce_mean(tf.cast( correct_prediction, dtype=tf.float32))
+
+    return X , Y , layers, logits  , hypothesis, cost , train, predicted , correct_prediction , accuracy , keep_prob
+
+def set_model_basic(x, y, nodes , learning_rate, activation_fn):
+    '''
+    :param activation_fn: 모델의 히든 레이어에 사용 될 activation function을 지정
+    :return:
+    '''
+    tf.reset_default_graph()
+
+
+    np.random.seed(777)
+    keep_prob = tf.placeholder(tf.float32) #0.7 -> 70% 켜진 채로 30% 꺼진 채로
+    layers = []
+
+    X = tf.placeholder(tf.float32, [None, len(x[0])])
+    Y = tf.placeholder(tf.float32, [None, len(y[0])])
+
+    phase = tf.placeholder(tf.bool, name='phase')
+    try :
+        activation_fn = activation_fn.lower()
+        if activation_fn =='relu':
+            activation_fn = tf.nn.relu
+        elif activation_fn == 'sigmoid':
+            activation_fn = tf.sigmoid
+        elif activation_fn == 'tanh':
+            activation_fn = tf.tanh
+        else :
+            raise ValueError
+    except ValueError :
+        print("WRONG ACTIVATION FUNCTION NAME.\n"
+              "YOU CAN USE ACTIVATION FUNCTIONS : \n"
+              "1) relu\n"
+              "2) sigmoid\n"
+              "3) tanh")
+
+    for i in range(len(nodes)):
+        if i == 0:
+            layers.append(dense(X, nodes[i], 'layer'+str(i+1), activation_fn))
+        else:
+            layers.append(dense(layers[i],  nodes[i], 'layer'+str(i+1), activation_fn))
+
+    logits = dense(layers[-1], len(y[0]), 'logits', 'none')
+    hypothesis = tf.nn.softmax(logits)
+
+    cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits= logits, labels= Y))
+    train = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost)
+
+    predicted = tf.argmax(hypothesis, 1)
+    correct_prediction = tf.equal( predicted, tf.argmax( Y, 1))
+    accuracy = tf.reduce_mean(tf.cast( correct_prediction, dtype=tf.float32))
+
+    return X , Y , layers, logits  , hypothesis, cost , train, predicted , correct_prediction , accuracy , keep_prob
+
+
+def set_model_by_paramter(x, y, nodes, learning_rate, drop_out, batch_norm, activation_fn):
+    '''
+    tf.nn.relu
+    tf.nn.relu6
+    tf.nn.crelu
+    tf.nn.elu
+    tf.nn.softplus
+    tf.nn.softsign
+    tf.nn.dropout
+    tf.nn.bias_add
+    tf.sigmoid
+    tf.tanh
+    '''
+    if activation_fn == 'relu' :
+        if drop_out and batch_norm:
+            return set_model_batch_dropout(x,y,nodes,learning_rate)
+        elif drop_out :
+            return set_model_dropout(x, y, nodes, learning_rate)
+        elif batch_norm :
+            return set_model_BN(x,y,nodes,learning_rate)
+        else :
+            return set_model_basic(x,y,nodes,learning_rate,'relu')
+    elif activation_fn == 'sigmoid' :
+        return set_model_basic(x,y,nodes,learning_rate,'sigmoid')
+    elif activation_fn == 'tanh' :
+        return set_model_basic(x,y,nodes,learning_rate,'tanh')
+    else :
+        return set_model_dropout(x, y, nodes, learning_rate)
