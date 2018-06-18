@@ -1,13 +1,22 @@
 import pandas as pd
 import numpy as np
+import time
+
+def prediction_probability(hypothesis, prediction, ydata, ids):
+    try :
+        if len(prediction) != len(ydata) or len(ydata) != len(ids) or len(ydata) != len(hypothesis):
+            raise ValueError
+        result = ids.to_frame('ID')
+        result = pd.concat([result, pd.DataFrame(hypothesis, columns=['hypothesis'+str(i) for i in len(hypothesis)]), pd.DataFrame(prediction, columns='prediction') , pd.DataFrame(ydata , columns='label') ] ,axis=1 )
+        output_f_name = time.strftime("%d/%m/%Y")+time.strftime("%H:%M:%S")+'result.csv'
+        result.to_csv(output_f_name , index=False)
+    except ValueError :
+        print("Cannot make prediction-probability file because length of arguments are not same.")
 
 
-def prediction_probability(prediction, ydata):
-
-
-def test_divide_DNN(data, key):
+def test_divide_DNN(data, key, start, end):
     ydata = data.loc[:, key].as_matrix()
-    xdata = data.iloc[:, 1:-3].as_matrix()
+    xdata = data.iloc[:, start:end].as_matrix()
     return xdata, ydata
 
 
@@ -16,11 +25,10 @@ def shuffle_index(data):
     # print(randomnumbers)
     return randomnumbers
 
-
-
 def fivefold(data, key ):
     """
-    :param: data is whole data for trainning and testing
+    :function:
+    :param:
     :return: seperate data for five dataframe or list
     """
     data_five = []
@@ -38,10 +46,20 @@ def n_fold(data, key, n):
     :return: seperate data for five dataframe or list
     """
     data_n = []
-    # print(data)
-    ## key column에 있는 값에 따라 데이터를 n-등분 하는 식으로 구현
-    keys = []
+    max_val = max(data.loc[:, key])
+    try :
+        if max_val != n :
+            raise ValueError
+        for i in range(1, n):
+            selected_data = data[data.loc[:, key] == i]
+            if selected_data.empty :
+                raise TypeError
+            data_n.append(selected_data)
 
+    except ValueError :
+        print("Value Error : Max value of key column is not same with argument n")
+    except TypeError:
+        print("DataFrame selected by key is Empty")
 
     return data_n
 
