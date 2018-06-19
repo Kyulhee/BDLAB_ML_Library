@@ -74,6 +74,7 @@ def dense_batch_dropout_relu(x,phase, size, scope, rate=0.5):
         h3 = tf.contrib.layers.dropout(h2, keep_prob=rate , is_training = phase ,scope='do')
         return tf.nn.relu(h3, 'relu')
 
+
 def set_model_dropout(x, y, nodes , learning_rate):
     '''
     :param x: 입력 데이터
@@ -98,9 +99,9 @@ def set_model_dropout(x, y, nodes , learning_rate):
         if i == 0:
             layers.append(dense_dropout_relu(X, phase, nodes[i], 'layer'+str(i+1), keep_prob))
         else:
-            layers.append(dense_dropout_relu(layers[i], phase, nodes[i], 'layer'+str(i+1), keep_prob))
+            layers.append(dense_dropout_relu(layers[i-1], phase, nodes[i], 'layer'+str(i+1), keep_prob))
 
-    logits = dense(layers[-1], len(y[0]), 'logits', 'none')
+    logits = dense(layers[-1], len(y[0]), 'logits', None)
     hypothesis = tf.nn.softmax(logits)
 
     cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits= logits, labels= Y))
@@ -110,7 +111,7 @@ def set_model_dropout(x, y, nodes , learning_rate):
     correct_prediction = tf.equal( predicted, tf.argmax( Y, 1))
     accuracy = tf.reduce_mean(tf.cast( correct_prediction, dtype=tf.float32))
 
-    return X , Y , layers, logits  , hypothesis, cost , train, predicted , correct_prediction , accuracy , keep_prob
+    return X , Y , layers, logits  ,phase, hypothesis, cost , train, predicted , correct_prediction , accuracy , keep_prob
 
 
 def set_model_BN(x, y, nodes, learning_rate) :
@@ -137,7 +138,7 @@ def set_model_BN(x, y, nodes, learning_rate) :
     # layers.append(h2)
     # layers.append(h3)
     # layers.append(h4)
-    logits = dense(layers[-1], len(y[0]), 'logits', 'none')
+    logits = dense(layers[-1], len(y[0]), 'logits', None)
     hypothesis = tf.nn.softmax(logits)
     cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits= logits, labels= Y))
     train = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost)
@@ -176,9 +177,9 @@ def set_model_batch_dropout(x, y, nodes , learning_rate):
         if i == 0:
             layers.append(dense_batch_dropout_relu(X, phase, nodes[i], 'layer'+str(i+1), keep_prob))
         else:
-            layers.append(dense_batch_dropout_relu(layers[i], phase, nodes[i], 'layer'+str(i+1), keep_prob))
+            layers.append(dense_batch_dropout_relu(layers[i-1], phase, nodes[i], 'layer'+str(i+1), keep_prob))
 
-    logits = dense(layers[-1], len(y[0]), 'logits', 'none')
+    logits = dense(layers[-1], len(y[0]), 'logits', None)
     hypothesis = tf.nn.softmax(logits)
 
     cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits= logits, labels= Y))
@@ -188,7 +189,7 @@ def set_model_batch_dropout(x, y, nodes , learning_rate):
     correct_prediction = tf.equal( predicted, tf.argmax( Y, 1))
     accuracy = tf.reduce_mean(tf.cast( correct_prediction, dtype=tf.float32))
 
-    return X , Y , layers, logits  , hypothesis, cost , train, predicted , correct_prediction , accuracy , keep_prob
+    return X , Y , layers, logits  ,phase, hypothesis, cost , train, predicted , correct_prediction , accuracy , keep_prob
 
 def set_model_basic(x, y, nodes , learning_rate, activation_fn):
     '''
@@ -227,9 +228,9 @@ def set_model_basic(x, y, nodes , learning_rate, activation_fn):
         if i == 0:
             layers.append(dense(X, nodes[i], 'layer'+str(i+1), activation_fn))
         else:
-            layers.append(dense(layers[i],  nodes[i], 'layer'+str(i+1), activation_fn))
+            layers.append(dense(layers[i-1],  nodes[i], 'layer'+str(i+1), activation_fn))
 
-    logits = dense(layers[-1], len(y[0]), 'logits', 'none')
+    logits = dense(layers[-1], len(y[0]), 'logits', None)
     hypothesis = tf.nn.softmax(logits)
 
     cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits= logits, labels= Y))
