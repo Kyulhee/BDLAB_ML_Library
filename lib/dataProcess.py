@@ -110,7 +110,7 @@ def divide_xy_train(data_n , key ,to_matrix , x_start, x_end):
         y_data_n.append(data.loc[:,key].as_matrix())
         x_data_n.append(data.iloc[:,x_start:x_end].as_matrix())
 
-    return x_data_n , y_data_
+    return x_data_n , y_data_n
 
 
 def divide_xy_test(data , key , x_start, x_end ):
