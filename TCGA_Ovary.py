@@ -2,148 +2,145 @@ import pandas as pd
 import tensorflow as tf
 import lib.dataProcess as dp
 import lib.deepLearning as dl
+from pandas import DataFrame as df
 
-file_names = ["OV_Var_200.csv", "OV_Diff_200.csv", "OV_CV_200.csv", "OV_Annotation3000_200.csv", "OV_Annotation40.csv"]
-file_name = file_names[1]
-file_name
+file_types = ["Var_200", "Diff_200", "CV_200", "Annotation3000_200", "Annotation40"]
 
-raw_data = pd.read_csv('../subsamples/'+file_name)
+for file_type in file_types:
+    file_name = "OV_"+file_type+".csv"
+    print("file type: "+file_type)
 
-shuffled_data = raw_data
-shuffled_data['index'] = dp.shuffle_index(shuffled_data)
+    raw_data = pd.read_csv('../subsamples/'+file_name)
 
-# make index as rep of 1:5
-fivefold = dp.n_fold(raw_data, 'index', 5)
+    shuffled_data = raw_data
+    shuffled_data['index'] = dp.shuffle_index(shuffled_data)
 
-# devide train & test
-xdata_five, ydata_five = dp.divide_xy_train(fivefold, 'Platinum_Status', True, 1, -2)
-train_x, test_x = dp.train_test(xdata_five, 0)
-train_y, test_y = dp.train_test(ydata_five, 0)
-train_y = dp.one_hot_encoder(train_y)
-test_y = dp.one_hot_encoder(test_y)
-val_x, test_x = dp.test_validation(test_x)
-val_y, test_y = dp.test_validation(test_y)
+    # make index as rep of 1:5
+    fivefold = dp.n_fold(raw_data, 'index', 5)
 
-#set hyperparameters - node, learning rate, batch size
-nodes = [200,200,200]
-learning_rate = 0.001
-batch_size = 100
+    # devide train & test
+    xdata_five, ydata_five = dp.divide_xy_train(fivefold, 'Platinum_Status', True, 1, -2)
+    train_x, test_x = dp.train_test(xdata_five, 0)
+    train_y, test_y = dp.train_test(ydata_five, 0)
+    train_y = dp.one_hot_encoder(train_y)
+    test_y = dp.one_hot_encoder(test_y)
+    val_x, test_x = dp.test_validation(test_x)
+    val_y, test_y = dp.test_validation(test_y)
 
-#make place holders. These are not real variables, just spaces for variable.
-X, Y, layers, logits, phase, hypothesis, cost, train, predicted, correct_prediction, accuracy, keep_prob = dl.set_model_dropout(train_x, train_y, nodes , learning_rate)
-
-best_train_acc = 0
-best_val_acc = 0
-best_test_acc = 0 
-best_cost = float("inf")
-save_path_dir ='./'
-count = 0
-model_num = 0
-
-saver = tf.train.Saver()
-with tf.Session() as sess:
-    # Initialize TensorFlow variables
-    sess.run(tf.global_variables_initializer())
-    stop_switch = True
-    step = 0
+    #set hyperparameters - node, learning rate, batch size
     
-    #if condition 
-    while stop_switch:
-        total_num = int(len(train_x) / batch_size)
-        for k in range(total_num):
-            #cut data as large as batch_size.
-            batch_x = train_x[k * batch_size:(k + 1) * batch_size]
-            batch_y = train_y[k * batch_size:(k + 1) * batch_size]
-            #dropout_ratio
-            sess.run(train, feed_dict={X: batch_x, Y: batch_y, keep_prob: 0.5 , phase:True})
+    nodes = [[200,200,200], [150,200,150], [100, 150, 200], [200, 150, 100]]
+    learning_rates = [0.01, 0.005, 0.001, 0.0005]
+    batch_sizes = [50, 75, 100, 125, 150]
+    
+    #for fast experiment
+    '''
+    nodes = [[200,200,200], [150,200,150]]
+    learning_rates = [0.005, 0.001]
+    batch_sizes = [50, 100]
+    '''
 
-        #feed_dict - place holder is just 'space', feed_dict means supply real data into place holder.
-        train_h, train_c, train_p, train_a = sess.run( [hypothesis, cost, predicted, accuracy], feed_dict={X: train_x, Y: train_y, keep_prob: 1 , phase:False})
-        val_h, val_c, val_p, val_a = sess.run([hypothesis, cost, predicted, accuracy], feed_dict={X: val_x, Y: val_y, keep_prob: 1 , phase:False})
-        if step % 20 == 0 :
-            print("train acc : ", train_a, "validation acc : ", val_a, "train_cost", train_c)
-        step += 1
-        
-        #condition 1: new best condition. 
-        #calculated cost(val_c) is smaller than before's(best_cost), save present condition and initialize count.
-        if best_cost > val_c :
-            best_train_acc = train_a
-            best_val_acc = val_a
-            best_cost = val_c
-            count = 0
-            save_path = saver.save(sess, save_path_dir + 'model'+str(model_num)+'.ckpt')
+    nodes_box = []
+    learning_rate_box = []
+    batch_size_box = []
+    tr_accuracy_box = []
+    ts_accuracy_box = []
 
-        #condition 2: cannot find best condition
-        #when cost is get worse and worse(10 times), finish learning.
-        elif count > 10 :
-            stop_switch = False
-            print("Learning Finished!! \n")
-        
-        #condition 3: condition is not best, but not yet finish.
-        else:
-            count += 1
+    for node in nodes:
+        for learning_rate in learning_rates:
+            for batch_size in batch_sizes:
 
-    print("Training Accuracy : ", best_train_acc,  "Validation Accuracy : ", best_val_acc)
+                #make place holders. These are not real variables, just spaces for variable.
+                X, Y, layers, logits, phase, hypothesis, cost, train, predicted, correct_prediction, accuracy, keep_prob = dl.set_model_dropout(train_x, train_y, node , learning_rate)
 
-    saver.restore(sess, save_path)
+                best_train_acc = 0
+                best_val_acc = 0
+                best_test_acc = 0 
+                best_cost = float("inf")
+                save_path_dir ='./'
+                count = 0
+                model_num = 0
 
-    test_h, test_p, test_a = sess.run([hypothesis, predicted, accuracy],
-                                      feed_dict={X: test_x, Y: test_y, keep_prob:1.0 , phase:False})
-    print("\nTest Accuracy: ", test_a)
-    best_test_acc = test_a
+                saver = tf.train.Saver()
+                with tf.Session() as sess:
+                    # Initialize TensorFlow variables
+                    sess.run(tf.global_variables_initializer())
+                    stop_switch = True
+                    step = 0
+                    
+                    #if condition 
+                    while stop_switch:
+                        total_num = int(len(train_x) / batch_size)
+                        for k in range(total_num):
+                            #cut data as large as batch_size.
+                            batch_x = train_x[k * batch_size:(k + 1) * batch_size]
+                            batch_y = train_y[k * batch_size:(k + 1) * batch_size]
+                            #dropout_ratio
+                            sess.run(train, feed_dict={X: batch_x, Y: batch_y, keep_prob: 0.5 , phase:True})
 
+                        #feed_dict - place holder is just 'space', feed_dict means supply real data into place holder.
+                        train_h, train_c, train_p, train_a = sess.run( [hypothesis, cost, predicted, accuracy], feed_dict={X: train_x, Y: train_y, keep_prob: 1 , phase:False})
+                        val_h, val_c, val_p, val_a = sess.run([hypothesis, cost, predicted, accuracy], feed_dict={X: val_x, Y: val_y, keep_prob: 1 , phase:False})
+                        if step % 20 == 0 :
+                            print("train acc : ", train_a, "validation acc : ", val_a, "train_cost", train_c)
+                        step += 1
+                        
+                        #condition 1: new best condition. 
+                        #calculated cost(val_c) is smaller than before's(best_cost), save present condition and initialize count.
+                        if best_cost > val_c :
+                            best_train_acc = train_a
+                            best_val_acc = val_a
+                            best_cost = val_c
+                            count = 0
+                            save_path = saver.save(sess, save_path_dir + 'model'+str(model_num)+'.ckpt')
 
-    model_num += 1                    
+                        #condition 2: cannot find best condition
+                        #when cost is get worse and worse(10 times), finish learning.
+                        elif count > 10 :
+                            stop_switch = False
+                            print("Learning Finished!! \n")
+                        
+                        #condition 3: condition is not best, but not yet finish.
+                        else:
+                            count += 1
 
-data_x, data_y = dp.divide_xy_test(raw_data, 'Platinum_Status', 1,-2)
-ids = raw_data['patient']
+                    print("Training Accuracy : ", best_train_acc,  "Validation Accuracy : ", best_val_acc)
 
-saver = tf.train.Saver()
-with tf.Session() as sess:
-    saver.restore(sess, './model0.ckpt')
-    test_h, test_p = sess.run([hypothesis, predicted], feed_dict={X: data_x, Y: dp.one_hot_encoder(data_y), keep_prob:1.0 , phase:False})
+                    saver.restore(sess, save_path)
 
-dp.prediction_probability(test_h, test_p, data_y, ids)
+                    test_h, test_p, test_a = sess.run([hypothesis, predicted, accuracy],
+                                                      feed_dict={X: test_x, Y: test_y, keep_prob:1.0 , phase:False})
+                    print("\nTest Accuracy: ", test_a)
+                    best_test_acc = test_a
 
+                    model_num += 1                    
 
-# In[12]:
+                data_x, data_y = dp.divide_xy_test(raw_data, 'Platinum_Status', 1,-2)
+                ids = raw_data['patient']
+
+                saver = tf.train.Saver()
+                with tf.Session() as sess:
+                    saver.restore(sess, './model0.ckpt')
+                    test_h, test_p = sess.run([hypothesis, predicted], feed_dict={X: data_x, Y: dp.one_hot_encoder(data_y), keep_prob:1.0 , phase:False})
+
+                nodes_box.append(node) 
+                learning_rate_box.append(learning_rate)
+                batch_size_box.append(batch_size)
+                tr_accuracy_box.append(best_train_acc)
+                ts_accuracy_box.append(best_test_acc)
+                
+
+    #train y, train 
+    df1 = df(data={'nodes': nodes_box, 'learning_rate': learning_rate_box, 'batch_sizes':batch_size_box, 'tr_accuracy':tr_accuracy_box, 'ts_accuracy': ts_accuracy_box })
+    df1.to_csv("OV_DNN_result_"+file_type+".csv", index=False, header=True, mode='w')
+
+    # prediction result(probability) file export
+    dp.prediction_probability(test_h, test_p, data_y, ids)
 
 
 len(test_h)
-
-
-# In[22]:
-
-
 len(data_y)
-
-
-# In[23]:
-
-
 len(ids)
-
-
-# In[24]:
-
-
 len(test_p)
-
-
-# In[25]:
-
-
 test_p
-
-
-# In[26]:
-
-
 test_h
-
-
-# In[28]:
-
-
-
-
