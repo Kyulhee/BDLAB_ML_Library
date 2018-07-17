@@ -2,6 +2,11 @@ import pandas as pd
 import numpy as np
 import time
 
+def test_validation_label(data):
+    val_label = np.array(data[:len(data)//2])
+    test_label = np.array(data[len(data)//2:])
+    return val_label, test_label
+
 def prediction_probability(hypothesis, prediction, ydata, ids):
     try :
         if len(prediction) != len(ydata) or len(ydata) != len(ids) or len(ydata) != len(hypothesis):

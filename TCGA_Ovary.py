@@ -4,7 +4,8 @@ import lib.dataProcess as dp
 import lib.deepLearning as dl
 from pandas import DataFrame as df
 
-file_types = ["Var_200", "Diff_200", "CV_200", "Annotation3000_200", "Annotation40"]
+file_types = ["Var_200", "Diff_200", "CV_200", "Annotation3000_200"
+              , "Annotation40"]
 
 for file_type in file_types:
     file_name = "OV_"+file_type+".csv"
@@ -28,16 +29,16 @@ for file_type in file_types:
     val_y, test_y = dp.test_validation(test_y)
 
     #set hyperparameters - node, learning rate, batch size
-    
+    #'''
     nodes = [[200,200,200], [150,200,150], [100, 150, 200], [200, 150, 100]]
     learning_rates = [0.01, 0.005, 0.001, 0.0005]
     batch_sizes = [50, 75, 100, 125, 150]
-    
+    #'''
     #for fast experiment
     '''
-    nodes = [[200,200,200], [150,200,150]]
-    learning_rates = [0.005, 0.001]
-    batch_sizes = [50, 100]
+    nodes = [[200,200,200]]
+    learning_rates = [0.005]
+    batch_sizes = [50]
     '''
 
     nodes_box = []
@@ -45,6 +46,26 @@ for file_type in file_types:
     batch_size_box = []
     tr_accuracy_box = []
     ts_accuracy_box = []
+    val_accuracy_box = []
+    tr_sensitivity_box = []
+    ts_sensitivity_box = []
+    val_sensitivity_box = []
+    tr_specificity_box = []
+    ts_specificity_box = []
+    val_specificity_box = []
+    
+    tr_TPs = []
+    tr_TNs = []
+    tr_FPs = []
+    tr_FNs = []
+    ts_TPs = []
+    ts_TNs = []
+    ts_FPs = []
+    ts_FNs = []
+    val_TPs = []
+    val_TNs = []
+    val_FPs = []
+    val_FNs = []
 
     for node in nodes:
         for learning_rate in learning_rates:
@@ -89,7 +110,9 @@ for file_type in file_types:
                         #calculated cost(val_c) is smaller than before's(best_cost), save present condition and initialize count.
                         if best_cost > val_c :
                             best_train_acc = train_a
+                            best_train_p = train_p
                             best_val_acc = val_a
+                            best_val_p = val_p
                             best_cost = val_c
                             count = 0
                             save_path = saver.save(sess, save_path_dir + 'model'+str(model_num)+'.ckpt')
@@ -104,17 +127,45 @@ for file_type in file_types:
                         else:
                             count += 1
 
-                    print("Training Accuracy : ", best_train_acc,  "Validation Accuracy : ", best_val_acc)
+                    print("########## Training Accuracy : ", best_train_acc,  "Validation Accuracy : ", best_val_acc)
 
                     saver.restore(sess, save_path)
 
                     test_h, test_p, test_a = sess.run([hypothesis, predicted, accuracy],
                                                       feed_dict={X: test_x, Y: test_y, keep_prob:1.0 , phase:False})
-                    print("\nTest Accuracy: ", test_a)
+                    print("########## Test Accuracy: ", test_a)
                     best_test_acc = test_a
 
-                    model_num += 1                    
+                    model_num += 1
+                    train_label, test_label = dp.train_test(ydata_five, 0)
+                    val_label, test_label = dp.test_validation_label(test_label)
 
+                    with tf.Session() as sess:
+                        tr_table_temp = tf.confusion_matrix(train_label, best_train_p, num_classes=2, dtype=tf.int64, name=None, weights=None)
+                        val_table_temp = tf.confusion_matrix(val_label, best_val_p, num_classes=2, dtype=tf.int64, name=None, weights=None)
+                        ts_table_temp = tf.confusion_matrix(test_label, test_p, num_classes=2, dtype=tf.int64, name=None, weights=None)
+                        tr_table, val_table, ts_table = sess.run([tr_table_temp, val_table_temp, ts_table_temp])
+
+                    # save contingency table
+                    tr_TN, tr_FN, tr_FP, tr_TP = tr_table[0,0], tr_table[0,1], tr_table[1,0], tr_table[1,1]
+                    tr_TPs.append(tr_TP)
+                    tr_TNs.append(tr_TN)
+                    tr_FPs.append(tr_FP)
+                    tr_FNs.append(tr_FN)
+
+                    ts_TN, ts_FN, ts_FP, ts_TP = ts_table[0,0], ts_table[0,1], ts_table[1,0], ts_table[1,1]
+                    ts_TPs.append(ts_TP)
+                    ts_TNs.append(ts_TN)
+                    ts_FPs.append(ts_FP)
+                    ts_FNs.append(ts_FN)
+                    
+                    val_TN, val_FN, val_FP, val_TP = val_table[0,0], val_table[0,1], val_table[1,0], val_table[1,1]
+                    val_TPs.append(val_TP)
+                    val_TNs.append(val_TN)
+                    val_FPs.append(val_FP)
+                    val_FNs.append(val_FN)
+     
+                    
                 data_x, data_y = dp.divide_xy_test(raw_data, 'Platinum_Status', 1,-2)
                 ids = raw_data['patient']
 
@@ -123,19 +174,51 @@ for file_type in file_types:
                     saver.restore(sess, './model0.ckpt')
                     test_h, test_p = sess.run([hypothesis, predicted], feed_dict={X: data_x, Y: dp.one_hot_encoder(data_y), keep_prob:1.0 , phase:False})
 
-                nodes_box.append(node) 
+                # save hyperparameter
+                nodes_box.append(node)
                 learning_rate_box.append(learning_rate)
                 batch_size_box.append(batch_size)
-                tr_accuracy_box.append(best_train_acc)
-                ts_accuracy_box.append(best_test_acc)
-                
 
+                # save accuracy & sensitivity & specificity
+                tr_accuracy_box.append(best_train_acc)
+                if(tr_TP + tr_FN > 0):
+                    tr_sensitivity_box.append(tr_TP/(tr_TP+tr_FN))
+                else:
+                    tr_sensitivity_box.append("NA")
+                if(tr_TN + tr_FP > 0):
+                    tr_specificity_box.append(tr_TN/(tr_TN+tr_FP))
+                else:
+                    tr_specificity_box.append("NA")
+               
+                ts_accuracy_box.append(best_test_acc)
+                if(ts_TP + ts_FN > 0):
+                    ts_sensitivity_box.append(ts_TP/(ts_TP+ts_FN))
+                else:
+                    ts_sensitivity_box.append("NA")
+                if(ts_TN + ts_FP > 0):
+                    ts_specificity_box.append(ts_TN/(ts_TN+ts_FP))
+                else:
+                    ts_specificity_box.append("NA")
+                
+                val_accuracy_box.append(best_val_acc)
+                if(val_TP + val_FN > 0):
+                    val_sensitivity_box.append(val_TP/(val_TP+val_FN))
+                else:
+                    val_sensitivity_box.append("NA")
+                if(val_TN + val_FP > 0):
+                    val_specificity_box.append(val_TN/(val_TN+val_FP))
+                else:
+                    val_specificity_box.append("NA")
+
+                
     #train y, train 
-    df1 = df(data={'nodes': nodes_box, 'learning_rate': learning_rate_box, 'batch_sizes':batch_size_box, 'tr_accuracy':tr_accuracy_box, 'ts_accuracy': ts_accuracy_box })
-    df1.to_csv("OV_DNN_result_"+file_type+".csv", index=False, header=True, mode='w')
+    df1 = df(data={'nodes': nodes_box, 'learning_rate': learning_rate_box, 'batch_sizes': batch_size_box, 'tr_accuracy':tr_accuracy_box, 'tr_sensitivity':tr_sensitivity_box, 'tr_specificity':tr_specificity_box, 'val_accuracy':val_accuracy_box, 'val_sensitivity':val_sensitivity_box, 'val_specificity':val_specificity_box, 'ts_accuracy': ts_accuracy_box, 'ts_sensitivity':ts_sensitivity_box, 'ts_specificity':ts_specificity_box })
+    df1.to_csv("../result/OV_DNN_result_"+file_type+".csv", index=False, header=True, mode='w')
+    df2 = df(data={'nodes': nodes_box, 'learning_rate': learning_rate_box, 'batch_sizes': batch_size_box, 'tr_TP': tr_TPs, 'tr_TN': tr_TNs, 'tr_FP': tr_FPs, 'tr_FN': tr_FNs, 'val_TP': val_TPs, 'val_TN': val_TNs, 'val_FP': val_FPs, 'val_FN': val_FNs, 'ts_TP': ts_TPs, 'ts_TN': ts_TNs, 'ts_FP': ts_FPs, 'ts_FN': ts_FNs})
+    df2.to_csv("../result/OV_DNN_result_"+file_type+"_raw.csv", index=False, header=True, mode='w')
 
     # prediction result(probability) file export
-    dp.prediction_probability(test_h, test_p, data_y, ids)
+    # dp.prediction_probability(test_h, test_p, data_y, ids)
 
 
 len(test_h)
