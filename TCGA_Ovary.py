@@ -4,8 +4,10 @@ import lib.dataProcess as dp
 import lib.deepLearning as dl
 from pandas import DataFrame as df
 
-file_types = ["Var_200", "Diff_200", "CV_200", "Annotation3000_200"
-              , "Annotation40"]
+file_types = [#"Var_100", "Diff_100", "CV_100", "Var_200", "Diff_200", "CV_400","Var_400", "Diff_400", "CV_400",
+              "Annotation3000_100", "Annotation3000_200", "Annotation3000_400"
+              #, "Annotation40"
+              ]
 
 for file_type in file_types:
     file_name = "OV_"+file_type+".csv"
@@ -32,7 +34,7 @@ for file_type in file_types:
     #'''
     nodes = [[200,200,200], [150,200,150], [100, 150, 200], [200, 150, 100]]
     learning_rates = [0.01, 0.005, 0.001, 0.0005]
-    batch_sizes = [50, 75, 100, 125, 150]
+    batch_sizes = [10, 20, 50, 75, 100]
     #'''
     #for fast experiment
     '''
@@ -140,30 +142,30 @@ for file_type in file_types:
                     train_label, test_label = dp.train_test(ydata_five, 0)
                     val_label, test_label = dp.test_validation_label(test_label)
 
-                    with tf.Session() as sess:
-                        tr_table_temp = tf.confusion_matrix(train_label, best_train_p, num_classes=2, dtype=tf.int64, name=None, weights=None)
-                        val_table_temp = tf.confusion_matrix(val_label, best_val_p, num_classes=2, dtype=tf.int64, name=None, weights=None)
-                        ts_table_temp = tf.confusion_matrix(test_label, test_p, num_classes=2, dtype=tf.int64, name=None, weights=None)
-                        tr_table, val_table, ts_table = sess.run([tr_table_temp, val_table_temp, ts_table_temp])
+                with tf.Session() as sess:
+                    tr_table_temp = tf.confusion_matrix(train_label, best_train_p, num_classes=2, dtype=tf.int64, name=None, weights=None)
+                    val_table_temp = tf.confusion_matrix(val_label, best_val_p, num_classes=2, dtype=tf.int64, name=None, weights=None)
+                    ts_table_temp = tf.confusion_matrix(test_label, test_p, num_classes=2, dtype=tf.int64, name=None, weights=None)
+                    tr_table, val_table, ts_table = sess.run([tr_table_temp, val_table_temp, ts_table_temp])
 
-                    # save contingency table
-                    tr_TN, tr_FN, tr_FP, tr_TP = tr_table[0,0], tr_table[0,1], tr_table[1,0], tr_table[1,1]
-                    tr_TPs.append(tr_TP)
-                    tr_TNs.append(tr_TN)
-                    tr_FPs.append(tr_FP)
-                    tr_FNs.append(tr_FN)
+                # save contingency table
+                tr_TN, tr_FN, tr_FP, tr_TP = tr_table[0,0], tr_table[1,0], tr_table[0,1], tr_table[1,1]
+                tr_TPs.append(tr_TP)
+                tr_TNs.append(tr_TN)
+                tr_FPs.append(tr_FP)
+                tr_FNs.append(tr_FN)
 
-                    ts_TN, ts_FN, ts_FP, ts_TP = ts_table[0,0], ts_table[0,1], ts_table[1,0], ts_table[1,1]
-                    ts_TPs.append(ts_TP)
-                    ts_TNs.append(ts_TN)
-                    ts_FPs.append(ts_FP)
-                    ts_FNs.append(ts_FN)
-                    
-                    val_TN, val_FN, val_FP, val_TP = val_table[0,0], val_table[0,1], val_table[1,0], val_table[1,1]
-                    val_TPs.append(val_TP)
-                    val_TNs.append(val_TN)
-                    val_FPs.append(val_FP)
-                    val_FNs.append(val_FN)
+                ts_TN, ts_FN, ts_FP, ts_TP = ts_table[0,0], ts_table[1,0], ts_table[0,1], ts_table[1,1]
+                ts_TPs.append(ts_TP)
+                ts_TNs.append(ts_TN)
+                ts_FPs.append(ts_FP)
+                ts_FNs.append(ts_FN)
+
+                val_TN, val_FN, val_FP, val_TP = val_table[0,0], val_table[1,0], val_table[0,1], val_table[1,1]
+                val_TPs.append(val_TP)
+                val_TNs.append(val_TN)
+                val_FPs.append(val_FP)
+                val_FNs.append(val_FN)
      
                     
                 data_x, data_y = dp.divide_xy_test(raw_data, 'Platinum_Status', 1,-2)
@@ -218,7 +220,7 @@ for file_type in file_types:
     df2.to_csv("../result/OV_DNN_result_"+file_type+"_raw.csv", index=False, header=True, mode='w')
 
     # prediction result(probability) file export
-    # dp.prediction_probability(test_h, test_p, data_y, ids)
+    #dp.prediction_probability(test_h, test_p, data_y, ids)
 
 
 len(test_h)
