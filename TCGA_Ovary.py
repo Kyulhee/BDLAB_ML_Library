@@ -5,8 +5,9 @@ import lib.deepLearning as dl
 from pandas import DataFrame as df
 
 file_types = [#"Var_100", "Diff_100", "CV_100", "Var_200", "Diff_200", "CV_400","Var_400", "Diff_400", "CV_400",
-              "Annotation3000_100", "Annotation3000_200", "Annotation3000_400"
-              #, "Annotation40"
+              #"Annotation3000_100", "Annotation3000_200", "Annotation3000_400"
+            #,
+            "Annotation40"
               ]
 
 for file_type in file_types:
@@ -32,7 +33,7 @@ for file_type in file_types:
 
     #set hyperparameters - node, learning rate, batch size
     #'''
-    nodes = [[200,200,200], [150,200,150], [100, 150, 200], [200, 150, 100]]
+    nodes = [[100,100,100], [50,100,50], [50, 75, 50], [50, 50, 50]]
     learning_rates = [0.01, 0.005, 0.001, 0.0005]
     batch_sizes = [10, 20, 50, 75, 100]
     #'''
