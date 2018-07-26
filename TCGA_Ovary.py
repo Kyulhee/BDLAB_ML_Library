@@ -4,11 +4,17 @@ import lib.dataProcess as dp
 import lib.deepLearning as dl
 from pandas import DataFrame as df
 
-file_types = [#"Var_100", "Diff_100", "CV_100", "Var_200", "Diff_200", "CV_400","Var_400", "Diff_400", "CV_400",
+file_types = [#"Var_100", "CV_100", "Var_200", "CV_400","Var_400",
+    #"Diff_100", "Diff_200", "Diff_400", "new_Diff_100", "new_Diff_200", "new_Diff_400"
+    #, "CV_400",
               #"Annotation3000_100", "Annotation3000_200", "Annotation3000_400"
             #,
-            "Annotation40"
+     #       "Annotation40"
+    "Clin"
               ]
+
+num=0
+
 
 for file_type in file_types:
     file_name = "OV_"+file_type+".csv"
@@ -33,15 +39,15 @@ for file_type in file_types:
 
     #set hyperparameters - node, learning rate, batch size
     #'''
-    nodes = [[100,100,100], [50,100,50], [50, 75, 50], [50, 50, 50]]
+    nodes = [[200,200,200], [150,200,150], [100, 150, 200], [200, 150, 100]]
     learning_rates = [0.01, 0.005, 0.001, 0.0005]
     batch_sizes = [10, 20, 50, 75, 100]
     #'''
     #for fast experiment
     '''
-    nodes = [[200,200,200]]
-    learning_rates = [0.005]
-    batch_sizes = [50]
+    nodes = [[100,150,200]]
+    learning_rates = [0.001]
+    batch_sizes = [20]
     '''
 
     nodes_box = []
@@ -56,6 +62,7 @@ for file_type in file_types:
     tr_specificity_box = []
     ts_specificity_box = []
     val_specificity_box = []
+    index = []
     
     tr_TPs = []
     tr_TNs = []
@@ -81,7 +88,7 @@ for file_type in file_types:
                 best_val_acc = 0
                 best_test_acc = 0 
                 best_cost = float("inf")
-                save_path_dir ='./'
+                save_path_dir ='../models/'
                 count = 0
                 model_num = 0
 
@@ -118,7 +125,7 @@ for file_type in file_types:
                             best_val_p = val_p
                             best_cost = val_c
                             count = 0
-                            save_path = saver.save(sess, save_path_dir + 'model'+str(model_num)+'.ckpt')
+                            save_path = saver.save(sess, save_path_dir + 'model'+str(num)+'.ckpt')
 
                         #condition 2: cannot find best condition
                         #when cost is get worse and worse(10 times), finish learning.
@@ -148,7 +155,7 @@ for file_type in file_types:
                     val_table_temp = tf.confusion_matrix(val_label, best_val_p, num_classes=2, dtype=tf.int64, name=None, weights=None)
                     ts_table_temp = tf.confusion_matrix(test_label, test_p, num_classes=2, dtype=tf.int64, name=None, weights=None)
                     tr_table, val_table, ts_table = sess.run([tr_table_temp, val_table_temp, ts_table_temp])
-
+                
                 # save contingency table
                 tr_TN, tr_FN, tr_FP, tr_TP = tr_table[0,0], tr_table[1,0], tr_table[0,1], tr_table[1,1]
                 tr_TPs.append(tr_TP)
@@ -174,9 +181,16 @@ for file_type in file_types:
 
                 saver = tf.train.Saver()
                 with tf.Session() as sess:
-                    saver.restore(sess, './model0.ckpt')
+                    saver.restore(sess, '../models/model'+str(num)+'.ckpt')
                     test_h, test_p = sess.run([hypothesis, predicted], feed_dict={X: data_x, Y: dp.one_hot_encoder(data_y), keep_prob:1.0 , phase:False})
+                print(test_p)
 
+                index.append(num)
+                
+                # prediction result(probability) file export
+                dp.prediction_probability(test_h, test_p, data_y, ids, num)
+                num = num+1
+                
                 # save hyperparameter
                 nodes_box.append(node)
                 learning_rate_box.append(learning_rate)
@@ -184,44 +198,26 @@ for file_type in file_types:
 
                 # save accuracy & sensitivity & specificity
                 tr_accuracy_box.append(best_train_acc)
-                if(tr_TP + tr_FN > 0):
-                    tr_sensitivity_box.append(tr_TP/(tr_TP+tr_FN))
-                else:
-                    tr_sensitivity_box.append("NA")
-                if(tr_TN + tr_FP > 0):
-                    tr_specificity_box.append(tr_TN/(tr_TN+tr_FP))
-                else:
-                    tr_specificity_box.append("NA")
+                tr_sensitivity_box.append(tr_TP/(tr_TP+tr_FN))
+                tr_specificity_box.append(tr_TN/(tr_TN+tr_FP))
                
                 ts_accuracy_box.append(best_test_acc)
-                if(ts_TP + ts_FN > 0):
-                    ts_sensitivity_box.append(ts_TP/(ts_TP+ts_FN))
-                else:
-                    ts_sensitivity_box.append("NA")
-                if(ts_TN + ts_FP > 0):
-                    ts_specificity_box.append(ts_TN/(ts_TN+ts_FP))
-                else:
-                    ts_specificity_box.append("NA")
+                ts_sensitivity_box.append(ts_TP/(ts_TP+ts_FN))
+                ts_specificity_box.append(ts_TN/(ts_TN+ts_FP))
                 
                 val_accuracy_box.append(best_val_acc)
-                if(val_TP + val_FN > 0):
-                    val_sensitivity_box.append(val_TP/(val_TP+val_FN))
-                else:
-                    val_sensitivity_box.append("NA")
-                if(val_TN + val_FP > 0):
-                    val_specificity_box.append(val_TN/(val_TN+val_FP))
-                else:
-                    val_specificity_box.append("NA")
+                val_sensitivity_box.append(val_TP/(val_TP+val_FN))
+                val_specificity_box.append(val_TN/(val_TN+val_FP))
+                
 
                 
     #train y, train 
-    df1 = df(data={'nodes': nodes_box, 'learning_rate': learning_rate_box, 'batch_sizes': batch_size_box, 'tr_accuracy':tr_accuracy_box, 'tr_sensitivity':tr_sensitivity_box, 'tr_specificity':tr_specificity_box, 'val_accuracy':val_accuracy_box, 'val_sensitivity':val_sensitivity_box, 'val_specificity':val_specificity_box, 'ts_accuracy': ts_accuracy_box, 'ts_sensitivity':ts_sensitivity_box, 'ts_specificity':ts_specificity_box })
+    df1 = df(data={'index': index, 'nodes': nodes_box, 'learning_rate': learning_rate_box, 'batch_sizes': batch_size_box, 'tr_accuracy':tr_accuracy_box, 'tr_sensitivity':tr_sensitivity_box, 'tr_specificity':tr_specificity_box, 'val_accuracy':val_accuracy_box, 'val_sensitivity':val_sensitivity_box, 'val_specificity':val_specificity_box, 'ts_accuracy': ts_accuracy_box, 'ts_sensitivity':ts_sensitivity_box, 'ts_specificity':ts_specificity_box })
     df1.to_csv("../result/OV_DNN_result_"+file_type+".csv", index=False, header=True, mode='w')
-    df2 = df(data={'nodes': nodes_box, 'learning_rate': learning_rate_box, 'batch_sizes': batch_size_box, 'tr_TP': tr_TPs, 'tr_TN': tr_TNs, 'tr_FP': tr_FPs, 'tr_FN': tr_FNs, 'val_TP': val_TPs, 'val_TN': val_TNs, 'val_FP': val_FPs, 'val_FN': val_FNs, 'ts_TP': ts_TPs, 'ts_TN': ts_TNs, 'ts_FP': ts_FPs, 'ts_FN': ts_FNs})
+    df2 = df(data={'index': index, 'nodes': nodes_box, 'learning_rate': learning_rate_box, 'batch_sizes': batch_size_box, 'tr_TP': tr_TPs, 'tr_TN': tr_TNs, 'tr_FP': tr_FPs, 'tr_FN': tr_FNs, 'val_TP': val_TPs, 'val_TN': val_TNs, 'val_FP': val_FPs, 'val_FN': val_FNs, 'ts_TP': ts_TPs, 'ts_TN': ts_TNs, 'ts_FP': ts_FPs, 'ts_FN': ts_FNs})
     df2.to_csv("../result/OV_DNN_result_"+file_type+"_raw.csv", index=False, header=True, mode='w')
 
-    # prediction result(probability) file export
-    #dp.prediction_probability(test_h, test_p, data_y, ids)
+    
 
 
 len(test_h)

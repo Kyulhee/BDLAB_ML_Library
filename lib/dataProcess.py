@@ -7,14 +7,14 @@ def test_validation_label(data):
     test_label = np.array(data[len(data)//2:])
     return val_label, test_label
 
-def prediction_probability(hypothesis, prediction, ydata, ids):
+def prediction_probability(hypothesis, prediction, ydata, ids, count):
     try :
         if len(prediction) != len(ydata) or len(ydata) != len(ids) or len(ydata) != len(hypothesis):
             print(len(prediction), len(ydata), len(ids), len(hypothesis))
             raise ValueError
         result = ids.to_frame('ID')
         result = pd.concat([result, pd.DataFrame(hypothesis, columns=['hypothesis'+str(i) for i in range(len(hypothesis[0]))]), pd.DataFrame(prediction, columns=['prediction']) , pd.DataFrame(ydata , columns=['label']) ] ,axis=1 )
-        output_f_name = time.strftime("%d%m%Y")+'_'+time.strftime("%H_%M")+'result.csv'
+        output_f_name = time.strftime("%d%m%Y")+'_'+time.strftime("%H_%M")+'_'+str(count)+'result.csv'
         result.to_csv(output_f_name , index=False)
     except ValueError :
         print("Cannot make prediction-probability file because length of arguments are not same.")
