@@ -5,7 +5,7 @@ import lib.deepLearning as dl
 from pandas import DataFrame as df
 
 file_types = ["Var_100", "CV_100", "new_Diff_100", "Annotation3000_100",
-	#"Var_200", "CV_200", "new_Diff_200", "Annotation3000_200",
+	"Var_200", "CV_200", "new_Diff_200", "Annotation3000_200",
 	#"Var_400", "CV_400", "new_Diff_400", "Annotation3000_400",
 	#"Var_1000", "CV_1000", "new_Diff_1000", "Annotation3000_1000",
 	#"Diff_100", "Diff_200", "Diff_400", 
@@ -38,10 +38,16 @@ for file_type in file_types:
 
     #set hyperparameters - node, learning rate, batch size
     #'''
-    nodes = [[300,300,300], [150,200,200,150], [150, 150, 150, 150], [150, 200, 300, 400]]
+    nodes = [[200,200,200], [200,300,200], [300, 300, 300], [100, 100, 100, 100]]
+    learning_rates = [0.01, 0.005, 0.001, 0.0005]
+    batch_sizes = [10, 50, 75, 100]
+    #'''
+    #for larger data
+    '''
+    nodes = [[400,400,400], [150,200,200,150], [150, 150, 150, 150], [150, 200, 300, 400]]
     learning_rates = [0.01, 0.005, 0.001, 0.0005]
     batch_sizes = [10, 50, 75, 100, 200]
-    #'''
+    '''
     #for fast experiment
     '''
     nodes = [[100,150,200]]
@@ -106,7 +112,7 @@ for file_type in file_types:
                             batch_x = train_x[k * batch_size:(k + 1) * batch_size]
                             batch_y = train_y[k * batch_size:(k + 1) * batch_size]
                             #dropout_ratio
-                            sess.run(train, feed_dict={X: batch_x, Y: batch_y, keep_prob: 0.5 , phase:True})
+                            sess.run(train, feed_dict={X: batch_x, Y: batch_y, keep_prob: 0.6 , phase:True})
 
                         #feed_dict - place holder is just 'space', feed_dict means supply real data into place holder.
                         train_h, train_c, train_p, train_a = sess.run( [hypothesis, cost, predicted, accuracy], feed_dict={X: train_x, Y: train_y, keep_prob: 1 , phase:False})
