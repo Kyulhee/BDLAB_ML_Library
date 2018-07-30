@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ls /home/tjahn/Git2/User/kyulhee/DNN/Tensor/BDLAB_ML_Library | grep result | xargs rm
+ls /home/tjahn/Git2/User/kyulhee/DNN/Tensor/models | grep model | xargs rm
+ls /home/tjahn/Git2/User/kyulhee/DNN/Tensor/result | grep result | xargs rm
