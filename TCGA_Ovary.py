@@ -4,20 +4,19 @@ import lib.dataProcess as dp
 import lib.deepLearning as dl
 from pandas import DataFrame as df
 
-file_types = [#"Var_100", "CV_100", "Var_200", "CV_400","Var_400",
-    #"Diff_100", "Diff_200", "Diff_400", "new_Diff_100", "new_Diff_200", "new_Diff_400"
-    #, "CV_400",
-              #"Annotation3000_100", "Annotation3000_200", "Annotation3000_400"
-            #,
-     #       "Annotation40"
-    "Clin"
-              ]
+file_types = ["Var_100", "CV_100", "new_Diff_100", "Annotation3000_100",
+	#"Var_200", "CV_200", "new_Diff_200", "Annotation3000_200",
+	#"Var_400", "CV_400", "new_Diff_400", "Annotation3000_400",
+	#"Var_1000", "CV_1000", "new_Diff_1000", "Annotation3000_1000",
+	#"Diff_100", "Diff_200", "Diff_400", 
+	#"Annotation40"
+	"Clin"]
 
 num=0
 
 
 for file_type in file_types:
-    file_name = "OV_"+file_type+".csv"
+    file_name = "inter_OV_"+file_type+".csv"
     print("file type: "+file_type)
 
     raw_data = pd.read_csv('../subsamples/'+file_name)
@@ -39,9 +38,9 @@ for file_type in file_types:
 
     #set hyperparameters - node, learning rate, batch size
     #'''
-    nodes = [[200,200,200], [150,200,150], [100, 150, 200], [200, 150, 100]]
+    nodes = [[300,300,300], [150,200,200,150], [150, 150, 150, 150], [150, 200, 300, 400]]
     learning_rates = [0.01, 0.005, 0.001, 0.0005]
-    batch_sizes = [10, 20, 50, 75, 100]
+    batch_sizes = [10, 50, 75, 100, 200]
     #'''
     #for fast experiment
     '''
