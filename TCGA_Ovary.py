@@ -4,13 +4,14 @@ import lib.dataProcess as dp
 import lib.deepLearning as dl
 from pandas import DataFrame as df
 
-file_types = ["Var_100", "CV_100", "new_Diff_100", "Annotation3000_100",
-	"Var_200", "CV_200", "new_Diff_200", "Annotation3000_200",
-	#"Var_400", "CV_400", "new_Diff_400", "Annotation3000_400",
-	#"Var_1000", "CV_1000", "new_Diff_1000", "Annotation3000_1000",
+file_types = [#"Var_100", "CV_100", "new_Diff_100", "Annotation3000_100",
+	#"Var_200", "CV_200", "new_Diff_200", "Annotation3000_200",
+	"Var_400", "CV_400", "new_Diff_400", "Annotation3000_400",
+	"Var_1000", "CV_1000", "new_Diff_1000", "Annotation3000_1000",
 	#"Diff_100", "Diff_200", "Diff_400", 
 	#"Annotation40"
-	"Clin"]
+	#"Clin"
+	]
 
 num=0
 
