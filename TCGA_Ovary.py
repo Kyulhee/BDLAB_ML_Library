@@ -4,18 +4,22 @@ import lib.dataProcess as dp
 import lib.deepLearning as dl
 from pandas import DataFrame as df
 
-file_types = [#"Var_100", "CV_100",
+file_types = [
+'''
+    "Var_100", "CV_100",
     "new_Diff_100",
-    #"Annotation3000_100",
-    #"Var_200", "CV_200",
+    "Annotation3000_100",
+    "Var_200", "CV_200",
     "new_Diff_200",
-    #"Annotation3000_200",
-    #"Var_400", "CV_400",
+    "Annotation3000_200",
+    "Var_400", "CV_400",
     "new_Diff_400",
-    #"Annotation3000_400",
-    #"Var_1000", "CV_1000",
-    "new_Diff_1000"
-    #,"Annotation3000_1000",
+    "Annotation3000_400",
+    "Var_1000", "CV_1000",
+    "new_Diff_1000",
+    "Annotation3000_1000",
+'''
+    "Clin_ch"
 	#"Diff_100", "Diff_200", "Diff_400", 
 	#"Annotation40"
 	#"Clin"
@@ -46,17 +50,17 @@ for file_type in file_types:
     val_y, test_y = dp.test_validation(test_y)
 
     #set hyperparameters - node, learning rate, batch size
-    '''
+    #'''
     nodes = [[200,200,200], [200,300,200], [300, 300, 300], [100, 100, 100, 100]]
     learning_rates = [0.01, 0.005, 0.001, 0.0005]
     batch_sizes = [10, 50, 75, 100]
-    '''
-    #for larger data
     #'''
+    #for larger data
+    '''
     nodes = [[400,400,400], [150,200,200,150], [150, 150, 150, 150], [150, 200, 300, 400]]
     learning_rates = [0.01, 0.005, 0.001, 0.0005]
     batch_sizes = [10, 50, 75, 100]
-    #'''
+    '''
     #for fast experiment
     '''
     nodes = [[100,150,200]]
