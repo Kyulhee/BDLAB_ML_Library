@@ -1,5 +1,30 @@
 #!/bin/bash
 
-ls /home/tjahn/Git2/User/kyulhee/DNN/Tensor/BDLAB_ML_Library | grep result | xargs rm
-ls /home/tjahn/Git2/User/kyulhee/DNN/Tensor/models | grep model | xargs rm
-ls /home/tjahn/Git2/User/kyulhee/DNN/Tensor/result | grep result | xargs rm
+
+if [ $1 = 'd' -o $1 = 'D' ]; then
+	echo 'delete files'
+	ls /home/tjahn/Git2/User/kyulhee/DNN/Tensor/BDLAB_ML_Library | grep result | xargs rm
+	ls /home/tjahn/Git2/User/kyulhee/DNN/Tensor/models | grep model | xargs rm
+	ls /home/tjahn/Git2/User/kyulhee/DNN/Tensor/result | grep result | xargs rm
+
+elif [ $1 = 's' -o $1 = 'S' ]; then
+	echo 'save files. pathway: '
+	if [ -n $2 ]; then
+		echo $2
+		mkdir -v '/home/tjahn/Git2/User/kyulhee/DNN/Tensor/result/'$2 
+		mkdir -v '/home/tjahn/Git2/User/kyulhee/DNN/Tensor/models/'$2
+		cd /home/tjahn/Git2/User/kyulhee/DNN/Tensor/BDLAB_ML_Library
+		ls | grep result | mv '/home/tjahn/Git2/User/kyulhee/DNN/Tensor/models/'$2
+		cd -
+		ls /home/tjahn/Git2/User/kyulhee/DNN/Tensor/models | grep model | xargs mv '/home/tjahn/Git2/User/kyulhee/DNN/Tensor/models/'{} '/home/tjahn/Git2/User/kyulhee/DNN/Tensor/models/'$2
+		ls /home/tjahn/Git2/User/kyulhee/DNN/Tensor/result | grep result | xargs mv '/home/tjahn/Git2/User/kyulhee/DNN/Tensor/result/'{} '/home/tjahn/Git2/User/kyulhee/DNN/Tensor/result/'$2
+		echo '/home/tjahn/Git2/User/kyulhee/DNN/Tensor/result/'$2
+	else
+		echo "pathway가 잘못됐습니다. 다시 입력해주세요."
+	fi
+else
+	echo "옵션이 잘못됐습니다. d/D: delete result & model, s '/pathway/directory': save result & model to pathway"
+fi
+#ls /home/tjahn/Git2/User/kyulhee/DNN/Tensor/BDLAB_ML_Library | grep result | xargs rm
+#ls /home/tjahn/Git2/User/kyulhee/DNN/Tensor/models | grep model | xargs rm
+#ls /home/tjahn/Git2/User/kyulhee/DNN/Tensor/result | grep result | xargs rm

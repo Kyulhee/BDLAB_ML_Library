@@ -26685,3 +26685,3208 @@ Number of Class : 2
  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  0 0 0 0 0 0 0 0 0 0 0]
+2018-07-31 15:48:53.074266: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2018-07-31 15:48:53.074291: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-07-31 15:48:53.074296: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2018-07-31 15:48:53.074299: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-07-31 15:48:53.074303: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+file type: new_Diff_100
+Number of Class : 2
+Number of Class : 2
+train acc :  0.585366 validation acc :  0.5 train_cost 0.689282
+train acc :  0.579268 validation acc :  0.5 train_cost 0.65039
+Learning Finished!! 
+
+########## Training Accuracy :  0.646341 Validation Accuracy :  0.5625
+########## Test Accuracy:  0.4375
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 1 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+ 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.426829 validation acc :  0.5 train_cost 1.12533
+Learning Finished!! 
+
+########## Training Accuracy :  0.695122 Validation Accuracy :  0.625
+########## Test Accuracy:  0.625
+Number of Class : 2
+[1 0 0 0 1 1 1 1 0 0 1 0 1 1 1 0 1 0 0 1 0 1 0 1 0 1 0 1 1 1 0 0 1 0 0 1 1
+ 0 0 1 1 0 1 1 1 1 0 1 0 0 0 1 0 1 0 0 1 1 0 0 1 0 0 1 0 1 1 0 0 1 1 0 0 0
+ 1 1 1 1 1 0 0 1 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 1 1 0 0 1 0 1 0 0 0 1 0 1 1
+ 0 1 0 0 0 1 1 0 0 1 1 1 1 0 1 1 1 1 0 1 0 1 0 0 1 0 0 0 1 0 0 1 1 1 0 0 0
+ 0 1 0 0 0 1 1 1 1 1 1 0 0 1 0 0 1 1 1 0 0 0 0 1 1 1 1 0 0 0 1 0 1 0 0 1 1
+ 0 1 1 0 0 0 1 0 0 0 1]
+train acc :  0.426829 validation acc :  0.5 train_cost 11.0696
+train acc :  0.786585 validation acc :  0.5625 train_cost 0.451479
+Learning Finished!! 
+
+########## Training Accuracy :  0.689024 Validation Accuracy :  0.625
+########## Test Accuracy:  0.5
+Number of Class : 2
+[1 0 0 0 1 1 1 1 0 0 1 0 1 1 1 0 0 0 1 1 1 1 0 1 0 1 0 1 1 1 0 0 1 0 0 1 1
+ 0 0 1 1 0 1 0 1 1 0 1 0 0 0 1 0 1 0 0 1 1 0 0 1 0 0 1 0 1 1 0 0 1 1 0 1 1
+ 1 1 1 1 1 0 0 1 0 0 0 0 1 0 0 1 1 0 0 0 0 0 0 1 1 0 0 1 0 1 1 0 0 1 0 0 0
+ 0 1 0 0 0 1 1 0 0 1 1 1 1 0 0 1 1 0 0 1 0 1 0 0 1 1 0 0 1 0 1 1 1 1 0 0 1
+ 0 1 0 1 1 1 1 1 1 1 1 0 0 0 1 0 1 1 1 0 0 0 0 1 1 1 0 0 1 1 1 0 1 1 1 0 1
+ 0 1 1 0 0 0 1 1 0 0 1]
+train acc :  0.573171 validation acc :  0.5 train_cost 15.5707
+train acc :  0.676829 validation acc :  0.5 train_cost 0.602307
+Learning Finished!! 
+
+########## Training Accuracy :  0.676829 Validation Accuracy :  0.625
+########## Test Accuracy:  0.4375
+Number of Class : 2
+[0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0
+ 0 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 1 1 0 0 1 0 1 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0
+ 0 1 0 0 0 1 0 0 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 1 1 0 1 0 0 0 1 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.695122 validation acc :  0.5625 train_cost 0.602806
+Learning Finished!! 
+
+########## Training Accuracy :  0.695122 Validation Accuracy :  0.5625
+########## Test Accuracy:  0.4375
+Number of Class : 2
+[1 0 0 0 1 1 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 1 0 0 0 1 0 1 0 0 0 0 0 0 0 1 1
+ 0 0 1 1 0 1 0 1 1 0 1 0 0 0 1 0 0 0 0 1 1 0 0 1 0 0 1 0 1 0 0 0 0 0 0 0 0
+ 0 0 1 1 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 1 0 0 1 0 1 0 0 0 1 0 1 1
+ 0 0 1 0 0 1 0 0 0 1 1 0 0 0 0 1 1 0 0 1 0 1 0 0 1 0 0 0 1 0 0 1 1 0 1 0 0
+ 0 1 0 0 0 1 0 1 1 1 1 0 0 1 0 0 1 1 1 0 0 0 0 1 1 0 1 0 0 0 1 0 1 0 0 0 1
+ 0 1 0 0 0 0 0 1 0 1 1]
+train acc :  0.573171 validation acc :  0.5 train_cost 2.84436
+Learning Finished!! 
+
+########## Training Accuracy :  0.670732 Validation Accuracy :  0.6875
+########## Test Accuracy:  0.75
+Number of Class : 2
+[1 0 0 0 1 1 1 1 0 0 1 1 1 1 0 0 1 1 0 1 1 1 0 1 0 1 0 1 1 1 1 0 0 0 0 1 1
+ 0 0 1 1 0 1 1 1 1 0 1 0 0 0 1 0 1 0 1 1 1 0 1 1 0 0 1 0 1 1 0 0 1 1 0 1 1
+ 1 1 1 1 1 0 0 1 0 0 0 1 1 0 0 1 1 1 0 0 1 0 0 1 1 0 0 1 0 1 0 0 1 1 0 1 1
+ 0 1 1 0 0 1 1 0 0 1 1 1 1 0 1 1 1 1 0 1 0 1 0 0 1 0 0 0 1 0 0 1 1 0 0 0 1
+ 0 1 0 1 0 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 0 0 1 1 1 1 1 0 0 1 1 0 1 0 0 1 1
+ 0 1 1 0 0 1 1 1 0 0 1]
+train acc :  0.426829 validation acc :  0.5 train_cost 1.37273
+Learning Finished!! 
+
+########## Training Accuracy :  0.579268 Validation Accuracy :  0.5625
+########## Test Accuracy:  0.6875
+Number of Class : 2
+[1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 0 1 1 1 0 1 1 1 1 0 1 0 0 1 1
+ 0 0 1 1 1 1 1 1 1 1 1 0 1 1 1 0 1 0 1 1 1 1 1 1 0 0 1 0 1 1 0 0 1 1 0 1 0
+ 1 1 1 1 1 0 1 1 0 0 0 1 1 0 0 1 1 1 1 0 1 0 0 1 1 0 1 1 1 1 1 0 1 1 0 1 1
+ 0 1 1 1 0 1 1 0 1 1 1 1 1 0 0 1 1 1 0 1 0 1 1 0 1 1 0 0 1 0 1 1 1 1 1 1 1
+ 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 0 1 1 1 1 0 0 1 1 1 1 1 0 1 1 1 0 1 0 0 1 1
+ 0 1 1 0 0 1 1 0 0 1 1]
+train acc :  0.591463 validation acc :  0.5 train_cost 0.763089
+Learning Finished!! 
+
+########## Training Accuracy :  0.445122 Validation Accuracy :  0.5625
+########## Test Accuracy:  0.5
+Number of Class : 2
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0 1 1 1 1 0 1 0 1 1 1
+ 1 0 1 1 1 1 1 1 1 1 1 0 1 1 1 0 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 0 1 0 0 1 1 0 1 1 1 1 1 1 1 1 1 1 1
+ 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 0 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 0 1 1
+ 1 1 1 1 0 1 1 1 1 1 1]
+train acc :  0.640244 validation acc :  0.5 train_cost 0.622538
+Learning Finished!! 
+
+########## Training Accuracy :  0.756098 Validation Accuracy :  0.4375
+########## Test Accuracy:  0.6875
+Number of Class : 2
+[1 0 0 0 0 1 0 0 1 1 1 1 1 1 1 0 1 0 0 1 0 1 1 1 0 1 0 1 1 1 0 0 1 0 0 1 1
+ 0 1 1 1 0 1 0 1 1 0 1 1 0 0 1 0 1 0 1 1 1 0 0 1 1 0 1 0 1 1 0 0 1 1 1 1 0
+ 1 1 1 1 1 0 0 1 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 1 0 1 0 1 1 1 0 1 1
+ 0 1 1 1 0 1 0 0 1 1 1 1 1 0 0 1 1 1 0 1 0 1 0 0 1 1 0 0 0 1 0 1 1 1 0 0 1
+ 0 1 0 0 1 1 1 1 1 1 1 0 0 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 0 1 1 0 0 1
+ 0 1 1 0 0 0 1 1 0 1 0]
+train acc :  0.634146 validation acc :  0.5 train_cost 0.636331
+Learning Finished!! 
+
+########## Training Accuracy :  0.634146 Validation Accuracy :  0.5
+########## Test Accuracy:  0.5
+Number of Class : 2
+[0 0 0 0 0 1 1 0 0 0 1 0 1 1 0 0 0 0 0 0 1 0 0 1 0 1 0 1 1 1 0 0 0 0 0 1 1
+ 0 0 1 1 0 1 0 1 1 1 1 0 1 0 1 0 1 0 1 1 1 0 0 1 0 0 1 0 0 1 0 0 1 1 0 1 0
+ 1 1 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 0 0 1 1
+ 0 1 1 1 0 1 1 1 1 1 1 0 0 0 0 1 1 1 0 1 0 0 0 0 1 0 0 0 1 0 0 1 1 1 0 1 0
+ 0 1 0 0 1 1 1 0 1 1 1 0 0 1 0 0 1 1 1 0 1 0 1 1 1 1 1 0 0 1 1 0 1 0 0 1 1
+ 0 1 1 0 0 0 0 1 0 0 0]
+train acc :  0.52439 validation acc :  0.5 train_cost 0.686664
+train acc :  0.865854 validation acc :  0.5625 train_cost 0.348022
+Learning Finished!! 
+
+########## Training Accuracy :  0.743902 Validation Accuracy :  0.625
+########## Test Accuracy:  0.6875
+Number of Class : 2
+[1 0 0 0 0 1 1 1 1 0 0 0 1 1 0 0 1 0 0 1 1 0 0 1 0 1 0 1 1 1 0 1 0 0 0 1 1
+ 0 1 0 1 0 1 0 1 1 1 1 0 0 0 1 0 1 0 0 1 1 0 0 1 0 0 1 0 0 1 0 0 1 1 1 1 1
+ 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 1 0 1 0 0 1 0 1 1 0 0 1 0 1 1
+ 0 1 1 0 0 1 1 0 1 1 1 1 1 0 0 1 1 1 0 1 0 1 0 0 1 1 0 0 0 0 1 1 1 0 0 0 0
+ 0 1 0 0 1 1 1 1 1 1 1 0 0 1 1 0 1 1 1 0 1 0 1 0 1 1 1 0 0 1 1 0 1 0 0 0 1
+ 0 1 1 0 0 0 1 1 0 0 0]
+train acc :  0.573171 validation acc :  0.5 train_cost 0.811626
+Learning Finished!! 
+
+########## Training Accuracy :  0.670732 Validation Accuracy :  0.625
+########## Test Accuracy:  0.6875
+Number of Class : 2
+[1 0 0 0 1 1 0 0 0 1 1 0 1 1 0 1 1 1 0 1 0 1 0 0 0 1 0 1 0 1 0 0 0 0 0 1 1
+ 0 0 1 1 1 1 1 1 1 0 1 0 0 0 1 0 1 0 0 1 1 0 0 1 0 0 1 0 1 0 0 0 1 0 0 0 0
+ 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 1 0 1 1
+ 0 0 1 1 1 1 1 0 1 1 1 1 0 0 1 1 1 1 0 1 0 1 0 0 1 0 0 0 0 0 0 1 1 1 0 0 1
+ 0 1 0 0 0 1 0 1 1 1 1 0 0 1 0 0 1 1 1 0 0 0 1 1 1 1 1 0 0 1 1 1 1 0 0 1 1
+ 1 1 1 0 0 1 1 0 0 1 1]
+train acc :  0.640244 validation acc :  0.625 train_cost 0.634592
+train acc :  0.957317 validation acc :  0.5625 train_cost 0.166802
+Learning Finished!! 
+
+########## Training Accuracy :  0.804878 Validation Accuracy :  0.5
+########## Test Accuracy:  0.625
+Number of Class : 2
+[1 0 0 0 0 1 0 0 1 1 0 0 1 0 0 0 1 0 0 1 1 1 1 1 0 1 1 1 0 1 0 0 0 0 0 1 1
+ 0 1 1 1 0 1 0 1 1 0 1 1 0 0 1 0 1 0 1 1 1 0 0 1 1 0 1 0 1 1 0 0 0 1 1 1 0
+ 1 1 1 1 1 0 0 0 1 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 0 1 1 0 1 1 0 1 1 1 1 1
+ 0 1 0 0 0 1 1 0 1 1 1 1 1 0 0 1 1 1 0 1 0 0 0 1 1 1 0 0 0 1 1 1 1 1 0 1 1
+ 0 1 1 0 1 1 1 1 1 1 1 0 0 1 1 0 1 1 1 1 1 0 1 1 1 1 0 0 1 1 1 0 1 1 1 0 1
+ 1 1 1 0 0 0 1 0 0 0 0]
+train acc :  0.585366 validation acc :  0.5 train_cost 0.674016
+Learning Finished!! 
+
+########## Training Accuracy :  0.670732 Validation Accuracy :  0.5
+########## Test Accuracy:  0.375
+Number of Class : 2
+[1 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 1 0 1 0 1 0 0 0 1 1 0 0 0 0 0 0 0 0
+ 0 0 1 1 0 1 0 0 1 0 1 0 0 0 1 0 1 0 1 1 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 1 0
+ 0 1 0 0 0 0 0 0 0 1 0 1 0 0 0 1 1 0 0 1 0 1 0 0 1 0 0 0 0 0 0 1 1 1 0 0 0
+ 0 1 0 0 0 1 0 1 1 0 0 0 0 0 1 0 1 0 1 0 0 0 0 1 0 1 1 0 0 0 1 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 1 0 1 0]
+train acc :  0.573171 validation acc :  0.5 train_cost 0.686893
+Learning Finished!! 
+
+########## Training Accuracy :  0.670732 Validation Accuracy :  0.4375
+########## Test Accuracy:  0.75
+Number of Class : 2
+[1 0 0 0 0 1 0 0 0 1 0 0 1 1 0 1 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0
+ 0 0 1 1 0 1 0 0 0 1 0 0 0 0 1 0 1 0 1 1 1 0 0 1 1 0 0 0 0 0 0 0 0 1 0 1 0
+ 0 1 1 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 1 0 1 1 0 0 1 0 1 1
+ 0 1 0 0 0 0 0 0 0 0 1 0 1 0 0 1 1 1 0 1 0 0 0 1 1 1 0 0 0 0 0 1 1 1 0 0 0
+ 0 1 0 0 1 1 1 0 1 1 1 0 0 1 0 0 1 1 1 1 1 0 0 0 0 1 0 0 0 1 1 0 1 0 0 0 1
+ 0 0 1 0 0 0 0 0 0 0 0]
+train acc :  0.609756 validation acc :  0.5 train_cost 0.647459
+Learning Finished!! 
+
+########## Training Accuracy :  0.719512 Validation Accuracy :  0.5
+########## Test Accuracy:  0.5625
+Number of Class : 2
+[0 0 0 0 0 1 0 1 0 0 0 0 1 1 0 0 0 0 1 1 0 1 0 0 0 1 0 1 1 0 0 0 0 0 0 1 1
+ 0 0 1 1 1 1 0 0 0 0 1 0 0 0 1 0 1 0 1 1 1 0 0 1 0 0 1 0 0 0 0 0 1 0 0 0 0
+ 1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0 1 0 1 1
+ 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 1 0 0 1 0 1 0 0 1 0 0 0 1 0 0 1 0 0 0 1 0
+ 0 1 0 0 0 1 0 1 1 1 1 0 0 0 1 0 1 1 1 0 0 0 1 0 1 1 1 0 0 0 1 0 0 0 0 0 1
+ 0 1 1 0 0 0 0 0 0 0 0]
+train acc :  0.579268 validation acc :  0.5625 train_cost 0.683577
+train acc :  0.573171 validation acc :  0.5 train_cost 0.623494
+Learning Finished!! 
+
+########## Training Accuracy :  0.573171 Validation Accuracy :  0.5
+########## Test Accuracy:  0.5
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.426829 validation acc :  0.5 train_cost 0.784723
+train acc :  0.77439 validation acc :  0.5 train_cost 0.358263
+Learning Finished!! 
+
+########## Training Accuracy :  0.707317 Validation Accuracy :  0.5625
+########## Test Accuracy:  0.5625
+Number of Class : 2
+[0 0 0 0 1 1 0 0 0 0 0 1 1 1 1 0 0 0 0 1 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 1 0
+ 0 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 1 1 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0
+ 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 1 0 1 1
+ 0 1 0 0 0 1 0 0 0 1 1 0 0 0 0 0 1 0 0 1 0 1 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0
+ 0 1 0 0 0 1 1 0 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 1 1 0 1 0 0 0 1 0 1 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.426829 validation acc :  0.5 train_cost 0.749761
+train acc :  0.670732 validation acc :  0.5 train_cost 0.60037
+Learning Finished!! 
+
+########## Training Accuracy :  0.542683 Validation Accuracy :  0.6875
+########## Test Accuracy:  0.5
+Number of Class : 2
+[1 0 0 0 1 1 1 1 0 0 1 1 1 1 1 0 0 1 0 1 1 1 0 0 0 1 0 1 1 1 1 0 0 0 0 1 1
+ 0 0 1 0 1 1 1 1 1 1 1 0 0 0 1 0 1 0 0 1 1 1 0 1 0 0 1 0 1 0 0 0 1 0 0 0 0
+ 1 1 1 1 0 0 0 1 0 0 1 1 1 0 0 0 1 1 1 0 1 0 0 1 1 0 0 0 0 1 0 1 0 1 0 1 0
+ 0 1 1 1 1 1 0 0 0 1 1 0 1 0 1 1 1 0 0 0 0 1 0 0 1 0 0 0 1 0 0 1 1 0 1 0 0
+ 0 1 0 1 0 1 1 0 1 1 1 0 1 1 1 0 1 0 1 0 0 1 0 0 1 1 1 0 0 0 1 0 1 0 0 1 1
+ 0 1 1 1 0 1 1 1 0 1 0]
+train acc :  0.573171 validation acc :  0.5 train_cost 3.05979
+train acc :  0.719512 validation acc :  0.6875 train_cost 0.584124
+Learning Finished!! 
+
+########## Training Accuracy :  0.719512 Validation Accuracy :  0.6875
+########## Test Accuracy:  0.75
+Number of Class : 2
+[0 0 0 0 1 1 0 0 1 0 0 1 1 1 0 0 1 1 0 1 0 1 0 0 0 1 0 1 1 1 0 0 0 0 0 1 1
+ 0 0 1 1 1 1 1 1 1 0 1 0 0 0 1 0 1 0 1 1 1 0 0 1 0 0 1 0 1 1 0 0 1 0 0 1 0
+ 1 0 1 1 1 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 1 0 0 1 0 0 0 1 0 1 0 0 0 1 0 1 1
+ 0 1 1 1 0 1 1 0 1 1 1 1 0 0 0 1 1 1 0 1 0 1 0 0 1 0 0 0 1 0 0 1 1 0 0 0 1
+ 0 1 0 0 0 1 0 1 1 1 1 0 0 1 1 0 1 1 1 1 1 0 1 1 1 1 1 0 0 1 1 1 1 0 0 0 1
+ 1 1 1 0 0 1 0 0 0 0 0]
+train acc :  0.573171 validation acc :  0.5 train_cost 0.79854
+train acc :  0.841463 validation acc :  0.5625 train_cost 0.382625
+Learning Finished!! 
+
+########## Training Accuracy :  0.75 Validation Accuracy :  0.6875
+########## Test Accuracy:  0.625
+Number of Class : 2
+[1 0 0 0 0 1 1 1 1 1 1 0 1 0 0 0 1 1 0 1 1 1 0 1 0 1 1 1 0 1 1 0 1 0 0 1 1
+ 1 1 0 1 0 1 0 1 1 1 1 1 0 0 1 1 1 0 1 1 1 0 0 1 1 0 1 0 1 1 0 0 0 1 1 1 1
+ 1 1 1 1 1 0 1 0 0 0 0 0 1 0 0 1 1 0 0 1 0 0 1 0 1 0 1 1 0 1 0 0 1 1 1 1 1
+ 0 1 0 0 0 1 1 0 1 1 1 1 1 0 0 1 1 1 0 1 0 1 0 0 1 1 0 0 1 1 1 1 1 1 0 1 1
+ 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 0 1 1 1 0 1
+ 1 1 1 1 0 0 1 1 0 0 1]
+train acc :  0.426829 validation acc :  0.5 train_cost 0.771325
+Learning Finished!! 
+
+########## Training Accuracy :  0.621951 Validation Accuracy :  0.5
+########## Test Accuracy:  0.625
+Number of Class : 2
+[1 0 0 0 1 1 1 1 0 1 1 1 1 1 1 1 1 0 1 1 1 1 0 1 0 1 0 1 1 1 0 1 1 0 0 1 1
+ 0 0 1 1 0 1 1 0 1 0 1 1 1 1 1 0 1 0 0 1 1 0 1 1 1 0 1 0 1 1 0 0 0 1 0 1 0
+ 1 1 1 1 1 1 0 1 0 0 0 1 1 0 0 1 1 1 0 0 1 0 0 1 1 0 0 1 0 1 1 0 0 1 0 1 1
+ 0 1 1 0 0 1 1 0 0 1 1 1 1 0 0 1 1 1 0 1 0 1 0 0 1 1 1 0 1 0 1 1 1 1 0 1 1
+ 0 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 0 1 0 0 1 1
+ 0 1 1 1 0 0 1 1 0 1 1]
+train acc :  0.573171 validation acc :  0.5 train_cost 0.709807
+train acc :  0.756098 validation acc :  0.5 train_cost 0.488021
+Learning Finished!! 
+
+########## Training Accuracy :  0.75 Validation Accuracy :  0.5
+########## Test Accuracy:  0.75
+Number of Class : 2
+[1 0 0 0 1 1 0 0 1 0 0 0 1 1 0 0 1 0 0 1 0 0 0 1 0 1 0 1 0 1 0 0 0 0 0 1 1
+ 0 0 1 1 0 1 1 1 1 0 1 0 0 0 1 0 0 0 1 1 1 0 0 1 0 0 1 0 1 1 0 0 0 1 1 1 0
+ 1 1 1 1 1 0 0 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 1 0 1 0 0 0 1 0 1 1
+ 0 1 0 0 0 1 0 0 0 1 1 1 1 0 0 1 1 1 0 1 0 1 0 0 1 0 0 0 0 0 1 1 1 0 0 0 1
+ 0 1 0 0 0 1 1 0 1 1 1 0 0 1 0 0 0 1 1 0 0 0 1 1 1 1 0 0 0 1 1 0 1 0 0 0 1
+ 0 1 1 0 0 0 1 0 0 0 1]
+train acc :  0.573171 validation acc :  0.5 train_cost 1.95037
+Learning Finished!! 
+
+########## Training Accuracy :  0.432927 Validation Accuracy :  0.5625
+########## Test Accuracy:  0.5
+Number of Class : 2
+[1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 0 1 1 1 1 1 1]
+train acc :  0.573171 validation acc :  0.5625 train_cost 0.683979
+Learning Finished!! 
+
+########## Training Accuracy :  0.573171 Validation Accuracy :  0.5625
+########## Test Accuracy:  0.5
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.579268 validation acc :  0.5 train_cost 0.721731
+train acc :  0.792683 validation acc :  0.5 train_cost 0.515784
+Learning Finished!! 
+
+########## Training Accuracy :  0.75 Validation Accuracy :  0.5625
+########## Test Accuracy:  0.6875
+Number of Class : 2
+[0 0 0 0 0 1 1 0 0 0 0 0 1 1 0 0 1 0 0 1 0 0 0 1 0 1 0 1 1 1 0 0 0 0 0 1 1
+ 0 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 0 1 0 1 0
+ 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 1 0 1 1
+ 0 0 0 0 0 1 1 0 0 1 1 1 1 0 0 1 0 1 0 0 0 1 0 0 1 1 0 0 0 0 0 1 1 0 0 0 0
+ 0 1 0 0 0 1 0 1 1 1 1 0 0 0 0 0 1 1 1 0 1 0 0 0 1 0 1 0 0 0 1 1 1 0 0 0 1
+ 0 1 0 0 0 0 1 0 0 0 0]
+train acc :  0.573171 validation acc :  0.5 train_cost 0.682957
+Learning Finished!! 
+
+########## Training Accuracy :  0.646341 Validation Accuracy :  0.75
+########## Test Accuracy:  0.5
+Number of Class : 2
+[0 0 0 0 0 1 0 0 0 0 0 1 1 1 0 0 0 1 0 0 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 1
+ 0 0 0 1 1 1 0 1 0 0 1 1 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0
+ 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 1 1 0 1 1
+ 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 0 1 0 1 0 0 1 0 0 0 1 0 0 1 1 0 0 0 0
+ 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 0 1 1 1 0 0 0 0 1 1 0 1 0 0 0 1 0 0 0 0 0 0
+ 0 0 1 0 0 0 0 0 0 0 0]
+train acc :  0.554878 validation acc :  0.5 train_cost 0.670595
+Learning Finished!! 
+
+########## Training Accuracy :  0.658537 Validation Accuracy :  0.4375
+########## Test Accuracy:  0.6875
+Number of Class : 2
+[0 0 1 0 0 1 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0
+ 0 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1
+ 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 1 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.609756 validation acc :  0.5625 train_cost 0.649258
+Learning Finished!! 
+
+########## Training Accuracy :  0.609756 Validation Accuracy :  0.5625
+########## Test Accuracy:  0.5
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 1 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 1 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.573171 validation acc :  0.5 train_cost 0.788668
+train acc :  0.658537 validation acc :  0.5 train_cost 0.62713
+Learning Finished!! 
+
+########## Training Accuracy :  0.652439 Validation Accuracy :  0.5
+########## Test Accuracy:  0.625
+Number of Class : 2
+[1 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0
+ 0 0 1 0 1 1 0 0 1 1 1 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0
+ 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1
+ 0 0 0 0 0 1 1 0 0 1 0 1 1 0 0 1 0 0 0 1 0 0 0 0 1 0 0 0 0 0 1 1 1 0 0 0 1
+ 0 1 0 0 1 1 1 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 1 0 1 0 0 0 1
+ 0 0 0 0 0 0 1 0 0 0 0]
+train acc :  0.573171 validation acc :  0.5 train_cost 0.694684
+Learning Finished!! 
+
+########## Training Accuracy :  0.658537 Validation Accuracy :  0.5625
+########## Test Accuracy:  0.5
+Number of Class : 2
+[0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 1 0 0 0 0 0 1 0 0 0 0
+ 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0
+ 0 1 0 0 0 1 0 0 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.420732 validation acc :  0.5 train_cost 0.730024
+Learning Finished!! 
+
+########## Training Accuracy :  0.560976 Validation Accuracy :  0.375
+########## Test Accuracy:  0.5
+Number of Class : 2
+[1 0 1 0 0 0 0 1 1 0 0 0 1 1 1 0 0 0 0 0 1 1 1 1 0 0 0 1 0 1 0 1 0 1 0 0 0
+ 0 0 0 1 0 0 0 1 1 1 0 0 1 0 0 1 1 0 1 1 0 0 0 0 0 0 1 1 1 1 0 1 0 1 0 1 1
+ 0 1 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0 1 0 0 1 1 0 0
+ 0 1 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 0 0 1 1 1 0 0 0 0 0 0 1 0 1 0 1 0 1 1 1
+ 1 0 0 0 1 1 1 1 0 1 1 0 0 1 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0
+ 0 1 0 0 0 0 1 1 0 0 1]
+train acc :  0.573171 validation acc :  0.5 train_cost 0.811416
+Learning Finished!! 
+
+########## Training Accuracy :  0.670732 Validation Accuracy :  0.625
+########## Test Accuracy:  0.4375
+Number of Class : 2
+[0 0 0 0 1 1 0 0 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 1
+ 0 0 1 1 1 1 0 0 0 0 1 0 0 0 1 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 1 0
+ 0 0 0 0 0 1 1 0 0 1 1 0 0 0 1 1 0 1 0 1 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0
+ 0 1 0 0 0 1 0 1 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 1 1 0 1 0 0 0 1 0 1 0 0 0 0
+ 0 1 1 0 0 0 0 0 0 0 1]
+train acc :  0.432927 validation acc :  0.5 train_cost 0.748345
+Learning Finished!! 
+
+########## Training Accuracy :  0.676829 Validation Accuracy :  0.6875
+########## Test Accuracy:  0.5625
+Number of Class : 2
+[1 0 0 1 0 1 1 1 0 0 0 0 1 1 0 0 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 0 0 0 1 1
+ 0 0 1 0 1 1 1 1 1 0 1 0 0 0 1 0 1 0 0 1 1 0 0 1 0 0 1 0 1 1 0 0 1 0 0 1 0
+ 1 1 1 1 1 0 0 0 0 0 0 0 1 0 0 1 1 0 0 0 1 0 0 1 1 0 0 0 0 0 0 0 0 1 0 1 1
+ 0 1 1 1 0 1 1 0 0 1 0 1 0 0 1 1 1 0 0 1 0 1 0 0 1 1 0 0 1 0 0 1 1 0 0 0 0
+ 0 1 0 0 0 1 0 1 1 1 1 0 0 1 0 0 1 1 1 0 0 0 1 1 1 1 1 0 0 1 1 0 1 0 0 0 1
+ 0 1 1 0 0 1 0 0 0 0 1]
+train acc :  0.573171 validation acc :  0.5 train_cost 0.778527
+train acc :  0.743902 validation acc :  0.5625 train_cost 0.519494
+Learning Finished!! 
+
+########## Training Accuracy :  0.695122 Validation Accuracy :  0.625
+########## Test Accuracy:  0.6875
+Number of Class : 2
+[1 0 0 0 0 1 1 0 0 0 1 1 1 1 1 0 0 0 0 1 0 0 0 1 0 1 0 1 1 0 0 0 0 0 0 1 1
+ 0 0 1 1 1 1 0 1 1 0 1 0 0 0 1 0 1 0 1 1 1 0 0 1 0 0 1 0 1 1 0 0 1 1 0 1 0
+ 1 1 1 1 1 0 0 1 0 0 0 0 0 0 0 1 1 0 0 0 1 0 0 1 1 0 0 1 0 1 0 0 0 1 0 1 1
+ 0 1 0 0 0 1 0 0 1 1 1 1 0 0 0 1 1 1 0 1 0 1 0 0 1 0 0 0 1 0 0 1 1 1 0 1 1
+ 0 1 0 0 1 1 1 1 1 1 1 0 0 1 1 0 1 1 1 1 0 0 1 1 1 1 1 0 0 1 1 0 1 0 0 1 1
+ 0 1 1 0 0 0 1 1 0 0 1]
+train acc :  0.573171 validation acc :  0.5 train_cost 0.860978
+train acc :  0.707317 validation acc :  0.5625 train_cost 0.605218
+Learning Finished!! 
+
+########## Training Accuracy :  0.573171 Validation Accuracy :  0.5
+########## Test Accuracy:  0.5
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.573171 validation acc :  0.5 train_cost 0.759617
+Learning Finished!! 
+
+########## Training Accuracy :  0.689024 Validation Accuracy :  0.5
+########## Test Accuracy:  0.625
+Number of Class : 2
+[1 0 0 0 0 1 0 0 0 1 1 1 1 1 0 1 1 1 0 1 0 0 0 1 0 1 0 1 0 1 0 0 1 0 1 1 1
+ 0 0 1 1 0 1 0 1 1 0 1 0 0 1 1 0 1 0 1 1 1 0 0 1 1 0 1 0 0 0 0 0 0 1 0 1 0
+ 1 1 1 1 1 0 0 1 1 0 0 0 0 0 0 1 1 0 0 0 1 0 0 1 1 0 0 1 0 1 0 1 1 0 0 1 1
+ 0 0 1 1 0 1 1 0 0 1 1 1 1 0 1 1 1 1 0 1 0 1 0 0 1 0 0 0 1 1 1 1 1 0 0 0 0
+ 0 1 1 0 1 1 1 1 1 1 1 0 0 1 1 0 1 1 1 1 1 1 1 1 1 0 1 0 0 1 1 1 1 0 0 0 1
+ 1 1 1 0 0 0 1 1 0 1 1]
+train acc :  0.52439 validation acc :  0.5625 train_cost 0.691427
+Learning Finished!! 
+
+########## Training Accuracy :  0.52439 Validation Accuracy :  0.5625
+########## Test Accuracy:  0.4375
+Number of Class : 2
+[1 0 0 1 1 1 1 1 0 0 1 0 1 0 1 0 0 0 1 1 1 1 0 0 0 1 1 1 1 0 0 1 0 0 0 1 0
+ 0 0 1 1 0 1 1 0 1 1 1 0 0 0 1 0 1 0 0 1 1 1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0
+ 0 0 0 1 1 1 0 1 0 0 1 0 0 1 0 0 0 1 1 1 1 0 0 1 1 0 0 0 1 1 0 1 0 1 0 1 0
+ 0 1 1 1 1 0 0 1 0 1 1 0 1 0 0 1 1 0 0 1 0 1 0 1 0 0 0 0 1 0 0 1 1 1 1 0 0
+ 0 1 1 1 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 1 0 0 1 1 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 0 0 1 0 1 1 0 1 1]
+train acc :  0.573171 validation acc :  0.5 train_cost 0.712004
+Learning Finished!! 
+
+########## Training Accuracy :  0.573171 Validation Accuracy :  0.6875
+########## Test Accuracy:  0.5
+Number of Class : 2
+[0 0 0 0 0 1 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 1 1 0 1 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0
+ 0 0 0 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 1 1 0 0 1 0]
+train acc :  0.426829 validation acc :  0.5 train_cost 0.80709
+Learning Finished!! 
+
+########## Training Accuracy :  0.689024 Validation Accuracy :  0.625
+########## Test Accuracy:  0.6875
+Number of Class : 2
+[1 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 1 0 1 1 0 0 0 0 0 1
+ 0 0 1 0 0 1 1 1 1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 0 0 1 0 1 1 0 0 1 1 0 0 1
+ 1 1 1 1 1 0 0 0 0 0 0 0 1 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0
+ 0 1 0 0 0 1 1 0 0 1 1 1 1 0 0 1 1 1 0 0 0 1 0 0 1 1 1 0 1 0 1 1 1 0 0 0 1
+ 0 1 0 1 1 1 1 1 1 1 0 0 0 0 0 0 0 1 1 0 0 1 1 0 1 1 1 0 0 1 1 0 0 1 0 0 1
+ 1 0 1 0 0 0 0 0 0 0 0]
+train acc :  0.579268 validation acc :  0.5 train_cost 0.667149
+train acc :  0.853659 validation acc :  0.5625 train_cost 0.359402
+Learning Finished!! 
+
+########## Training Accuracy :  0.743902 Validation Accuracy :  0.625
+########## Test Accuracy:  0.625
+Number of Class : 2
+[1 0 0 0 1 1 1 0 0 0 0 1 1 1 0 0 1 0 0 1 0 1 0 0 0 1 0 1 1 1 0 0 0 0 0 1 1
+ 0 0 1 1 0 1 1 1 1 0 1 0 0 0 1 0 1 0 1 1 1 0 1 1 0 0 1 0 1 1 0 0 0 1 0 1 1
+ 1 1 1 1 1 0 0 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 1 0 0 1 0 1 0 0 1 1 0 1 1
+ 0 1 0 0 0 1 1 0 1 1 1 1 1 0 1 1 1 1 0 1 0 1 0 0 1 0 0 0 1 0 0 1 1 0 0 1 0
+ 0 1 1 0 0 1 1 1 1 1 1 0 0 1 1 0 1 1 1 1 0 0 1 1 1 1 1 0 0 1 1 1 1 1 0 0 1
+ 0 1 1 0 0 0 1 0 0 0 1]
+train acc :  0.579268 validation acc :  0.5 train_cost 0.683462
+train acc :  0.713415 validation acc :  0.5 train_cost 0.606744
+Learning Finished!! 
+
+########## Training Accuracy :  0.676829 Validation Accuracy :  0.5625
+########## Test Accuracy:  0.5625
+Number of Class : 2
+[1 0 0 0 1 1 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 1 0
+ 0 0 1 1 1 1 0 0 1 0 1 0 0 0 1 0 0 0 0 1 1 0 1 1 0 0 1 0 1 0 0 0 0 0 0 0 0
+ 1 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 1 0 0 1 0 0 0 1 0 1 1
+ 0 1 0 1 1 1 1 0 0 1 1 0 0 0 0 0 1 0 0 1 0 1 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0
+ 0 1 0 0 0 1 0 0 1 1 0 0 0 1 1 0 1 1 1 0 0 0 0 1 1 1 1 0 0 0 1 0 1 0 0 0 1
+ 0 1 1 0 0 0 0 0 0 0 0]
+train acc :  0.573171 validation acc :  0.5 train_cost 0.702496
+Learning Finished!! 
+
+########## Training Accuracy :  0.621951 Validation Accuracy :  0.5625
+########## Test Accuracy:  0.5625
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0
+ 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0
+ 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 1 1 0 0 0 0
+ 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0
+ 0 1 0 0 0 0 0 0 0 0 0]
+train acc :  0.548781 validation acc :  0.375 train_cost 0.682157
+train acc :  0.670732 validation acc :  0.5625 train_cost 0.651357
+train acc :  0.707317 validation acc :  0.5625 train_cost 0.588524
+Learning Finished!! 
+
+########## Training Accuracy :  0.707317 Validation Accuracy :  0.5625
+########## Test Accuracy:  0.75
+Number of Class : 2
+[0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 1 0 1 1 1 0 0 0 0 0 1 1
+ 0 0 1 1 0 1 1 0 1 0 1 0 0 0 1 0 1 0 0 1 1 0 0 1 0 0 1 0 1 1 0 0 0 1 0 0 0
+ 1 0 1 1 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 1 1 0 1 1
+ 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 1 1 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0
+ 0 1 0 0 0 1 0 1 1 1 0 0 0 0 0 0 0 1 1 1 0 0 1 0 1 1 0 0 0 1 1 0 0 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.554878 validation acc :  0.4375 train_cost 0.675663
+Learning Finished!! 
+
+########## Training Accuracy :  0.554878 Validation Accuracy :  0.4375
+########## Test Accuracy:  0.4375
+Number of Class : 2
+[0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0
+ 0 1 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.567073 validation acc :  0.5 train_cost 0.69466
+train acc :  0.719512 validation acc :  0.375 train_cost 0.626976
+Learning Finished!! 
+
+########## Training Accuracy :  0.682927 Validation Accuracy :  0.5
+########## Test Accuracy:  0.25
+Number of Class : 2
+[0 0 0 0 0 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 1
+ 0 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 1 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0
+ 0 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 0 1 1 0 0 1 0 0 1 1 1 0 0 1 0 0 1 1 1 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 0
+ 0 0 0 0 0 0 1 0 0 0 0]
+train acc :  0.432927 validation acc :  0.4375 train_cost 0.71327
+train acc :  0.658537 validation acc :  0.5 train_cost 0.648125
+train acc :  0.695122 validation acc :  0.5625 train_cost 0.60994
+Learning Finished!! 
+
+########## Training Accuracy :  0.695122 Validation Accuracy :  0.5
+########## Test Accuracy:  0.5625
+Number of Class : 2
+[0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0
+ 0 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 1 0
+ 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 1 0 0 1 0 0 0 0 0 0 1 1 0 0 0 1
+ 0 1 0 0 0 1 0 1 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 1 1 0 1 0 0 1 1 0 1 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.567073 validation acc :  0.5625 train_cost 0.694371
+train acc :  0.646341 validation acc :  0.75 train_cost 0.638415
+Learning Finished!! 
+
+########## Training Accuracy :  0.658537 Validation Accuracy :  0.75
+########## Test Accuracy:  0.4375
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0
+ 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0
+ 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0
+ 0 0 1 0 0 0 0 0 0 0 0]
+train acc :  0.573171 validation acc :  0.5 train_cost 1.2376
+train acc :  0.658537 validation acc :  0.625 train_cost 0.612003
+Learning Finished!! 
+
+########## Training Accuracy :  0.658537 Validation Accuracy :  0.625
+########## Test Accuracy:  0.375
+Number of Class : 2
+[0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0
+ 0 0 0 1 0 1 1 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 1 0
+ 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0
+ 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 0 1 0 1 0 0 0 0 1 0 1 1 0 0 0 1 0 1 0 0 0 0
+ 0 1 0 0 0 0 0 0 0 0 1]
+train acc :  0.426829 validation acc :  0.5 train_cost 0.75485
+train acc :  0.798781 validation acc :  0.5 train_cost 0.462377
+Learning Finished!! 
+
+########## Training Accuracy :  0.707317 Validation Accuracy :  0.625
+########## Test Accuracy:  0.5
+Number of Class : 2
+[1 0 0 0 1 1 1 1 1 1 1 0 1 1 0 0 0 0 0 1 1 1 0 1 0 1 0 1 0 1 1 0 1 0 0 1 1
+ 0 0 1 1 0 1 1 1 1 1 1 0 0 0 1 0 1 0 1 1 1 0 0 1 0 0 1 0 1 1 0 0 1 1 0 1 1
+ 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 1 0 1 1 0 1 1 0 1 1
+ 0 1 0 0 0 1 1 0 1 1 1 1 1 0 0 1 1 1 0 1 0 0 0 0 1 1 0 0 1 0 1 1 1 1 0 1 0
+ 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 0 1 1 1 1 0 1 1 1 1 1 0 0 0 1 1 0 1 1 0 0 1
+ 0 1 1 0 0 0 1 1 0 0 1]
+train acc :  0.585366 validation acc :  0.4375 train_cost 0.673704
+train acc :  0.756098 validation acc :  0.5 train_cost 0.482602
+Learning Finished!! 
+
+########## Training Accuracy :  0.676829 Validation Accuracy :  0.5625
+########## Test Accuracy:  0.625
+Number of Class : 2
+[1 0 0 0 0 1 1 0 0 0 1 1 1 1 1 0 0 0 0 1 0 0 0 0 0 1 0 1 1 0 0 0 1 0 0 1 1
+ 0 0 1 1 0 1 0 0 1 0 1 0 1 0 1 0 1 0 0 1 0 0 0 1 0 0 0 0 1 1 0 0 1 1 0 1 0
+ 1 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 1 1 0 0 0 0 1 0 0 1 1 0 1 1
+ 0 1 0 0 0 1 0 0 0 1 1 1 0 0 0 1 1 1 0 1 0 1 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0
+ 0 1 0 0 0 1 1 0 1 1 0 0 0 0 1 0 1 1 1 1 0 0 0 1 1 1 1 0 0 0 1 0 1 0 0 0 0
+ 0 1 1 0 0 0 0 0 0 0 1]
+train acc :  0.426829 validation acc :  0.5 train_cost 6.58485
+train acc :  0.621951 validation acc :  0.625 train_cost 0.639318
+Learning Finished!! 
+
+########## Training Accuracy :  0.707317 Validation Accuracy :  0.625
+########## Test Accuracy:  0.6875
+Number of Class : 2
+[0 0 0 1 1 1 0 1 0 0 0 1 1 1 0 0 1 1 1 1 0 1 0 0 1 1 0 1 1 1 1 0 0 0 0 1 1
+ 0 0 1 1 1 1 1 1 1 0 1 0 0 0 1 0 1 0 1 1 1 0 0 1 0 0 1 0 1 1 0 0 1 1 0 1 0
+ 1 1 1 1 1 0 0 1 0 0 0 0 1 0 0 1 1 1 0 0 1 0 0 1 0 0 0 1 0 1 0 0 1 1 0 1 1
+ 0 1 0 1 0 1 1 0 1 1 1 1 0 0 0 1 1 1 0 1 0 1 0 0 1 0 0 0 1 0 0 1 1 0 0 1 1
+ 0 1 0 0 0 1 1 1 1 1 1 0 0 1 1 0 1 1 1 0 0 0 1 1 1 1 1 0 0 1 1 0 1 0 0 1 1
+ 1 1 0 0 0 1 0 0 0 0 1]
+train acc :  0.573171 validation acc :  0.5 train_cost 0.801272
+train acc :  0.786585 validation acc :  0.8125 train_cost 0.414095
+Learning Finished!! 
+
+########## Training Accuracy :  0.823171 Validation Accuracy :  0.8125
+########## Test Accuracy:  0.75
+Number of Class : 2
+[1 1 0 0 0 1 1 0 1 1 1 0 1 0 0 0 1 1 0 1 1 1 0 1 0 1 1 0 1 1 0 1 0 0 1 1 1
+ 1 1 1 1 0 1 0 1 0 0 1 0 0 0 1 0 1 0 1 1 1 0 0 1 0 0 1 0 1 1 0 1 0 1 1 1 0
+ 1 1 1 1 1 0 0 0 1 0 0 0 1 0 0 1 1 0 0 1 0 0 1 1 1 0 1 1 0 1 0 0 1 1 1 1 1
+ 0 1 0 0 0 1 1 0 1 1 1 1 1 0 0 1 1 1 0 1 0 1 0 0 1 1 0 0 0 1 1 1 1 1 0 1 1
+ 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 0 1 0 1 0 1
+ 1 1 1 1 0 1 1 0 0 0 1]
+train acc :  0.676829 validation acc :  0.5625 train_cost 0.627931
+Learning Finished!! 
+
+########## Training Accuracy :  0.75 Validation Accuracy :  0.75
+########## Test Accuracy:  0.75
+Number of Class : 2
+[1 0 0 0 0 1 1 1 1 1 0 0 1 1 0 0 1 1 0 1 1 0 0 0 0 1 0 1 0 1 1 0 0 0 0 1 1
+ 0 0 0 1 0 1 0 1 1 0 1 0 0 0 1 0 1 0 1 1 1 0 0 1 0 0 1 0 1 0 0 0 0 1 1 1 1
+ 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 1 0 1 0 1 0 0 1 0 1 1 0 0 1 1 1 1
+ 1 1 0 0 0 1 1 0 1 1 1 1 1 0 0 1 1 1 0 1 0 1 0 0 1 1 0 0 0 1 0 1 1 0 0 1 1
+ 0 1 0 0 1 1 1 1 1 1 1 0 0 1 1 0 1 1 1 1 1 0 1 1 1 1 1 0 0 1 1 0 1 1 0 0 1
+ 0 1 1 0 0 0 1 0 0 0 0]
+train acc :  0.512195 validation acc :  0.5625 train_cost 0.690207
+Learning Finished!! 
+
+########## Training Accuracy :  0.707317 Validation Accuracy :  0.4375
+########## Test Accuracy:  0.5
+Number of Class : 2
+[0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 0
+ 0 0 1 1 0 1 0 0 1 0 1 0 0 0 1 0 1 0 0 1 1 0 0 0 0 0 1 0 0 1 0 0 0 1 0 1 0
+ 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 1 1
+ 0 1 0 0 0 1 0 0 0 1 1 1 0 0 0 1 0 1 0 1 0 0 0 0 1 0 0 0 0 0 1 1 1 1 0 1 0
+ 0 1 0 0 0 1 1 1 1 1 1 0 0 1 1 0 1 1 1 0 1 0 1 1 1 1 1 0 0 1 1 1 1 1 0 0 1
+ 0 1 1 0 0 0 0 0 0 0 1]
+train acc :  0.609756 validation acc :  0.4375 train_cost 0.658383
+train acc :  0.798781 validation acc :  0.5 train_cost 0.483298
+Learning Finished!! 
+
+########## Training Accuracy :  0.603659 Validation Accuracy :  0.5625
+########## Test Accuracy:  0.5625
+Number of Class : 2
+[1 0 0 0 1 1 1 1 1 0 1 1 1 1 1 0 1 0 0 1 1 1 0 1 0 1 0 1 1 1 1 0 0 0 0 1 1
+ 0 0 1 1 1 1 1 1 1 1 1 0 0 1 1 0 1 0 1 1 1 1 1 1 0 0 1 0 1 1 0 0 1 1 1 1 1
+ 1 1 1 1 1 0 0 1 0 0 1 1 1 0 0 1 1 1 1 0 1 0 0 1 1 0 0 1 1 1 1 1 1 1 1 1 1
+ 0 1 1 1 1 1 1 1 0 1 1 1 1 0 1 1 1 1 0 1 0 1 0 0 1 0 0 0 1 0 1 1 1 1 1 0 1
+ 0 1 0 0 1 1 1 1 1 1 1 0 1 1 1 0 1 1 1 0 0 1 1 1 1 1 1 0 0 1 1 1 1 1 0 1 1
+ 1 1 1 0 0 1 1 1 0 1 1]
+train acc :  0.670732 validation acc :  0.5625 train_cost 0.643792
+Learning Finished!! 
+
+########## Training Accuracy :  0.762195 Validation Accuracy :  0.625
+########## Test Accuracy:  0.6875
+Number of Class : 2
+[1 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 1 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 0
+ 0 1 0 1 0 1 0 0 1 0 1 0 0 0 1 0 1 0 1 1 1 0 0 1 0 0 1 0 1 1 0 0 1 1 0 1 0
+ 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 1 0 1 1
+ 0 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 1 1 0 1 0 1 0 0 1 1 0 0 0 0 0 1 1 0 0 0 0
+ 0 1 0 0 0 1 0 1 1 1 1 0 0 0 1 0 1 1 1 0 0 0 1 1 1 0 0 0 0 1 1 0 1 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.591463 validation acc :  0.5625 train_cost 0.669994
+train acc :  0.786585 validation acc :  0.5625 train_cost 0.443569
+Learning Finished!! 
+
+########## Training Accuracy :  0.768293 Validation Accuracy :  0.5625
+########## Test Accuracy:  0.625
+Number of Class : 2
+[1 0 0 0 0 1 0 0 1 0 0 1 1 1 1 0 0 0 0 1 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 1 0
+ 0 0 0 1 0 1 0 0 1 0 1 0 0 0 1 0 0 0 1 1 1 0 0 1 0 0 1 0 1 1 0 0 0 1 0 0 0
+ 0 0 1 1 1 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 0 1 1 0 0 1 0 1 1
+ 0 1 0 0 0 1 0 0 0 1 1 1 1 0 0 1 1 1 0 1 0 1 0 0 1 0 0 0 0 0 0 1 1 0 0 1 0
+ 0 1 0 0 0 1 1 1 1 1 1 0 0 1 1 0 1 1 1 1 0 0 1 1 1 0 0 0 0 0 1 0 1 0 0 0 0
+ 0 1 0 0 0 0 0 0 0 0 0]
+train acc :  0.573171 validation acc :  0.5 train_cost 0.847133
+train acc :  0.695122 validation acc :  0.5 train_cost 0.578556
+Learning Finished!! 
+
+########## Training Accuracy :  0.713415 Validation Accuracy :  0.5625
+########## Test Accuracy:  0.5
+Number of Class : 2
+[1 0 0 0 0 1 0 0 1 0 1 0 1 1 0 0 1 0 0 1 1 0 0 1 0 0 0 1 1 0 0 0 0 0 0 1 1
+ 0 0 1 1 0 1 0 1 0 0 1 0 0 0 1 0 1 0 1 0 1 0 0 1 0 0 0 0 0 1 0 0 1 1 0 0 0
+ 0 1 1 0 1 0 0 0 0 0 0 0 1 0 0 1 1 0 1 0 1 0 0 1 1 0 0 1 0 0 0 0 0 1 0 1 1
+ 0 1 1 0 0 1 1 0 1 1 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1 1 0 0 0 0 0 1 1 1 0 0 1
+ 0 1 0 0 1 1 1 1 1 1 1 0 0 0 0 0 1 1 1 0 1 0 0 1 1 1 1 0 0 1 1 0 1 0 0 0 0
+ 0 1 1 0 0 0 1 1 0 0 0]
+train acc :  0.615854 validation acc :  0.625 train_cost 0.666257
+train acc :  0.731707 validation acc :  0.5625 train_cost 0.607421
+Learning Finished!! 
+
+########## Training Accuracy :  0.676829 Validation Accuracy :  0.6875
+########## Test Accuracy:  0.5625
+Number of Class : 2
+[0 0 0 0 1 1 0 0 0 1 0 0 1 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 1 0 0 0 0 0 1 1
+ 0 0 0 1 1 1 1 1 0 0 1 0 0 0 1 0 1 0 1 1 1 0 0 1 0 0 1 0 1 0 0 0 0 1 0 1 0
+ 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 0 0 1 0 0 1 0 0 1 1 0 1 1 0 1 1
+ 1 0 1 0 1 1 1 0 1 1 1 0 0 0 0 1 1 0 0 0 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 0 0
+ 0 1 0 0 0 1 1 1 1 1 1 0 1 0 0 0 1 1 1 1 0 1 1 0 1 1 1 0 1 1 1 1 0 1 0 1 1
+ 1 1 1 0 0 1 0 0 0 0 1]
+train acc :  0.573171 validation acc :  0.625 train_cost 0.68287
+Learning Finished!! 
+
+########## Training Accuracy :  0.689024 Validation Accuracy :  0.5625
+########## Test Accuracy:  0.5625
+Number of Class : 2
+[1 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0
+ 0 1 1 1 1 1 0 0 1 0 1 0 1 0 1 0 0 0 0 0 1 0 0 1 0 0 1 0 1 0 0 0 0 1 0 0 0
+ 0 1 1 1 1 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 1 1
+ 0 1 0 0 0 1 0 0 0 1 1 1 0 0 0 1 0 1 0 1 0 0 0 0 1 0 0 0 1 0 0 1 1 0 0 0 0
+ 0 1 0 0 1 1 0 0 1 1 1 0 0 0 1 0 1 1 1 0 1 0 0 0 1 0 1 0 0 0 1 0 1 0 0 0 1
+ 0 0 1 0 0 0 0 0 0 0 0]
+train acc :  0.579268 validation acc :  0.5 train_cost 0.671967
+Learning Finished!! 
+
+########## Training Accuracy :  0.615854 Validation Accuracy :  0.625
+########## Test Accuracy:  0.5625
+Number of Class : 2
+[1 0 0 1 1 1 1 1 0 1 1 0 1 1 1 0 0 0 0 1 0 1 0 1 0 1 0 1 1 1 0 0 0 0 0 1 1
+ 0 0 1 1 0 1 1 1 1 0 1 0 0 0 1 0 1 0 1 1 1 0 1 0 1 1 0 0 0 1 0 0 0 0 0 0 0
+ 0 0 1 1 1 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 1 1 0 1 1 0 1 0 1 1 0 1 1 1
+ 0 0 1 0 1 1 1 0 0 1 1 0 1 0 0 1 1 0 0 1 0 1 0 0 1 1 0 0 1 0 0 1 1 0 1 0 1
+ 0 1 0 0 1 1 1 0 1 1 1 0 0 1 1 0 1 1 1 0 1 1 0 1 1 1 0 0 0 0 1 1 1 0 0 1 1
+ 0 1 1 0 0 1 1 1 0 1 1]
+train acc :  0.573171 validation acc :  0.5 train_cost 0.686275
+train acc :  0.713415 validation acc :  0.5 train_cost 0.60019
+Learning Finished!! 
+
+########## Training Accuracy :  0.756098 Validation Accuracy :  0.625
+########## Test Accuracy:  0.75
+Number of Class : 2
+[0 0 0 0 0 1 1 0 0 1 0 0 1 1 0 0 0 0 0 0 0 1 0 1 0 1 0 1 1 0 0 0 0 0 0 1 1
+ 0 0 0 1 0 1 0 1 0 0 1 0 0 0 1 0 0 0 0 1 1 0 0 1 0 0 1 0 1 0 0 0 0 1 0 0 0
+ 1 1 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 1 0 1 0 0 0 1 0 1 1
+ 0 1 0 0 0 1 1 0 0 1 1 1 1 0 0 1 1 0 0 1 0 1 0 0 1 0 0 0 0 0 0 1 1 1 0 0 1
+ 0 1 0 0 0 1 0 0 1 1 0 0 0 0 0 0 0 1 1 1 0 0 1 1 1 0 1 0 0 1 1 0 1 0 0 0 0
+ 0 1 1 0 0 0 1 0 0 0 0]
+train acc :  0.548781 validation acc :  0.5625 train_cost 0.691918
+Learning Finished!! 
+
+########## Training Accuracy :  0.567073 Validation Accuracy :  0.5
+########## Test Accuracy:  0.5625
+Number of Class : 2
+[0 0 0 1 0 1 1 0 1 0 0 1 1 1 0 0 1 1 1 1 1 1 1 1 0 1 1 1 1 1 0 1 1 0 1 1 0
+ 0 0 1 1 1 1 1 1 0 1 1 1 1 1 1 0 0 0 0 1 1 0 1 1 0 0 1 0 1 1 0 0 1 1 0 1 1
+ 1 0 1 1 1 0 0 1 0 1 1 1 1 1 0 1 1 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 1 1 1
+ 0 0 1 0 0 1 1 1 1 1 1 1 1 0 1 0 0 0 0 0 0 1 0 0 1 0 1 0 1 0 1 1 1 1 0 1 0
+ 1 0 0 1 1 1 1 1 1 1 1 0 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 0 1 1
+ 0 1 1 1 0 1 1 1 0 1 1]
+file type: new_Diff_200
+Number of Class : 2
+Number of Class : 2
+train acc :  0.493506 validation acc :  0.380952 train_cost 0.693312
+Learning Finished!! 
+
+########## Training Accuracy :  0.675325 Validation Accuracy :  0.666667
+########## Test Accuracy:  0.52381
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 1
+ 0 0 0 1 0 1 0 0 0 0 1 0 0 0 1 0 1 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0
+ 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 1 1 0 0 0 1
+ 0 1 0 0 0 1 0 1 1 1 0 0 0 0 0 0 0 1 1 1 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 2.65189
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.849409
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 19.5737
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 1.13945
+Learning Finished!! 
+
+########## Training Accuracy :  0.662338 Validation Accuracy :  0.761905
+########## Test Accuracy:  0.571429
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 0 0 0 0 0 1 1
+ 0 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 1 0 0 0 1 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0
+ 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+ 0 1 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0
+ 0 1 0 0 0 1 0 0 1 1 0 0 0 0 0 0 0 1 1 0 0 0 0 1 1 1 0 0 0 0 1 0 1 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.82772
+Learning Finished!! 
+
+########## Training Accuracy :  0.824675 Validation Accuracy :  0.761905
+########## Test Accuracy:  0.571429
+Number of Class : 2
+[0 0 0 0 0 1 0 0 0 0 1 0 1 0 0 0 1 0 0 1 0 0 0 0 0 1 0 1 0 1 0 0 0 0 0 1 1
+ 0 0 0 1 0 1 0 1 0 0 1 0 0 0 1 0 0 0 1 1 1 0 0 1 0 0 1 0 1 0 0 0 0 1 0 0 0
+ 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 1 0 1 0 0 1 1 0 1 1
+ 0 1 0 0 0 1 0 0 0 0 1 0 1 0 0 1 1 1 0 1 0 1 0 0 1 0 0 0 1 0 0 1 1 0 0 0 1
+ 0 1 0 0 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 1 0 1 1 0 0 0 1 1 0 1 0 0 0 1
+ 0 0 0 0 0 1 1 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 6.18329
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 1.8628
+train acc :  0.785714 validation acc :  0.666667 train_cost 0.602796
+Learning Finished!! 
+
+########## Training Accuracy :  0.883117 Validation Accuracy :  0.571429
+########## Test Accuracy:  0.52381
+Number of Class : 2
+[0 0 0 0 0 1 1 0 1 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 1 0 0 1 0 0 0 0 0 1 1
+ 0 0 0 1 0 1 0 1 1 0 0 0 0 0 1 0 1 0 1 1 1 0 0 1 0 0 1 0 1 1 0 0 0 1 1 0 1
+ 0 0 1 1 0 0 0 0 1 0 0 0 1 0 0 1 1 0 0 1 0 0 0 0 1 0 0 1 0 1 1 0 0 0 0 1 1
+ 0 1 0 0 0 1 0 0 1 0 1 1 1 0 0 1 0 1 0 0 0 0 0 0 1 0 0 0 1 1 1 1 1 0 0 0 1
+ 0 1 0 0 0 1 1 1 1 1 0 0 0 0 0 0 0 1 1 1 0 0 1 0 1 0 0 0 0 1 1 0 1 0 1 0 1
+ 1 0 0 0 0 0 1 0 0 0 0]
+train acc :  0.448052 validation acc :  0.285714 train_cost 0.795436
+Learning Finished!! 
+
+########## Training Accuracy :  0.902597 Validation Accuracy :  0.619048
+########## Test Accuracy:  0.666667
+Number of Class : 2
+[0 1 0 0 0 1 0 0 1 1 0 0 1 0 0 0 1 0 0 1 0 0 1 1 0 1 1 1 0 1 0 0 0 0 0 1 1
+ 0 1 0 1 0 1 0 1 0 0 1 0 0 0 1 0 1 0 1 1 1 0 0 1 0 0 1 0 1 0 0 0 0 1 1 0 1
+ 1 0 1 1 1 0 0 0 1 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 1 1 0 1 1
+ 0 1 0 0 0 1 0 0 1 0 1 1 1 0 0 1 1 1 0 0 0 1 0 0 1 1 0 0 1 1 1 1 1 0 0 0 1
+ 0 1 0 0 1 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 1 0 1 1 0 0 0 1 1 0 1 0 1 0 1
+ 1 1 0 0 0 0 1 0 0 0 0]
+train acc :  0.461039 validation acc :  0.285714 train_cost 0.769909
+Learning Finished!! 
+
+########## Training Accuracy :  0.61039 Validation Accuracy :  0.761905
+########## Test Accuracy:  0.52381
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1
+ 0 0 0 0 0 1 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 1.07816
+train acc :  0.88961 validation acc :  0.571429 train_cost 0.277635
+Learning Finished!! 
+
+########## Training Accuracy :  0.831169 Validation Accuracy :  0.666667
+########## Test Accuracy:  0.571429
+Number of Class : 2
+[0 0 0 0 0 1 0 0 1 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 1
+ 1 0 0 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 1 1 0 0 1 0 0 1 0 1 1 0 0 0 0 0 0 1
+ 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 1
+ 0 1 0 0 0 1 0 0 0 0 1 0 1 0 0 0 1 1 0 0 0 1 0 0 1 0 0 0 0 0 0 1 1 0 0 0 1
+ 0 1 0 0 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 1 0 1 0 0 0 0 1 1 0 1 0 1 0 1
+ 1 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.841434
+Learning Finished!! 
+
+########## Training Accuracy :  0.584416 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.52381
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 0.829714
+Learning Finished!! 
+
+########## Training Accuracy :  0.714286 Validation Accuracy :  0.666667
+########## Test Accuracy:  0.571429
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 1
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1
+ 0 1 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0 0
+ 1 0 0 0 0 0 1 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.697957
+Learning Finished!! 
+
+########## Training Accuracy :  0.681818 Validation Accuracy :  0.761905
+########## Test Accuracy:  0.619048
+Number of Class : 2
+[0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 1 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 1
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.590909 validation acc :  0.714286 train_cost 0.677015
+Learning Finished!! 
+
+########## Training Accuracy :  0.668831 Validation Accuracy :  0.666667
+########## Test Accuracy:  0.52381
+Number of Class : 2
+[0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 1 1 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0
+ 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0
+ 0 1 0 0 0 1 0 1 1 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0 0 1 0 0 0 0 1 0 1 0 0 0 0
+ 1 0 0 0 0 0 1 0 0 0 0]
+train acc :  0.461039 validation acc :  0.285714 train_cost 0.838907
+train acc :  0.818182 validation acc :  0.52381 train_cost 0.516589
+Learning Finished!! 
+
+########## Training Accuracy :  0.662338 Validation Accuracy :  0.666667
+########## Test Accuracy:  0.47619
+Number of Class : 2
+[0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+ 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.745733
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.551948 validation acc :  0.47619 train_cost 0.700358
+train acc :  0.805195 validation acc :  0.52381 train_cost 0.426637
+Learning Finished!! 
+
+########## Training Accuracy :  0.75974 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.571429
+Number of Class : 2
+[0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0
+ 0 0 1 0 0 1 0 0 0 0 1 0 0 0 1 0 1 0 0 0 1 0 0 1 0 0 1 0 1 1 0 0 0 1 0 0 1
+ 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 1
+ 0 1 0 0 0 1 0 0 0 0 1 1 1 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0
+ 0 1 0 0 1 1 1 1 1 1 0 0 0 0 0 0 1 1 1 0 0 0 1 0 1 1 0 0 0 1 1 0 1 0 0 0 1
+ 1 0 0 0 0 0 1 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 0.751029
+train acc :  0.688312 validation acc :  0.714286 train_cost 0.67153
+train acc :  0.902597 validation acc :  0.619048 train_cost 0.234689
+Learning Finished!! 
+
+########## Training Accuracy :  0.831169 Validation Accuracy :  0.666667
+########## Test Accuracy:  0.571429
+Number of Class : 2
+[0 0 0 0 0 1 1 0 0 1 0 0 1 1 0 0 1 0 0 1 0 0 1 0 0 1 0 1 1 1 0 0 0 0 0 1 1
+ 0 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 1 1 0 0 1 0 0 1 0 1 1 0 0 0 1 0 0 1
+ 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 0 0 1 1
+ 0 1 0 0 0 1 0 0 0 0 1 1 1 0 0 1 1 1 0 1 0 1 0 0 1 1 0 0 1 1 0 1 1 0 0 1 1
+ 0 1 0 0 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 1 0 1 1 0 0 0 1 1 0 1 0 0 0 1
+ 1 0 0 0 0 0 1 0 0 0 1]
+train acc :  0.558442 validation acc :  0.714286 train_cost 4.04583
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 1.38298
+train acc :  0.824675 validation acc :  0.428571 train_cost 0.414483
+Learning Finished!! 
+
+########## Training Accuracy :  0.831169 Validation Accuracy :  0.571429
+########## Test Accuracy:  0.619048
+Number of Class : 2
+[1 0 0 0 0 1 1 0 1 0 0 0 1 1 1 0 1 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1 0 0 1 1
+ 0 0 1 1 0 1 0 0 0 0 0 0 0 0 1 0 1 0 0 1 1 0 0 1 0 0 1 0 1 0 0 0 0 1 1 0 0
+ 1 0 1 0 1 0 0 0 0 0 0 0 1 0 0 1 1 0 0 0 1 0 0 1 1 0 0 1 0 1 0 0 0 1 0 1 1
+ 0 1 0 0 0 1 0 0 1 1 1 1 1 0 0 1 1 1 0 0 0 1 0 0 1 1 0 0 1 0 0 1 1 0 0 0 1
+ 0 1 0 0 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 1 1 1 0 0 0 0 1 1 0 1 0 0 0 1
+ 0 0 1 0 0 0 1 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 1.25392
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 1.27977
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 1.64675
+train acc :  0.603896 validation acc :  0.714286 train_cost 0.616665
+Learning Finished!! 
+
+########## Training Accuracy :  0.753247 Validation Accuracy :  0.761905
+########## Test Accuracy:  0.619048
+Number of Class : 2
+[0 0 0 0 0 0 1 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 1 0 1 0 0 0 0 0 0 0 0
+ 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 1
+ 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 1 1 1 0 1 0 0 0 0 0 0 0 1 1 1 0 0 1 0 1 0 0 0 0 1 1 0 1 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.61039 validation acc :  0.52381 train_cost 0.676362
+train acc :  0.961039 validation acc :  0.571429 train_cost 0.1905
+Learning Finished!! 
+
+########## Training Accuracy :  0.733766 Validation Accuracy :  0.761905
+########## Test Accuracy:  0.571429
+Number of Class : 2
+[0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 0 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 1 0 1 0 0 0 0 0 0 0 0
+ 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 1
+ 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0
+ 0 1 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 1 1 1 0 0 0 0 1 1 0 1 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.564935 validation acc :  0.714286 train_cost 0.693062
+Learning Finished!! 
+
+########## Training Accuracy :  0.564935 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.716897
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.380952
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.636364 validation acc :  0.380952 train_cost 0.662178
+train acc :  0.571429 validation acc :  0.714286 train_cost 0.612377
+train acc :  0.811688 validation acc :  0.666667 train_cost 0.442545
+Learning Finished!! 
+
+########## Training Accuracy :  0.779221 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.47619
+Number of Class : 2
+[0 0 0 0 0 1 1 0 1 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 1
+ 0 0 1 1 0 1 1 1 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 1 0 0 0 1 1 0 1
+ 1 1 1 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 1 0 1 1 0 0 0 0 1 1
+ 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 1 0 0 0 1 0 1 1 1 0 0 0 1
+ 0 0 0 0 0 1 0 0 1 1 0 0 0 0 0 0 0 1 1 1 0 0 1 0 1 1 0 0 0 1 1 0 1 1 0 0 1
+ 0 0 0 0 0 0 1 0 0 0 0]
+train acc :  0.603896 validation acc :  0.714286 train_cost 0.664005
+Learning Finished!! 
+
+########## Training Accuracy :  0.616883 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.47619
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 0 0 0]
+train acc :  0.551948 validation acc :  0.380952 train_cost 0.681884
+Learning Finished!! 
+
+########## Training Accuracy :  0.655844 Validation Accuracy :  0.52381
+########## Test Accuracy:  0.714286
+Number of Class : 2
+[0 0 0 0 0 1 1 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 1 1 0 1 0 0 0 1 0 0 0 0 0 1 0
+ 0 0 1 1 0 1 1 0 1 0 1 1 1 0 0 0 0 0 1 0 1 1 0 1 0 0 1 0 1 0 0 0 1 0 0 0 0
+ 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 0
+ 0 1 0 0 0 1 1 0 0 0 1 1 0 0 0 0 0 1 0 1 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 1
+ 0 1 0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 1 1 1 0 0 0 1 1 0 1 0 0 0 1
+ 0 0 1 1 0 0 0 0 0 0 1]
+train acc :  0.584416 validation acc :  0.666667 train_cost 0.672088
+train acc :  0.766234 validation acc :  0.571429 train_cost 0.595161
+Learning Finished!! 
+
+########## Training Accuracy :  0.766234 Validation Accuracy :  0.619048
+########## Test Accuracy:  0.52381
+Number of Class : 2
+[0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 1 0 1 1 0 1 1 0 0 0 0 1 1 0 1 0 0 0 0 1 1
+ 1 0 0 1 0 1 0 1 0 0 1 1 0 0 1 0 0 0 1 1 1 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0
+ 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 0 1 0 0 1 1 0 1 1
+ 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 1 0 1 1 0 0 0 1 0 0 1 1 0 0 1 1
+ 0 1 0 0 0 1 0 1 1 1 0 0 0 0 0 0 1 1 1 0 0 0 1 0 1 0 0 0 0 1 1 0 1 0 0 0 1
+ 1 0 0 0 0 0 0 0 0 0 1]
+train acc :  0.525974 validation acc :  0.714286 train_cost 0.68835
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 0.715441
+Learning Finished!! 
+
+########## Training Accuracy :  0.577922 Validation Accuracy :  0.761905
+########## Test Accuracy:  0.52381
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+ 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 1 0]
+train acc :  0.571429 validation acc :  0.47619 train_cost 0.674161
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 1.70962
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 1.18332
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.448052 validation acc :  0.285714 train_cost 0.809251
+train acc :  0.707792 validation acc :  0.380952 train_cost 0.580737
+Learning Finished!! 
+
+########## Training Accuracy :  0.694805 Validation Accuracy :  0.666667
+########## Test Accuracy:  0.52381
+Number of Class : 2
+[0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 1 0 0 0 0 0
+ 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 1 0 1 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0
+ 1 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 0.822019
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.435065 validation acc :  0.285714 train_cost 0.831137
+train acc :  0.909091 validation acc :  0.619048 train_cost 0.324255
+Learning Finished!! 
+
+########## Training Accuracy :  0.844156 Validation Accuracy :  0.666667
+########## Test Accuracy:  0.47619
+Number of Class : 2
+[0 0 0 0 0 1 1 0 1 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 1
+ 0 0 0 1 0 1 0 1 0 0 1 0 0 0 1 0 0 0 1 1 1 0 0 1 0 0 1 0 1 1 0 0 0 1 0 1 1
+ 0 0 1 1 1 0 0 0 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 1 1
+ 0 1 0 0 0 1 0 0 0 0 1 1 1 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 1 1 0 1 1 0 0 0 0
+ 0 1 0 0 0 1 1 1 1 1 0 0 0 0 0 0 0 1 1 1 0 0 1 1 1 1 0 0 0 1 1 0 1 0 0 0 1
+ 1 0 0 0 0 1 1 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.759722
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.532468 validation acc :  0.380952 train_cost 0.693288
+train acc :  0.935065 validation acc :  0.666667 train_cost 0.18939
+Learning Finished!! 
+
+########## Training Accuracy :  0.772727 Validation Accuracy :  0.761905
+########## Test Accuracy:  0.52381
+Number of Class : 2
+[0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 1 0 1 0 0 0 0 0 0 1 0
+ 0 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 0 0 1 0 0 1
+ 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 0 1 0 0 0 0 0 1 1
+ 0 1 0 0 0 1 0 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 1
+ 0 1 0 0 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 0 1 1 0 0 0 0 0 1 0 1 0 0 0 0
+ 0 0 0 0 0 0 1 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.756626
+train acc :  0.772727 validation acc :  0.714286 train_cost 0.599308
+Learning Finished!! 
+
+########## Training Accuracy :  0.571429 Validation Accuracy :  0.666667
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.603896 validation acc :  0.571429 train_cost 0.666796
+train acc :  0.668831 validation acc :  0.761905 train_cost 0.613026
+train acc :  0.902597 validation acc :  0.714286 train_cost 0.3623
+Learning Finished!! 
+
+########## Training Accuracy :  0.88961 Validation Accuracy :  0.619048
+########## Test Accuracy:  0.571429
+Number of Class : 2
+[0 0 0 0 0 1 0 0 1 0 0 0 1 0 0 0 1 0 0 1 0 1 1 0 0 1 0 0 0 1 0 0 0 0 0 1 1
+ 0 0 0 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 1 1 1 0 0 1 0 0 1 0 1 1 0 0 0 1 1 0 1
+ 0 0 1 1 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 1 0 0 0 1 1 0 0 1 0 1 0 0 1 0 0 1 1
+ 0 1 0 0 0 1 0 0 0 0 1 1 1 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 1
+ 0 1 0 0 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 1 0 1 0 0 0 0 1 1 0 1 0 0 0 1
+ 0 1 0 0 0 0 1 0 0 0 0]
+train acc :  0.545455 validation acc :  0.714286 train_cost 0.706653
+Learning Finished!! 
+
+########## Training Accuracy :  0.564935 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.597403 validation acc :  0.714286 train_cost 0.674918
+Learning Finished!! 
+
+########## Training Accuracy :  0.597403 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+ 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+ 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0
+ 0 1 0 0 0 0 1 0 0 0 0]
+train acc :  0.525974 validation acc :  0.52381 train_cost 0.691479
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.597403 validation acc :  0.714286 train_cost 0.671418
+Learning Finished!! 
+
+########## Training Accuracy :  0.681818 Validation Accuracy :  0.761905
+########## Test Accuracy:  0.52381
+Number of Class : 2
+[0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 1 0 1 0 0 0 0 0 0 0 0
+ 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0 0 1 0 1 1 0 1 1 0 0 0 0 0 0 0 1 1 0 1 0 0 1
+ 0 0 1 0 0 1 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.809524 train_cost 0.684051
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.809524
+########## Test Accuracy:  0.380952
+Number of Class : 2
+[0 0 0 0 1 0 0 0 0 0 1 1 0 1 0 1 1 0 0 1 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0
+ 0 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0
+ 1 0 1 0 0 0 0 0 0 0 0 0 1 0 1 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 0 1 0
+ 0 1 1 0 1 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 1 1 0 1 0 0 1 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 1 1 0 1 1 0 0 0]
+train acc :  0.5 validation acc :  0.428571 train_cost 0.706814
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.435065 validation acc :  0.285714 train_cost 0.724293
+train acc :  0.863636 validation acc :  0.714286 train_cost 0.311899
+Learning Finished!! 
+
+########## Training Accuracy :  0.850649 Validation Accuracy :  0.666667
+########## Test Accuracy:  0.619048
+Number of Class : 2
+[0 0 0 0 0 1 0 1 1 0 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 1 0 0 0 0 0 0 0 0 1 1
+ 1 0 1 1 0 1 0 1 0 0 1 0 0 0 1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 1 0 0 1 1 1 1 1
+ 1 0 1 1 1 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 0 0 0 1 1 0 0 1 0 1 0 0 1 1 0 1 1
+ 0 1 0 0 0 1 0 0 1 0 1 0 1 0 0 0 1 1 0 1 0 1 0 0 1 1 0 0 1 0 0 1 1 0 0 0 1
+ 0 1 0 0 1 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 1 1 1 1 0 0 0 1 1 0 1 0 0 1 1
+ 1 1 0 0 0 1 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 5.54005
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 11.68
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.827045
+train acc :  0.74026 validation acc :  0.666667 train_cost 0.450959
+Learning Finished!! 
+
+########## Training Accuracy :  0.824675 Validation Accuracy :  0.619048
+########## Test Accuracy:  0.47619
+Number of Class : 2
+[0 0 0 0 0 1 1 0 0 1 0 0 1 0 1 0 1 0 0 1 1 0 1 0 0 1 1 0 1 1 1 1 0 0 0 1 1
+ 0 1 1 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 1 1 1 0 0 1 0 0 1 0 0 1 0 0 0 1 1 0 1
+ 0 0 0 1 1 0 0 0 1 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 0 0 1 0 1 1 0 0 0 0 1 1
+ 0 1 0 0 0 1 0 0 1 0 1 1 1 0 0 0 0 1 0 1 0 0 0 0 1 0 0 0 1 0 0 1 1 0 0 1 0
+ 0 1 0 1 1 1 1 1 1 1 1 0 0 0 0 0 1 1 1 1 0 0 1 1 1 0 0 0 0 1 1 0 1 0 0 0 1
+ 1 0 1 0 0 0 1 0 0 0 0]
+train acc :  0.590909 validation acc :  0.714286 train_cost 0.66645
+train acc :  0.961039 validation acc :  0.619048 train_cost 0.161107
+Learning Finished!! 
+
+########## Training Accuracy :  0.850649 Validation Accuracy :  0.809524
+########## Test Accuracy:  0.619048
+Number of Class : 2
+[0 0 0 0 0 0 1 0 1 0 0 0 1 0 0 0 1 0 0 0 0 1 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0
+ 1 1 1 0 0 1 0 1 0 0 1 0 0 0 1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 1 0 0 0 1 1 1 1
+ 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 0 0 1 1
+ 0 1 0 0 0 1 0 0 1 0 1 1 1 0 0 0 0 1 0 1 0 1 0 0 1 1 0 0 1 1 0 1 1 0 0 1 1
+ 0 1 0 0 0 1 1 1 1 0 0 0 0 0 0 0 1 1 1 1 1 0 1 0 1 1 0 0 0 1 1 0 1 0 1 0 1
+ 1 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.829007
+train acc :  0.896104 validation acc :  0.666667 train_cost 0.316971
+Learning Finished!! 
+
+########## Training Accuracy :  0.798701 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.47619
+Number of Class : 2
+[0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1
+ 0 0 1 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 1 0 1 1 0 0 0 1 0 0 0
+ 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 1 0 1 0 0 0 0 0 1 1
+ 0 1 0 0 0 1 0 0 1 0 1 1 1 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 1 0 0 1 1 0 0 0 1
+ 0 1 0 0 0 1 0 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 0 0 1 0 0 0 0 1 1 0 1 0 0 0 0
+ 1 0 0 0 0 0 1 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 2.59822
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 0.773786
+Learning Finished!! 
+
+########## Training Accuracy :  0.733766 Validation Accuracy :  0.761905
+########## Test Accuracy:  0.619048
+Number of Class : 2
+[0 0 0 0 0 1 0 0 0 0 0 0 1 0 1 0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0 1 1 0 0 0 0 0 0 0
+ 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 0 1 1
+ 0 1 0 0 0 1 0 0 0 0 1 0 1 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 0 1 0 0 0 1 0 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 0 1 1 1 0 0 0 1 1 0 1 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 1]
+train acc :  0.564935 validation acc :  0.714286 train_cost 0.67638
+train acc :  0.844156 validation acc :  0.571429 train_cost 0.358844
+Learning Finished!! 
+
+########## Training Accuracy :  0.688312 Validation Accuracy :  0.761905
+########## Test Accuracy:  0.619048
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1
+ 0 1 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 1 1 0 0 0 0 0 1 1 0 0 0 0
+ 0 1 0 0 0 1 1 0 1 1 0 0 0 0 0 0 0 1 1 1 0 0 1 1 0 0 0 0 0 1 1 0 1 0 0 0 1
+ 0 0 1 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 0.774817
+Learning Finished!! 
+
+########## Training Accuracy :  0.571429 Validation Accuracy :  0.666667
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.75507
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.642857 validation acc :  0.619048 train_cost 0.656628
+train acc :  0.948052 validation acc :  0.619048 train_cost 0.175723
+Learning Finished!! 
+
+########## Training Accuracy :  0.694805 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.52381
+Number of Class : 2
+[0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 0 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1
+ 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0
+ 0 1 0 0 0 1 0 1 1 1 0 0 0 0 0 0 0 1 1 1 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.512987 validation acc :  0.333333 train_cost 0.685767
+train acc :  0.75974 validation acc :  0.571429 train_cost 0.562325
+Learning Finished!! 
+
+########## Training Accuracy :  0.746753 Validation Accuracy :  0.619048
+########## Test Accuracy:  0.52381
+Number of Class : 2
+[1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 1 0 0 1 0 1 1 0 0 1 1 1 1 0 0 0 0 0 0 1 1
+ 0 0 1 1 1 1 1 1 0 0 1 1 0 0 1 0 1 0 0 1 0 0 0 1 0 0 1 0 1 1 0 0 0 1 0 0 0
+ 1 0 1 1 1 0 0 0 0 0 0 0 1 1 0 0 1 0 0 1 0 0 0 1 1 0 0 1 0 1 0 0 0 0 0 1 1
+ 0 1 0 0 0 1 0 0 0 1 1 1 0 0 0 1 1 1 0 1 0 1 0 0 1 0 0 0 1 0 1 1 1 0 0 0 1
+ 0 1 0 1 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 1 1 1 1 1 1 0 1 1 1 1 0 0 1 1
+ 0 1 0 0 0 0 1 0 0 0 1]
+train acc :  0.454545 validation acc :  0.285714 train_cost 0.736141
+Learning Finished!! 
+
+########## Training Accuracy :  0.61039 Validation Accuracy :  0.761905
+########## Test Accuracy:  0.47619
+Number of Class : 2
+[0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 1
+ 0 0 0 1 0 1 0 1 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0 0
+ 0 1 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 1 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 1 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.577922 validation acc :  0.714286 train_cost 0.674356
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+file type: new_Diff_400
+Number of Class : 2
+Number of Class : 2
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.715041
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 3.05047
+train acc :  0.772727 validation acc :  0.714286 train_cost 0.405586
+Learning Finished!! 
+
+########## Training Accuracy :  0.805195 Validation Accuracy :  0.666667
+########## Test Accuracy:  0.666667
+Number of Class : 2
+[0 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 1
+ 0 1 1 1 0 1 0 0 0 0 1 0 0 0 1 0 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 0 0 0 0 0 0
+ 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 0 1 0 0 1 0 0 1 1
+ 0 1 0 0 0 1 0 0 1 0 1 1 1 0 0 1 1 1 0 1 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 0 1 0 0 0 1 1 1 1 0 0 0 0 0 0 0 1 1 1 0 1 0 0 0 1 0 0 0 0 1 1 0 1 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 57.8054
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 33.5816
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.706088
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 3.02479
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.551948 validation acc :  0.714286 train_cost 0.706221
+Learning Finished!! 
+
+########## Training Accuracy :  0.551948 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 11.3777
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.571429 validation acc :  0.333333 train_cost 0.659453
+Learning Finished!! 
+
+########## Training Accuracy :  0.902597 Validation Accuracy :  0.52381
+########## Test Accuracy:  0.619048
+Number of Class : 2
+[0 0 0 0 0 1 1 1 1 0 0 0 1 1 1 0 1 0 0 1 0 0 0 1 0 1 0 0 0 1 0 0 0 0 0 1 1
+ 0 1 0 1 0 1 0 1 1 0 1 0 0 0 1 0 1 0 1 1 1 0 0 1 0 0 1 0 1 1 0 0 0 1 1 1 1
+ 0 1 1 1 1 0 0 0 0 0 0 0 1 0 0 1 1 0 0 1 0 0 0 1 1 0 0 1 0 1 0 0 1 0 0 1 1
+ 0 1 0 0 0 1 0 0 1 0 1 1 1 0 0 1 1 1 0 1 0 1 0 0 1 1 0 0 1 1 0 1 1 0 0 0 1
+ 0 1 0 0 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 1 0 1 0 0 0 0 1 1 0 1 0 0 0 1
+ 1 1 0 0 0 0 1 0 0 0 0]
+train acc :  0.448052 validation acc :  0.285714 train_cost 1.10782
+train acc :  0.967532 validation acc :  0.761905 train_cost 0.106059
+Learning Finished!! 
+
+########## Training Accuracy :  0.844156 Validation Accuracy :  0.761905
+########## Test Accuracy:  0.666667
+Number of Class : 2
+[0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0
+ 0 1 0 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 1 1 1 0 0 1 0 0 1 0 1 1 0 0 0 1 1 0 1
+ 0 0 1 1 1 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 1 0 0 1 1
+ 0 1 0 0 0 1 0 0 0 0 1 1 1 0 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 1 0 1 0 0 0 0 0
+ 0 1 0 0 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 0 0 1 0 0 0 0 1 1 0 1 0 0 0 1
+ 1 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 1.56613
+Learning Finished!! 
+
+########## Training Accuracy :  0.62987 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.52381
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 1.5569
+train acc :  0.850649 validation acc :  0.666667 train_cost 0.433911
+Learning Finished!! 
+
+########## Training Accuracy :  0.655844 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+ 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.467532 validation acc :  0.285714 train_cost 0.75352
+Learning Finished!! 
+
+########## Training Accuracy :  0.662338 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.571429
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 1 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.692851
+train acc :  0.928571 validation acc :  0.666667 train_cost 0.259748
+Learning Finished!! 
+
+########## Training Accuracy :  0.883117 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.571429
+Number of Class : 2
+[0 0 0 0 0 1 1 0 1 0 0 0 1 0 1 0 1 0 0 1 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 1
+ 0 1 0 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 1 0 1 1 0 0 0 1 0 0 0
+ 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 1 1 0 0 1 0 1 0 0 1 0 0 1 1
+ 0 1 0 0 0 1 0 0 0 0 1 1 1 0 0 1 1 1 0 1 0 1 0 0 1 0 0 0 1 0 0 1 1 0 0 0 1
+ 0 1 0 0 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 1 0 1 0 0 0 0 1 1 0 1 0 0 0 1
+ 1 0 0 0 0 0 1 0 0 0 0]
+train acc :  0.493506 validation acc :  0.333333 train_cost 0.7516
+train acc :  0.922078 validation acc :  0.761905 train_cost 0.291897
+Learning Finished!! 
+
+########## Training Accuracy :  0.857143 Validation Accuracy :  0.761905
+########## Test Accuracy:  0.619048
+Number of Class : 2
+[0 0 0 0 0 1 1 0 0 1 0 0 1 0 1 0 1 0 0 1 0 0 0 0 0 1 1 0 1 0 0 0 0 0 0 1 1
+ 0 0 0 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 1 0 0 0 1 0 0 0
+ 0 0 1 1 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 0 0 1 1
+ 0 1 0 0 0 1 0 0 1 0 1 1 1 0 0 0 1 1 0 1 0 0 0 0 1 0 0 0 0 1 0 1 0 0 0 0 0
+ 0 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 1 1 1 1 0 0 1 0 1 0 0 0 0 1 1 0 1 0 0 0 0
+ 1 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.864223
+train acc :  0.636364 validation acc :  0.666667 train_cost 0.590012
+Learning Finished!! 
+
+########## Training Accuracy :  0.564935 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.603896 validation acc :  0.761905 train_cost 0.681823
+Learning Finished!! 
+
+########## Training Accuracy :  0.597403 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.52381
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.732977
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 4.90795
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 4.01613
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 1.26095
+train acc :  0.441558 validation acc :  0.285714 train_cost 0.694704
+Learning Finished!! 
+
+########## Training Accuracy :  0.564935 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 0.828474
+train acc :  0.909091 validation acc :  0.761905 train_cost 0.294349
+Learning Finished!! 
+
+########## Training Accuracy :  0.655844 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.52381
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 0 1 0 0 0 1 1 0 1 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.467532 validation acc :  0.285714 train_cost 0.706739
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 1.3392
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 0.874102
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.551948 validation acc :  0.666667 train_cost 0.682558
+Learning Finished!! 
+
+########## Training Accuracy :  0.551948 Validation Accuracy :  0.666667
+########## Test Accuracy:  0.380952
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 1 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.731141
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.551948 validation acc :  0.666667 train_cost 0.740906
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.590909 validation acc :  0.857143 train_cost 0.679605
+Learning Finished!! 
+
+########## Training Accuracy :  0.590909 Validation Accuracy :  0.857143
+########## Test Accuracy:  0.52381
+Number of Class : 2
+[1 0 0 0 1 0 1 0 0 0 0 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 1 1 1 0 1 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0
+ 1 0 1 0 0 0 1 0 0 0 0 0 1 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 0 0 0 0 0 1 0 0 1 0 1 0 1 0 0 1 1 0 1 0 0
+ 0 1 0 0 0 1 1 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 1
+ 0 0 0 0 0 0 1 0 0 0 0]
+train acc :  0.538961 validation acc :  0.571429 train_cost 0.691303
+Learning Finished!! 
+
+########## Training Accuracy :  0.538961 Validation Accuracy :  0.571429
+########## Test Accuracy:  0.666667
+Number of Class : 2
+[1 1 1 1 0 0 0 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 0 1 0 0 0 1 0 0 1 0 0 1 0 0 0
+ 0 1 1 1 1 1 1 1 1 0 1 1 0 1 1 1 1 1 0 0 1 0 0 1 0 1 0 0 0 1 1 0 1 1 1 1 1
+ 1 0 0 1 1 1 1 1 0 1 1 1 0 0 0 1 1 0 1 1 0 0 0 1 0 0 1 1 1 1 0 0 0 1 1 1 1
+ 0 1 1 1 0 1 1 0 1 1 1 1 1 0 0 1 1 1 0 0 0 1 0 0 1 1 0 1 0 0 1 1 0 0 1 1 0
+ 1 1 0 1 1 1 1 1 0 1 1 1 0 1 0 0 0 1 0 0 1 0 1 1 1 1 1 0 0 1 1 0 1 0 0 0 0
+ 1 1 0 0 1 1 1 1 1 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.717903
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.603896 validation acc :  0.809524 train_cost 0.682457
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 0.903991
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.686313
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.761239
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.686814
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 6.33841
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 0.934328
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.686556
+Learning Finished!! 
+
+########## Training Accuracy :  0.642857 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.619048
+Number of Class : 2
+[0 0 1 0 0 1 1 0 0 0 0 0 1 1 1 0 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 0 1 0 0 1 1
+ 0 0 1 0 0 1 0 0 1 0 1 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 1 0 0 1 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 1 0
+ 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0 0 0 1 0 1 0 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 0 1 0 0 0 1 0 1 1 0 0 0 0 1 1 0 1 1 1 0 0 0 0 1 0 1 0 0 0 0 1 0 1 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 1.00678
+Learning Finished!! 
+
+########## Training Accuracy :  0.564935 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.47619
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 0.877902
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.487013 validation acc :  0.52381 train_cost 0.703895
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.664629
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.571429 validation acc :  0.666667 train_cost 0.671811
+train acc :  0.961039 validation acc :  0.571429 train_cost 0.30902
+Learning Finished!! 
+
+########## Training Accuracy :  0.883117 Validation Accuracy :  0.571429
+########## Test Accuracy:  0.619048
+Number of Class : 2
+[0 0 0 0 1 1 1 0 1 0 0 0 1 0 1 0 1 0 0 0 0 0 1 1 0 1 1 0 0 1 0 0 0 0 0 1 1
+ 0 1 1 1 0 1 1 0 0 0 1 0 0 0 1 0 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 0 0 1 1 1 1
+ 1 0 1 1 1 0 0 0 1 0 0 0 1 0 0 1 1 0 1 1 0 0 0 1 1 0 0 1 0 1 0 0 1 0 0 1 1
+ 0 1 0 0 0 1 0 0 1 0 1 1 1 0 0 0 1 1 0 0 0 1 0 0 1 0 0 0 0 1 0 1 0 0 0 0 1
+ 0 1 0 0 0 1 1 1 1 1 0 1 0 0 0 0 1 1 1 1 0 0 1 0 1 1 0 0 0 1 1 0 1 0 0 0 1
+ 1 1 0 0 0 0 1 0 0 0 0]
+train acc :  0.545455 validation acc :  0.666667 train_cost 0.685787
+train acc :  0.792208 validation acc :  0.571429 train_cost 0.592616
+Learning Finished!! 
+
+########## Training Accuracy :  0.805195 Validation Accuracy :  0.619048
+########## Test Accuracy:  0.666667
+Number of Class : 2
+[0 0 0 0 1 1 0 0 1 0 0 1 1 0 1 0 1 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 1
+ 0 0 0 1 0 1 0 1 1 0 1 0 0 0 1 0 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 0 0 0 0 1 1
+ 0 0 0 1 1 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 1 0 1 0 0 1 0 0 1 0
+ 0 1 0 0 0 1 0 0 1 0 1 1 1 0 0 1 0 1 0 1 0 1 0 0 1 1 0 0 0 0 0 1 1 0 0 0 1
+ 0 1 0 0 0 1 1 1 1 1 1 0 0 0 0 0 1 0 1 0 0 0 1 0 1 0 0 0 0 1 1 0 1 0 0 0 1
+ 0 1 1 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.72737
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.474026 validation acc :  0.333333 train_cost 0.737234
+train acc :  0.707792 validation acc :  0.619048 train_cost 0.655085
+Learning Finished!! 
+
+########## Training Accuracy :  0.597403 Validation Accuracy :  0.666667
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 1 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 1 0 0 0 1
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 0 0 0]
+train acc :  0.590909 validation acc :  0.666667 train_cost 0.679776
+train acc :  0.824675 validation acc :  0.714286 train_cost 0.405041
+Learning Finished!! 
+
+########## Training Accuracy :  0.720779 Validation Accuracy :  0.809524
+########## Test Accuracy:  0.571429
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 1 0 1 0 0 0 0 0 0 0 0
+ 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1
+ 0 1 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 1 1 0 0 0 1 1 0 1 0 0 0 0
+ 1 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.5 validation acc :  0.333333 train_cost 0.706452
+Learning Finished!! 
+
+########## Training Accuracy :  0.62987 Validation Accuracy :  0.761905
+########## Test Accuracy:  0.380952
+Number of Class : 2
+[0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0
+ 0 0 0 0 0 1 0 1 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 1 0 1 1 0 0 1 1 0 1 0
+ 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 1 0 0 1 1 1 0 0 0 1 0 0 0 0 0 1 0
+ 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0
+ 0 1 0 0 1 1 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 1 0 0 0 0 1 1 0 1 0 0 0 0 0
+ 0 0 1 0 0 0 0 0 0 0 1]
+train acc :  0.409091 validation acc :  0.380952 train_cost 0.747483
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.758204
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 0.874375
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.686457
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 0.756333
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 2.21636
+train acc :  0.746753 validation acc :  0.761905 train_cost 0.513637
+Learning Finished!! 
+
+########## Training Accuracy :  0.746753 Validation Accuracy :  0.761905
+########## Test Accuracy:  0.571429
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 0 1 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0
+ 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 1 1
+ 0 1 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 1.73445
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.487013 validation acc :  0.285714 train_cost 0.694773
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 0.846267
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 0.793733
+train acc :  0.792208 validation acc :  0.619048 train_cost 0.577905
+Learning Finished!! 
+
+########## Training Accuracy :  0.798701 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.571429
+Number of Class : 2
+[0 1 0 0 0 1 0 0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+ 0 1 0 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 1 0 1
+ 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 1 1
+ 0 1 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0
+ 0 0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 1 0 1 0 0 0 0 0 1 0 1 0 0 0 1
+ 0 0 0 0 0 0 1 0 0 0 0]
+train acc :  0.448052 validation acc :  0.285714 train_cost 0.894839
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.493506 validation acc :  0.333333 train_cost 0.704383
+train acc :  0.779221 validation acc :  0.428571 train_cost 0.41165
+Learning Finished!! 
+
+########## Training Accuracy :  0.850649 Validation Accuracy :  0.761905
+########## Test Accuracy:  0.619048
+Number of Class : 2
+[0 1 1 0 0 0 1 0 1 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1
+ 0 1 0 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 1
+ 0 0 1 1 1 0 0 0 1 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 1 1
+ 0 1 0 0 0 1 0 0 1 0 0 1 0 0 0 1 1 1 0 0 0 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 1 1 1 1 0 0 1 0 1 0 0 0 0 1 1 0 1 0 0 0 1
+ 1 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.428571 train_cost 0.681641
+train acc :  0.948052 validation acc :  0.619048 train_cost 0.302933
+Learning Finished!! 
+
+########## Training Accuracy :  0.941558 Validation Accuracy :  0.619048
+########## Test Accuracy:  0.714286
+Number of Class : 2
+[0 1 0 0 0 1 1 0 1 1 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 1
+ 0 1 0 1 0 1 0 0 0 0 1 1 0 0 1 0 0 0 1 1 1 0 0 1 0 0 1 0 1 1 0 0 0 0 1 0 0
+ 0 0 1 1 1 0 0 0 1 0 0 0 0 0 0 1 1 0 0 1 0 0 0 1 1 0 0 1 0 1 0 0 1 0 0 1 1
+ 0 1 0 0 0 1 0 0 1 0 0 1 1 0 0 1 1 1 0 1 0 0 0 0 1 1 0 0 0 1 0 1 0 0 0 1 1
+ 0 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 1 0 1 0 0 0 0 1 1 0 1 0 1 0 1
+ 1 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 0.758152
+Learning Finished!! 
+
+########## Training Accuracy :  0.584416 Validation Accuracy :  0.666667
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 1.08158
+train acc :  0.675325 validation acc :  0.619048 train_cost 0.623872
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.603896 validation acc :  0.47619 train_cost 0.678709
+train acc :  0.954545 validation acc :  0.666667 train_cost 0.201372
+Learning Finished!! 
+
+########## Training Accuracy :  0.844156 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.619048
+Number of Class : 2
+[0 1 0 0 0 1 0 0 1 1 0 0 1 0 1 0 1 0 0 1 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 1 0
+ 0 0 0 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 1 0 1 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0
+ 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 1 0 0 1 1
+ 0 1 0 0 0 1 0 0 1 0 0 1 1 0 0 0 1 1 0 1 0 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 0 1 0 0 0 1 0 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 1 0 1 0 0 0 0 1 1 0 1 0 0 0 0
+ 1 0 0 0 0 0 1 0 0 0 0]
+train acc :  0.441558 validation acc :  0.333333 train_cost 0.758355
+train acc :  0.824675 validation acc :  0.619048 train_cost 0.514197
+Learning Finished!! 
+
+########## Training Accuracy :  0.844156 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.714286
+Number of Class : 2
+[0 1 1 0 0 1 1 0 1 0 0 0 1 0 1 0 1 1 0 1 1 0 0 0 0 1 0 1 0 1 0 0 0 0 0 1 1
+ 1 1 1 1 0 1 1 0 0 0 1 0 0 0 1 0 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 0 1 1 1 0 1
+ 1 1 1 1 1 0 0 0 1 0 0 0 0 0 0 1 1 0 1 1 0 0 0 0 1 0 0 1 0 1 0 1 1 0 0 1 1
+ 0 1 0 0 0 1 0 0 1 0 1 1 1 0 0 1 1 1 0 1 0 1 0 0 1 1 0 0 0 1 0 1 1 0 0 0 0
+ 0 0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 1 1 1 1 0 0 1 0 1 1 0 0 0 1 1 0 1 1 1 0 1
+ 0 1 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.722701
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.519481 validation acc :  0.571429 train_cost 0.700884
+Learning Finished!! 
+
+########## Training Accuracy :  0.688312 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.380952
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0
+ 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 1 0 1 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+ 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0
+ 0 0 0 0 1 1 1 0 1 1 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+file type: new_Diff_1000
+Number of Class : 2
+Number of Class : 2
+train acc :  0.519481 validation acc :  0.619048 train_cost 0.675575
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 3.0091
+train acc :  0.733766 validation acc :  0.428571 train_cost 0.488953
+Learning Finished!! 
+
+########## Training Accuracy :  0.837662 Validation Accuracy :  0.857143
+########## Test Accuracy:  0.714286
+Number of Class : 2
+[0 1 0 0 0 1 1 0 1 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 1
+ 0 0 0 1 0 1 0 1 0 1 1 0 0 0 1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 1 0 0 0 0 1 0 0
+ 1 0 1 0 0 0 0 0 0 0 0 0 1 0 0 1 1 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 1 1 0 1 1
+ 0 1 0 0 0 1 1 0 1 0 1 1 1 0 0 1 1 1 0 1 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 1
+ 0 1 0 0 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 1 1
+ 1 1 0 0 0 0 1 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 5.4691
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 89.4222
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.685694
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.467532 validation acc :  0.333333 train_cost 1.09111
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.686311
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 5.67452
+train acc :  0.62987 validation acc :  0.380952 train_cost 0.588979
+Learning Finished!! 
+
+########## Training Accuracy :  0.922078 Validation Accuracy :  0.857143
+########## Test Accuracy:  0.666667
+Number of Class : 2
+[0 1 0 0 0 0 1 0 1 1 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 1 0 0 1 1 0 0 0 0 0 1 0
+ 1 1 0 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 1 0 0 0 1 1 0 0
+ 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 1 0 0 1 1
+ 0 1 0 0 0 1 1 0 1 0 1 1 1 0 0 0 1 1 0 1 0 1 0 0 1 0 0 0 0 1 0 1 1 0 0 0 0
+ 0 0 0 0 0 1 1 1 1 1 0 1 0 0 0 0 1 1 1 1 0 0 1 0 1 0 0 0 0 1 1 0 1 0 0 0 1
+ 1 1 0 0 0 0 1 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 37.4991
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 26.2746
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.678604
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 1.5896
+train acc :  0.961039 validation acc :  0.428571 train_cost 0.206255
+Learning Finished!! 
+
+########## Training Accuracy :  0.941558 Validation Accuracy :  0.619048
+########## Test Accuracy:  0.714286
+Number of Class : 2
+[0 1 0 0 0 1 1 0 1 1 0 0 1 0 1 0 1 0 0 1 0 0 1 0 0 1 1 0 0 1 0 0 0 0 0 1 1
+ 1 1 0 1 0 1 0 1 0 0 1 0 0 0 1 0 1 0 1 1 1 0 0 1 0 0 1 0 1 1 0 0 0 1 1 0 1
+ 0 0 1 1 0 0 0 0 1 0 0 0 1 0 0 1 1 0 0 1 0 0 0 1 1 0 0 1 0 1 0 0 1 1 0 1 1
+ 0 1 0 0 0 1 0 0 1 0 1 1 1 0 0 1 1 1 0 1 0 0 0 0 1 0 0 0 0 1 0 1 1 0 0 0 1
+ 0 1 0 0 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 1 0 1 0 0 0 0 1 1 0 1 0 1 0 1
+ 1 1 0 0 0 0 1 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 1.31752
+train acc :  0.941558 validation acc :  0.571429 train_cost 0.275552
+Learning Finished!! 
+
+########## Training Accuracy :  0.88961 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.619048
+Number of Class : 2
+[0 1 0 0 0 0 1 0 1 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0
+ 0 1 0 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 1 0 0 0 0 1 1 0
+ 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 1 0 0 1 1
+ 0 1 0 0 0 1 1 0 1 0 1 1 1 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 1 0 1 0 0 0 0 1
+ 0 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 0 0 1
+ 1 0 0 0 0 0 1 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 1.80763
+train acc :  0.935065 validation acc :  0.809524 train_cost 0.305191
+Learning Finished!! 
+
+########## Training Accuracy :  0.928571 Validation Accuracy :  0.761905
+########## Test Accuracy:  0.666667
+Number of Class : 2
+[0 1 0 0 0 0 1 0 1 1 0 0 1 0 1 0 1 0 0 1 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0
+ 0 1 0 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 1 0 0 0 0 1 0 0
+ 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 1 1 0 0 1 0 0 0 1 1 0 0 1 0 1 0 0 1 0 0 1 1
+ 0 1 0 0 0 1 0 0 1 0 1 1 1 0 0 1 1 1 0 1 0 1 0 0 1 0 0 0 0 1 0 1 0 0 0 0 1
+ 0 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 0 0 1 0 0 0 0 1 1 0 1 0 0 0 1
+ 1 1 0 0 0 0 1 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 3.10302
+Learning Finished!! 
+
+########## Training Accuracy :  0.590909 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.597403 validation acc :  0.571429 train_cost 0.64956
+train acc :  0.863636 validation acc :  0.47619 train_cost 0.296888
+Learning Finished!! 
+
+########## Training Accuracy :  0.88961 Validation Accuracy :  0.761905
+########## Test Accuracy:  0.666667
+Number of Class : 2
+[0 1 0 0 0 0 1 0 1 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0
+ 0 1 0 1 0 1 0 0 0 0 1 0 0 0 1 0 0 0 1 1 1 0 0 1 0 0 1 0 1 1 0 0 0 0 1 0 0
+ 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 1 0 0 1 1
+ 0 1 0 0 0 1 0 0 1 0 1 1 1 0 0 1 0 1 0 1 0 0 0 0 1 0 0 0 0 1 0 1 0 0 0 0 0
+ 0 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 0 0 0 1 0 1 0 0 0 0 1 1 0 1 0 0 0 1
+ 1 1 0 0 0 0 1 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 1.16051
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.590909 validation acc :  0.428571 train_cost 0.677291
+train acc :  0.941558 validation acc :  0.619048 train_cost 0.341891
+train acc :  0.993506 validation acc :  0.714286 train_cost 0.0536378
+Learning Finished!! 
+
+########## Training Accuracy :  0.974026 Validation Accuracy :  0.761905
+########## Test Accuracy:  0.714286
+Number of Class : 2
+[0 1 0 0 0 0 1 0 1 1 0 0 1 0 1 0 1 1 0 1 0 0 0 0 0 1 1 0 0 0 0 1 0 0 0 1 1
+ 0 1 0 1 0 1 0 1 0 0 1 0 0 0 1 0 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 0 0 1 1 0 0
+ 0 0 1 1 1 0 0 0 1 0 0 0 1 0 0 1 1 0 0 1 0 0 0 1 1 0 0 1 0 1 0 0 1 1 0 1 1
+ 0 1 0 0 0 1 0 0 1 0 0 1 1 0 0 1 1 1 0 1 0 1 0 0 1 0 0 0 0 1 0 1 1 0 0 0 1
+ 0 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 1 0 1 0 0 0 0 1 1 0 1 0 1 0 1
+ 1 1 0 0 0 0 1 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.870985
+Learning Finished!! 
+
+########## Training Accuracy :  0.577922 Validation Accuracy :  0.761905
+########## Test Accuracy:  0.47619
+Number of Class : 2
+[0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.461039 validation acc :  0.285714 train_cost 0.700862
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.519481 validation acc :  0.52381 train_cost 0.688763
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.568696
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 5.35621
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 2.63154
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.448052 validation acc :  0.285714 train_cost 0.754943
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.686544
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.448052 validation acc :  0.285714 train_cost 0.731875
+train acc :  0.701299 validation acc :  0.666667 train_cost 0.464869
+Learning Finished!! 
+
+########## Training Accuracy :  0.922078 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.666667
+Number of Class : 2
+[0 1 0 0 0 0 1 0 1 1 0 0 1 0 1 0 1 0 0 1 0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 1 1
+ 0 1 0 1 0 1 0 1 0 0 1 0 0 0 1 0 1 0 1 1 1 0 0 1 0 0 1 0 1 1 0 0 0 1 1 0 1
+ 0 0 1 0 0 0 0 0 1 0 0 0 1 0 0 1 1 0 0 1 0 0 0 1 1 0 0 1 0 1 0 0 1 1 0 1 1
+ 0 1 0 0 0 1 0 0 1 0 1 1 1 0 0 1 1 1 0 1 0 1 0 0 1 0 0 0 0 1 0 1 1 0 0 0 1
+ 0 1 0 0 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 0 0 1 1 0 0 0 1 1 0 1 0 0 0 1
+ 1 1 0 0 0 0 1 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 1.65485
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.758146
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 0.881741
+train acc :  0.785714 validation acc :  0.52381 train_cost 0.540418
+Learning Finished!! 
+
+########## Training Accuracy :  0.681818 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.52381
+Number of Class : 2
+[0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 1 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0
+ 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 0 1 0 1 0 0 0 0 0 1 0 1 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.512987 validation acc :  0.47619 train_cost 0.691902
+Learning Finished!! 
+
+########## Training Accuracy :  0.577922 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.333333
+Number of Class : 2
+[0 0 0 0 1 0 1 0 0 1 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 0
+ 0 0 0 0 1 1 1 1 0 1 0 0 0 0 0 0 1 1 0 1 0 1 1 1 0 0 0 0 1 0 0 1 1 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0
+ 0 1 1 0 0 0 0 0 0 0 1 0 1 0 0 1 0 1 1 0 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 1
+ 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 1 0 0 0 1 0 0 0 1 0]
+train acc :  0.564935 validation acc :  0.666667 train_cost 0.684092
+Learning Finished!! 
+
+########## Training Accuracy :  0.564935 Validation Accuracy :  0.666667
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.738431
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.713276
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.461039 validation acc :  0.285714 train_cost 0.750286
+Learning Finished!! 
+
+########## Training Accuracy :  0.603896 Validation Accuracy :  0.666667
+########## Test Accuracy:  0.47619
+Number of Class : 2
+[0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0
+ 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0
+ 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.467532 validation acc :  0.333333 train_cost 0.726335
+train acc :  0.766234 validation acc :  0.714286 train_cost 0.646087
+train acc :  0.863636 validation acc :  0.714286 train_cost 0.461096
+train acc :  0.954545 validation acc :  0.47619 train_cost 0.167119
+Learning Finished!! 
+
+########## Training Accuracy :  0.922078 Validation Accuracy :  0.857143
+########## Test Accuracy:  0.619048
+Number of Class : 2
+[0 1 0 0 0 0 0 0 1 1 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0
+ 1 1 0 1 0 1 0 1 0 0 1 0 0 0 1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 1 0 0 0 0 1 1 0
+ 1 0 1 1 1 0 0 0 1 0 0 0 0 0 0 1 1 0 0 1 0 0 0 1 1 0 0 1 0 1 0 0 1 1 0 1 1
+ 0 1 0 0 0 1 0 0 1 0 1 1 1 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 1 0 1 0 0 0 0 1
+ 0 1 0 0 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 1 0 0 0 0 0 0 1 1 0 1 0 0 0 1
+ 1 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.538961 validation acc :  0.619048 train_cost 0.705436
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 2.18348
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.686355
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 2.43359
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.461039 validation acc :  0.428571 train_cost 0.700439
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 3.01403
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.683599
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 1.33177
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.584416 validation acc :  0.52381 train_cost 0.685931
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 2.49876
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.655368
+train acc :  0.948052 validation acc :  0.666667 train_cost 0.346774
+Learning Finished!! 
+
+########## Training Accuracy :  0.772727 Validation Accuracy :  0.761905
+########## Test Accuracy:  0.571429
+Number of Class : 2
+[0 1 0 0 0 0 1 0 1 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 1 0 0 1 0 1 1 0 0 0 1 0 0 0
+ 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 0 1 1
+ 0 1 0 0 0 1 0 0 1 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 1
+ 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 1
+ 1 0 0 0 0 0 1 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 4.78811
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 1.02866
+train acc :  0.857143 validation acc :  0.428571 train_cost 0.568847
+Learning Finished!! 
+
+########## Training Accuracy :  0.62987 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.571429
+Number of Class : 2
+[0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+ 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.519481 validation acc :  0.666667 train_cost 0.693549
+train acc :  0.571429 validation acc :  0.714286 train_cost 0.660988
+train acc :  0.935065 validation acc :  0.714286 train_cost 0.341817
+Learning Finished!! 
+
+########## Training Accuracy :  0.928571 Validation Accuracy :  0.619048
+########## Test Accuracy:  0.761905
+Number of Class : 2
+[0 1 0 0 0 0 1 0 1 0 0 0 1 0 1 0 1 0 0 1 0 0 0 0 0 1 1 0 0 0 0 1 0 0 0 1 1
+ 1 1 0 1 0 1 0 0 0 0 1 1 0 0 1 0 0 0 1 1 1 0 0 1 0 0 1 0 1 1 0 0 0 1 1 1 0
+ 0 0 1 1 0 0 0 0 1 0 0 0 1 0 0 1 1 0 0 1 0 0 0 1 1 0 0 1 0 1 0 0 1 0 0 1 1
+ 0 1 0 0 0 1 1 0 1 0 1 1 1 0 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 1 0 1 1 0 0 0 0
+ 0 0 0 0 0 1 1 1 1 1 0 0 0 0 1 0 1 1 1 1 0 0 1 0 1 0 0 0 0 1 1 0 1 0 1 0 1
+ 1 1 0 0 0 0 1 0 0 0 0]
+train acc :  0.584416 validation acc :  0.761905 train_cost 0.681675
+train acc :  0.597403 validation acc :  0.714286 train_cost 0.632477
+train acc :  0.961039 validation acc :  0.809524 train_cost 0.282979
+Learning Finished!! 
+
+########## Training Accuracy :  0.974026 Validation Accuracy :  0.761905
+########## Test Accuracy:  0.571429
+Number of Class : 2
+[0 1 0 0 0 0 1 0 1 1 0 0 1 0 1 0 1 1 0 1 0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 1 1
+ 1 1 0 1 0 1 0 1 0 0 1 0 0 0 1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 1 0 0 0 1 1 1 0
+ 0 0 1 1 0 0 0 0 1 0 0 0 1 0 0 1 1 0 0 1 0 0 0 1 1 0 0 1 0 1 0 0 1 0 0 1 1
+ 0 1 0 0 0 1 0 0 1 0 0 1 1 0 0 1 1 1 0 1 0 1 0 0 1 0 0 0 1 1 0 1 1 0 0 0 1
+ 0 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 1 0 1 0 0 0 0 1 1 0 1 0 0 0 1
+ 1 1 0 0 0 0 1 0 0 0 0]
+train acc :  0.545455 validation acc :  0.619048 train_cost 0.692641
+Learning Finished!! 
+
+########## Training Accuracy :  0.623377 Validation Accuracy :  0.761905
+########## Test Accuracy:  0.47619
+Number of Class : 2
+[0 0 0 1 1 0 1 0 0 1 0 1 1 0 1 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0
+ 1 1 0 1 1 1 0 0 1 1 1 1 0 0 1 0 0 0 1 1 1 0 1 1 0 0 0 0 1 0 0 1 0 0 0 0 0
+ 1 0 1 1 0 0 0 0 1 0 0 0 0 0 0 1 1 0 1 0 0 0 0 1 1 0 1 1 1 0 0 1 0 0 1 1 1
+ 1 1 1 1 1 0 0 0 1 0 0 0 1 0 0 1 0 1 0 1 0 0 1 0 0 0 0 0 0 1 0 0 1 0 0 1 1
+ 0 0 1 0 0 1 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 0 1 0 1 0 1 1 1 1 1 0 0 0 1
+ 0 0 1 1 0 1 0 0 0 1 0]
+train acc :  0.551948 validation acc :  0.714286 train_cost 0.718427
+Learning Finished!! 
+
+########## Training Accuracy :  0.551948 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.571429 validation acc :  0.619048 train_cost 0.674708
+train acc :  0.701299 validation acc :  0.761905 train_cost 0.639654
+train acc :  0.915584 validation acc :  0.52381 train_cost 0.363223
+Learning Finished!! 
+
+########## Training Accuracy :  0.941558 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.666667
+Number of Class : 2
+[0 1 0 0 0 0 1 0 1 1 0 0 1 0 0 0 1 1 0 1 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0
+ 1 1 0 1 0 1 0 0 1 0 1 0 1 0 1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 1 0 0 0 0 1 0 0
+ 0 0 0 1 1 0 0 0 1 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 1 1 0 1 1
+ 0 1 0 0 0 1 0 0 1 0 0 1 1 0 0 0 1 1 0 1 0 1 0 0 1 0 0 0 1 1 0 1 0 0 0 0 1
+ 0 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 1 0 1 0 0 0 0 1 1 0 1 0 0 0 1
+ 1 0 0 0 0 0 1 0 0 0 0]
+train acc :  0.590909 validation acc :  0.809524 train_cost 0.665562
+Learning Finished!! 
+
+########## Training Accuracy :  0.564935 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.47619
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.590909 validation acc :  0.666667 train_cost 0.684154
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.663138
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 1.44395
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.686555
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 2.05435
+train acc :  0.441558 validation acc :  0.285714 train_cost 0.694409
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 22.5866
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 26.0195
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 1.12997
+Learning Finished!! 
+
+########## Training Accuracy :  0.720779 Validation Accuracy :  0.666667
+########## Test Accuracy:  0.619048
+Number of Class : 2
+[0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1
+ 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 1 0 1 0 0 0 0 0 0 0 0
+ 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 1
+ 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0
+ 0 0 0 0 0 1 1 0 1 1 0 0 0 0 0 0 1 1 1 1 0 0 1 0 1 1 1 0 0 0 1 0 1 0 0 0 1
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 1.27844
+train acc :  0.883117 validation acc :  0.761905 train_cost 0.560825
+Learning Finished!! 
+
+########## Training Accuracy :  0.798701 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.52381
+Number of Class : 2
+[0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 1 0 1 0 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 1 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 1 1
+ 0 1 0 0 0 1 0 0 1 0 0 1 0 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 1 0 1 0 0 0 0 0
+ 0 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 0 0 0
+ 1 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 7.43789
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 3.59344
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 1.13012
+train acc :  0.902597 validation acc :  0.571429 train_cost 0.375226
+Learning Finished!! 
+
+########## Training Accuracy :  0.928571 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.714286
+Number of Class : 2
+[0 1 0 0 0 0 1 0 1 1 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0
+ 1 1 0 1 0 1 0 0 0 0 1 0 1 0 1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 1 0 0 0 1 1 0 0
+ 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 1 1 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 1 0 0 1 1
+ 0 1 0 0 0 1 1 0 1 0 1 1 1 0 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 1 0 1 0 0 0 0 0
+ 0 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 1 0 1 0 0 0 0 1 1 0 1 0 0 0 1
+ 1 1 0 0 0 0 1 0 0 0 0]
+train acc :  0.551948 validation acc :  0.714286 train_cost 0.688033
+Learning Finished!! 
+
+########## Training Accuracy :  0.551948 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.721708
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 0.879665
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.441558 validation acc :  0.285714 train_cost 0.798459
+train acc :  0.883117 validation acc :  0.619048 train_cost 0.311244
+Learning Finished!! 
+
+########## Training Accuracy :  0.961039 Validation Accuracy :  0.761905
+########## Test Accuracy:  0.714286
+Number of Class : 2
+[0 1 0 0 0 1 1 0 1 1 0 0 1 0 1 0 1 1 0 1 0 1 0 1 0 1 1 0 1 1 0 0 0 0 0 1 1
+ 1 1 1 1 0 1 0 1 0 0 1 0 0 0 1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 1 0 0 0 1 1 1 0
+ 1 0 1 1 1 0 0 0 1 0 0 0 1 0 0 1 1 0 0 1 0 0 0 1 1 0 0 1 0 1 0 0 1 1 0 1 1
+ 0 1 0 0 0 1 1 0 1 0 1 1 1 0 0 1 1 1 0 0 0 1 0 0 1 0 0 0 0 1 0 1 1 0 0 0 1
+ 0 1 0 0 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 0 0 1 0 1 0 0 0 0 1 1 0 1 0 1 0 1
+ 1 1 1 0 0 0 1 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.713751
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.558442 validation acc :  0.714286 train_cost 0.741219
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.714286
+########## Test Accuracy:  0.428571
+Number of Class : 2
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0]
+train acc :  0.538961 validation acc :  0.52381 train_cost 0.686833
+Learning Finished!! 
+
+########## Training Accuracy :  0.558442 Validation Accuracy :  0.857143
+########## Test Accuracy:  0.571429
+Number of Class : 2
+[0 1 0 1 0 0 1 0 0 0 0 1 1 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0
+ 1 0 1 0 1 1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 0 0 1 0 0 1 0 0 0 0
+ 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 1 0 0 0 0 0 0 1 1 1 0 0 1 1 0 0 1
+ 0 0 0 0 0 1 0 1 0 0 0 1 0 0 1 0 0 0 0 1 1 0 0 0 1 1 1 0 1 0 0 0 1 0 0 1 0
+ 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 0 0 0 1 1 0 0 0 1 1
+ 0 1 0 0 0 1 1 0 1 1 1]
