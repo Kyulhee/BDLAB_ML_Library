@@ -13,11 +13,9 @@ elif [ $1 = 's' -o $1 = 'S' ]; then
 		echo $2
 		mkdir -v '/home/tjahn/Git2/User/kyulhee/DNN/Tensor/result/'$2 
 		mkdir -v '/home/tjahn/Git2/User/kyulhee/DNN/Tensor/models/'$2
-		cd /home/tjahn/Git2/User/kyulhee/DNN/Tensor/BDLAB_ML_Library
-		ls | grep result | mv '/home/tjahn/Git2/User/kyulhee/DNN/Tensor/models/'$2
-		cd -
-		ls /home/tjahn/Git2/User/kyulhee/DNN/Tensor/models | grep model | xargs mv '/home/tjahn/Git2/User/kyulhee/DNN/Tensor/models/'{} '/home/tjahn/Git2/User/kyulhee/DNN/Tensor/models/'$2
-		ls /home/tjahn/Git2/User/kyulhee/DNN/Tensor/result | grep result | xargs mv '/home/tjahn/Git2/User/kyulhee/DNN/Tensor/result/'{} '/home/tjahn/Git2/User/kyulhee/DNN/Tensor/result/'$2
+		find /home/tjahn/Git2/User/kyulhee/DNN/Tensor/BDLAB_ML_Library -maxdepth 1 -name "*.csv" -exec mv {} /home/tjahn/Git2/User/kyulhee/DNN/Tensor/models/$2 \;
+		find /home/tjahn/Git2/User/kyulhee/DNN/Tensor/models -maxdepth 1 -name "model*" -exec mv {} /home/tjahn/Git2/User/kyulhee/DNN/Tensor/models/$2 \;
+		find /home/tjahn/Git2/User/kyulhee/DNN/Tensor/result -maxdepth 1 -name "*.csv" -exec mv {} /home/tjahn/Git2/User/kyulhee/DNN/Tensor/result/$2 \;
 		echo '/home/tjahn/Git2/User/kyulhee/DNN/Tensor/result/'$2
 	else
 		echo "pathway가 잘못됐습니다. 다시 입력해주세요."
