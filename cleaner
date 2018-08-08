@@ -3,9 +3,9 @@
 
 if [ $1 = 'd' -o $1 = 'D' ]; then
 	echo 'delete files'
-	ls /home/tjahn/Git2/User/kyulhee/DNN/Tensor/BDLAB_ML_Library | grep result | xargs rm
-	ls /home/tjahn/Git2/User/kyulhee/DNN/Tensor/models | grep model | xargs rm
-	ls /home/tjahn/Git2/User/kyulhee/DNN/Tensor/result | grep result | xargs rm
+	find /home/tjahn/Git2/User/kyulhee/DNN/Tensor/BDLAB_ML_Library -maxdepth 1 -name "*.csv" -delete
+	find /home/tjahn/Git2/User/kyulhee/DNN/Tensor/models -maxdepth 1 -name "model*" -delete
+	find /home/tjahn/Git2/User/kyulhee/DNN/Tensor/result -maxdepth 1 -name "*.csv" -delete
 
 elif [ $1 = 's' -o $1 = 'S' ]; then
 	echo 'save files. pathway: '
