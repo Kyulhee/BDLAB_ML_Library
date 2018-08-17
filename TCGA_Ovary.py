@@ -125,7 +125,7 @@ for file_type in file_types:
                             batch_x = train_x[k * batch_size:(k + 1) * batch_size]
                             batch_y = train_y[k * batch_size:(k + 1) * batch_size]
                             #dropout_ratio
-                            sess.run(train, feed_dict={X: batch_x, Y: batch_y, keep_prob: 0.5 , phase:True})
+                            sess.run(train, feed_dict={X: batch_x, Y: batch_y, keep_prob: 0.65 , phase:True})
 
                         #feed_dict - place holder is just 'space', feed_dict means supply real data into place holder.
                         train_h, train_c, train_p, train_a = sess.run( [hypothesis, cost, predicted, accuracy], feed_dict={X: train_x, Y: train_y, keep_prob: 1 , phase:False})
@@ -147,7 +147,7 @@ for file_type in file_types:
 
                         #condition 2: cannot find best condition
                         #when cost is get worse and worse(10 times), finish learning.
-                        elif count > 10 :
+                        elif count > 12 :
                             stop_switch = False
                             print("Learning Finished!! \n")
                         
