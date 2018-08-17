@@ -20,7 +20,7 @@ file_types = [
     "Annotation3000_1000",
     #"Clin_ch"
 	#"Diff_100", "Diff_200", "Diff_400", 
-	#"Annotation40"
+	"Annotation40"
 	#"Clin"
 	]
 
@@ -28,10 +28,10 @@ num=0
 
 
 for file_type in file_types:
-    file_name = "inter_OV_"+file_type+".csv"
+    file_name = "sum_OV_"+file_type+".csv"
     print("file type: "+file_type)
 
-    raw_data = pd.read_csv('../subsamples/TC_intersect_subsamples/'+file_name)
+    raw_data = pd.read_csv('/home/tjahn/TCGA_Ovary/01.Data/DNN/TC_GEO_TCGA_subsamples/'+file_name)
 
     shuffled_data = raw_data
     shuffled_data['index'] = dp.shuffle_index(shuffled_data)
@@ -56,7 +56,7 @@ for file_type in file_types:
     #'''
     #for larger data
     '''
-    nodes = [[400,400,400], [150,200,200,150], [150, 150, 150, 150], [150, 200, 300, 400]]
+    nodes = [[400,400,400], [150,200,200,150], [150, 150, 150, 150], [150, 200, 300, 400], [100,100,100,100,100]]
     learning_rates = [0.01, 0.005, 0.001, 0.0005]
     batch_sizes = [10, 50, 75, 100]
     '''
@@ -124,7 +124,7 @@ for file_type in file_types:
                             batch_x = train_x[k * batch_size:(k + 1) * batch_size]
                             batch_y = train_y[k * batch_size:(k + 1) * batch_size]
                             #dropout_ratio
-                            sess.run(train, feed_dict={X: batch_x, Y: batch_y, keep_prob: 0.5 , phase:True})
+                            sess.run(train, feed_dict={X: batch_x, Y: batch_y, keep_prob: 0.35 , phase:True})
 
                         #feed_dict - place holder is just 'space', feed_dict means supply real data into place holder.
                         train_h, train_c, train_p, train_a = sess.run( [hypothesis, cost, predicted, accuracy], feed_dict={X: train_x, Y: train_y, keep_prob: 1 , phase:False})
@@ -146,7 +146,7 @@ for file_type in file_types:
 
                         #condition 2: cannot find best condition
                         #when cost is get worse and worse(10 times), finish learning.
-                        elif count > 10 :
+                        elif count > 12 :
                             stop_switch = False
                             print("Learning Finished!! \n")
                         

@@ -7,12 +7,22 @@ if [ $1 = 'd' -o $1 = 'D' ]; then
 	find /home/tjahn/Git2/User/kyulhee/DNN/Tensor/models -maxdepth 1 -name "model*" -delete
 	find /home/tjahn/Git2/User/kyulhee/DNN/Tensor/result -maxdepth 1 -name "*.csv" -delete
 
+elif [ $1 = 'c' -o $1 = 'C' ]; then
+	echo 'copy models'
+	if [ -n $2 ]; then
+		#echo $2
+		result='*.'$2'result.csv'
+		echo $result
+		find /home/tjahn/Git2/User/kyulhee/DNN/Tensor/BDLAB_ML_Library -maxdepth 1 -name $result -exec echo {} \;
+	fi
+
 elif [ $1 = 's' -o $1 = 'S' ]; then
 	echo 'save files. pathway: '
 	if [ -n $2 ]; then
 		echo $2
 		mkdir -v '/home/tjahn/Git2/User/kyulhee/DNN/Tensor/result/'$2 
 		mkdir -v '/home/tjahn/Git2/User/kyulhee/DNN/Tensor/models/'$2
+		mkdir -v '/home/tjahn/Git2/User/kyulhee/DNN/Tensor/select/'$2
 		find /home/tjahn/Git2/User/kyulhee/DNN/Tensor/BDLAB_ML_Library -maxdepth 1 -name "*.csv" -exec mv {} /home/tjahn/Git2/User/kyulhee/DNN/Tensor/models/$2 \;
 		find /home/tjahn/Git2/User/kyulhee/DNN/Tensor/models -maxdepth 1 -name "model*" -exec mv {} /home/tjahn/Git2/User/kyulhee/DNN/Tensor/models/$2 \;
 		find /home/tjahn/Git2/User/kyulhee/DNN/Tensor/result -maxdepth 1 -name "*.csv" -exec mv {} /home/tjahn/Git2/User/kyulhee/DNN/Tensor/result/$2 \;
