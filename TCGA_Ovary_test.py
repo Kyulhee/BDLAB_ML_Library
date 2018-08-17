@@ -4,37 +4,18 @@ import lib.dataProcess as dp
 import lib.deepLearning as dl
 from pandas import DataFrame as df
 
-file_types = [
-
-    "Var_100", "CV_100",
-    "new_Diff_100",
-    "Annotation3000_100",
-    "Var_200", "CV_200",
-    "new_Diff_200",
-    "Annotation3000_200",
-    "Var_400", "CV_400",
-    "new_Diff_400",
-    "Annotation3000_400",
-    "Var_1000", "CV_1000",
-    "new_Diff_1000",
-    "Annotation3000_1000",
-    #"Clin_ch"
-	#"Diff_100", "Diff_200", "Diff_400", 
-	"Annotation40"
-	#"Clin"
-	]
+file_types = ["new_Diff_100"]
 
 num=0
 
 
 for file_type in file_types:
-    file_name = "sum_OV_"+file_type+".csv"
+    file_name = "inter_OV_"+file_type+".csv"
     print("file type: "+file_type)
 
-    raw_data = pd.read_csv('/home/tjahn/TCGA_Ovary/01.Data/DNN/TC_GEO_TCGA_subsamples/'+file_name)
+    raw_data = pd.read_csv('../subsamples/TC_intersect_subsamples/'+file_name)
 
     shuffled_data = raw_data
-    #shuffle option: for shuffling index. For experiment or reproduction, turn off this option.
     #shuffled_data['index'] = dp.shuffle_index(shuffled_data)
 
     # make index as rep of 1:5
@@ -44,10 +25,13 @@ for file_type in file_types:
     xdata_five, ydata_five = dp.divide_xy_train(fivefold, 'Platinum_Status', True, 1, -2)
     train_x, test_x = dp.train_test(xdata_five, 0)
     train_y, test_y = dp.train_test(ydata_five, 0)
+    
     train_y = dp.one_hot_encoder(train_y)
     test_y = dp.one_hot_encoder(test_y)
     val_x, test_x = dp.test_validation(test_x)
     val_y, test_y = dp.test_validation(test_y)
+
+    print(len(test_x)//2,len(test_x))
 
     #set hyperparameters - node, learning rate, batch size
     #'''
@@ -125,7 +109,7 @@ for file_type in file_types:
                             batch_x = train_x[k * batch_size:(k + 1) * batch_size]
                             batch_y = train_y[k * batch_size:(k + 1) * batch_size]
                             #dropout_ratio
-                            sess.run(train, feed_dict={X: batch_x, Y: batch_y, keep_prob: 0.35 , phase:True})
+                            sess.run(train, feed_dict={X: batch_x, Y: batch_y, keep_prob: 0.5 , phase:True})
 
                         #feed_dict - place holder is just 'space', feed_dict means supply real data into place holder.
                         train_h, train_c, train_p, train_a = sess.run( [hypothesis, cost, predicted, accuracy], feed_dict={X: train_x, Y: train_y, keep_prob: 1 , phase:False})
@@ -147,7 +131,7 @@ for file_type in file_types:
 
                         #condition 2: cannot find best condition
                         #when cost is get worse and worse(10 times), finish learning.
-                        elif count > 12 :
+                        elif count > 10 :
                             stop_switch = False
                             print("Learning Finished!! \n")
                         
