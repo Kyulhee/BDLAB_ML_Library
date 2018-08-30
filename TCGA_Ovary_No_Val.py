@@ -182,7 +182,6 @@ for file_type in file_types:
                     with tf.Session() as sess:
                         saver.restore(sess, '../models/model'+str(num)+'.ckpt')
                         test_h, test_p = sess.run([hypothesis, predicted], feed_dict={X: data_x, Y: dp.one_hot_encoder(data_y), keep_prob:1.0 , phase:False})
-                    print(test_p)
 
                     index.append(num)
                     
@@ -213,11 +212,3 @@ for file_type in file_types:
     df1.to_csv("../result/OV_DNN_result_"+file_type+".csv", index=False, header=True, mode='w')
     df2 = df(data={'count':  counts_box,'index': index, 'nodes': nodes_box, 'learning_rate': learning_rate_box, 'batch_sizes': batch_size_box, 'tr_TP': tr_TPs, 'tr_TN': tr_TNs, 'tr_FP': tr_FPs, 'tr_FN': tr_FNs, 'ts_TP': ts_TPs, 'ts_TN': ts_TNs, 'ts_FP': ts_FPs, 'ts_FN': ts_FNs})
     df2.to_csv("../result/OV_DNN_result_"+file_type+"_raw.csv", index=False, header=True, mode='w')
-
-
-len(test_h)
-len(data_y)
-len(ids)
-len(test_p)
-test_p
-test_h
