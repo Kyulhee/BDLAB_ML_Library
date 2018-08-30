@@ -28,10 +28,10 @@ num=0
 
 
 for file_type in file_types:
-    file_name = "inter_OV_"+file_type+".csv"
+    file_name = "sum_OV_"+file_type+".csv"
     print("file type: "+file_type)
 
-    raw_data = pd.read_csv('/home/tjahn/TCGA_Ovary/01.Data/DNN/TC_intersect_subsamples/'+file_name)
+    raw_data = pd.read_csv('/home/tjahn/TCGA_Ovary/01.Data/DNN/TC_GEO_TCGA_subsamples/'+file_name)
 
     shuffled_data = raw_data
     #shuffle option: for shuffling index. For experiment or reproduction, turn off this option.
@@ -49,9 +49,9 @@ for file_type in file_types:
 
     #set hyperparameters - node, learning rate, batch size
     #'''
-    nodes = [[200,200,200], [200,300,200], [300, 300, 300], [100, 100, 100, 100]]
+    nodes = [[100,100,100], [200,200,200], [200,300,200], [300, 300, 300], [100, 100, 100, 100]]
     learning_rates = [0.01, 0.005, 0.001, 0.0005]
-    batch_sizes = [10, 50, 75, 100]
+    batch_sizes = [10, 20, 50]
     #'''
     #for larger data
     '''

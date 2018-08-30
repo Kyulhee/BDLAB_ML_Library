@@ -13428,3 +13428,33 @@ Number of Class : 2
  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  0 0 0 0 0 0 0 0 0 0 0]
+2018-08-31 00:12:55.264976: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2018-08-31 00:12:55.264999: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-08-31 00:12:55.265005: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2018-08-31 00:12:55.265008: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-08-31 00:12:55.265012: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+file type: Var_100
+Number of Class : 2
+Number of Class : 2
+train acc :  0.52071005 train_cost 2.330348
+Learning Finished!! 
+
+########## Training Accuracy :  0.5887574
+########## Test Accuracy:  0.5882353
+Number of Class : 2
+[0 0 1 1 0 1 0 1 0 0 0 0 0 0 1 1 0 1 0 0 1 0 1 1 1 1 0 1 0 0 0 0 0 0 1 0 1
+ 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 1 0 1 0 1 1 0 1 1 0 0 1 0 0 1 0 1
+ 0 1 0 1 0 1 0 0 0 0 0 0 1 1 0 0 0 1 0 0 0 0 0 1 1 1 1 1 0 1 1 0 0 0 1 0 0
+ 0 0 0 1 0 0 0 0 1 0 1 1 1 1 0 0 1 1 0 0 0 0 0 0 0 0 0 1 1 0 1 0 0 1 1 0 0
+ 1 0 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 1 0 0 0 1 0 0 0 1 1 1 0 0
+ 1 0 0 0 0 0 0 1 1 1 0 1 0 0 0 1 0 0 0 1 0 0 1 0 1 0 0 0 0 1 0 0 0 0 1 1 0
+ 0 1 1 0 1 1 0 1 0 0 0 1 1 0 0 1 0 1 1 0 0 0 0 1 0 1 0 0 0 1 1 0 0 0 1 1 0
+ 0 1 1 0 1 1 0 0 1 1 0 1 0 0 1 0 1 0 1 0 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 1 1
+ 0 1 0 0 1 0 0 1 1 0 0 0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0 1 1 1 1 1 0 0 0 0 0
+ 0 1 0 0 1 0 0 1 1 0 1 1 1 0 0 0 0 0 1 0 1 1 1 1 0 0 0 0 1 0 0 1 1 0 0 0 0
+ 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 1 0 1 0 0 1 0 0 0 0 0 1 0 0 0 1 1 0
+ 0 0 0 1 1 0 1 1 1 1 1 0 0 0 1 0]
+Traceback (most recent call last):
+  File "TCGA_Ovary_No_Val.py", line 207, in <module>
+    count_box.append(count_limit)
+NameError: name 'count_box' is not defined

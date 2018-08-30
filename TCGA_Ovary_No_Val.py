@@ -204,14 +204,14 @@ for file_type in file_types:
                     ts_sensitivity_box.append(ts_TP/(ts_TP+ts_FN))
                     ts_specificity_box.append(ts_TN/(ts_TN+ts_FP))
 
-                    count_box.append(count_limit)
+                    counts_box.append(count_limit)
                 
 
                 
     #train y, train 
-    df1 = df(data={'count':  count_box, 'index': index, 'nodes': nodes_box, 'learning_rate': learning_rate_box, 'batch_sizes': batch_size_box, 'tr_accuracy':tr_accuracy_box, 'tr_sensitivity':tr_sensitivity_box, 'tr_specificity':tr_specificity_box, 'ts_accuracy': ts_accuracy_box, 'ts_sensitivity':ts_sensitivity_box, 'ts_specificity':ts_specificity_box })
+    df1 = df(data={'count':  counts_box, 'index': index, 'nodes': nodes_box, 'learning_rate': learning_rate_box, 'batch_sizes': batch_size_box, 'tr_accuracy':tr_accuracy_box, 'tr_sensitivity':tr_sensitivity_box, 'tr_specificity':tr_specificity_box, 'ts_accuracy': ts_accuracy_box, 'ts_sensitivity':ts_sensitivity_box, 'ts_specificity':ts_specificity_box })
     df1.to_csv("../result/OV_DNN_result_"+file_type+".csv", index=False, header=True, mode='w')
-    df2 = df(data={'count':  count_box,'index': index, 'nodes': nodes_box, 'learning_rate': learning_rate_box, 'batch_sizes': batch_size_box, 'tr_TP': tr_TPs, 'tr_TN': tr_TNs, 'tr_FP': tr_FPs, 'tr_FN': tr_FNs, 'ts_TP': ts_TPs, 'ts_TN': ts_TNs, 'ts_FP': ts_FPs, 'ts_FN': ts_FNs})
+    df2 = df(data={'count':  counts_box,'index': index, 'nodes': nodes_box, 'learning_rate': learning_rate_box, 'batch_sizes': batch_size_box, 'tr_TP': tr_TPs, 'tr_TN': tr_TNs, 'tr_FP': tr_FPs, 'tr_FN': tr_FNs, 'ts_TP': ts_TPs, 'ts_TN': ts_TNs, 'ts_FP': ts_FPs, 'ts_FN': ts_FNs})
     df2.to_csv("../result/OV_DNN_result_"+file_type+"_raw.csv", index=False, header=True, mode='w')
 
 
