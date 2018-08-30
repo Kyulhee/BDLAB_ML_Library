@@ -19,10 +19,10 @@ file_types = [
     "new_Diff_1000",
     "Annotation3000_1000",
     #"Clin_ch"
-    #"Diff_100", "Diff_200", "Diff_400", 
-    "Annotation40"
+    #"Diff_100", "Diff_200", "Diff_400",
+    #"Annotation40"
     #"Clin"
-    
+
     ]
 
 num=0
@@ -78,7 +78,7 @@ for file_type in file_types:
     tr_specificity_box = []
     ts_specificity_box = []
     index = []
-    
+
     tr_TPs = []
     tr_TNs = []
     tr_FPs = []
@@ -97,7 +97,7 @@ for file_type in file_types:
                     X, Y, layers, logits, phase, hypothesis, cost, train, predicted, correct_prediction, accuracy, keep_prob = dl.set_model_dropout(train_x, train_y, node , learning_rate)
 
                     best_train_acc = 0
-                    best_test_acc = 0 
+                    best_test_acc = 0
                     best_cost = float("inf")
                     save_path_dir ='../models/'
                     count = 0
@@ -109,8 +109,8 @@ for file_type in file_types:
                         sess.run(tf.global_variables_initializer())
                         stop_switch = True
                         step = 0
-                        
-                        #if condition 
+
+                        #if condition
                         while stop_switch:
                             total_num = int(len(train_x) / batch_size)
                             for k in range(total_num):
@@ -125,8 +125,8 @@ for file_type in file_types:
                             if step % 20 == 0 :
                                 print("train acc : ", train_a, "train_cost", train_c)
                             step += 1
-                            
-                            #condition 1: new best condition. 
+
+                            #condition 1: new best condition.
                             #calculated cost(train_c) is smaller than before's(best_cost), save present condition and initialize count.
                             if best_cost > train_c :
                                 best_train_acc = train_a
@@ -140,7 +140,7 @@ for file_type in file_types:
                             elif count > count_limit :
                                 stop_switch = False
                                 print("Learning Finished!! \n")
-                            
+
                             #condition 3: condition is not best, but not yet finish.
                             else:
                                 count += 1
@@ -161,7 +161,7 @@ for file_type in file_types:
                         tr_table_temp = tf.confusion_matrix(train_label, best_train_p, num_classes=2, dtype=tf.int64, name=None, weights=None)
                         ts_table_temp = tf.confusion_matrix(test_label, test_p, num_classes=2, dtype=tf.int64, name=None, weights=None)
                         tr_table, ts_table = sess.run([tr_table_temp, ts_table_temp])
-                    
+
                     # save contingency table
                     tr_TN, tr_FN, tr_FP, tr_TP = tr_table[0,0], tr_table[1,0], tr_table[0,1], tr_table[1,1]
                     tr_TPs.append(tr_TP)
@@ -174,7 +174,7 @@ for file_type in file_types:
                     ts_TNs.append(ts_TN)
                     ts_FPs.append(ts_FP)
                     ts_FNs.append(ts_FN)
-                        
+
                     data_x, data_y = dp.divide_xy_test(raw_data, 'Platinum_Status', 1,-2)
                     ids = raw_data['patient']
 
@@ -184,11 +184,11 @@ for file_type in file_types:
                         test_h, test_p = sess.run([hypothesis, predicted], feed_dict={X: data_x, Y: dp.one_hot_encoder(data_y), keep_prob:1.0 , phase:False})
 
                     index.append(num)
-                    
+
                     # prediction result(probability) file export
                     dp.prediction_probability(test_h, test_p, data_y, ids, num)
                     num = num+1
-                    
+
                     # save hyperparameter
                     nodes_box.append(node)
                     learning_rate_box.append(learning_rate)
@@ -198,16 +198,16 @@ for file_type in file_types:
                     tr_accuracy_box.append(best_train_acc)
                     tr_sensitivity_box.append(tr_TP/(tr_TP+tr_FN))
                     tr_specificity_box.append(tr_TN/(tr_TN+tr_FP))
-                   
+
                     ts_accuracy_box.append(best_test_acc)
                     ts_sensitivity_box.append(ts_TP/(ts_TP+ts_FN))
                     ts_specificity_box.append(ts_TN/(ts_TN+ts_FP))
 
                     counts_box.append(count_limit)
-                
 
-                
-    #train y, train 
+
+
+    #train y, train
     df1 = df(data={'count':  counts_box, 'index': index, 'nodes': nodes_box, 'learning_rate': learning_rate_box, 'batch_sizes': batch_size_box, 'tr_accuracy':tr_accuracy_box, 'tr_sensitivity':tr_sensitivity_box, 'tr_specificity':tr_specificity_box, 'ts_accuracy': ts_accuracy_box, 'ts_sensitivity':ts_sensitivity_box, 'ts_specificity':ts_specificity_box })
     df1.to_csv("../result/OV_DNN_result_"+file_type+".csv", index=False, header=True, mode='w')
     df2 = df(data={'count':  counts_box,'index': index, 'nodes': nodes_box, 'learning_rate': learning_rate_box, 'batch_sizes': batch_size_box, 'tr_TP': tr_TPs, 'tr_TN': tr_TNs, 'tr_FP': tr_FPs, 'tr_FN': tr_FNs, 'ts_TP': ts_TPs, 'ts_TN': ts_TNs, 'ts_FP': ts_FPs, 'ts_FN': ts_FNs})
