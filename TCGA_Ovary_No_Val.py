@@ -193,7 +193,7 @@ for file_type in file_types:
                     ts_sensitivity_box.append(ts_TP/(ts_TP+ts_FN))
                     ts_specificity_box.append(ts_TN/(ts_TN+ts_FP))
 
-                    if tr_accuracy >= ts_accuracy && ts_accuracy > find_best:
+                    if tr_accuracy >= ts_accuracy and ts_accuracy > find_best:
                         print('################ find! best model in '+file_type+'. tr_accuracy: '+ str(best_train_acc)+', ts_accuracy: '+str(best_test_acc)+ '.\ncount: '+count_limit+"\nnode: "+str(node), "\nlearning_rate: "+str(learning_rate)+"\nbatch_size: "+str(batch_size))
                         find_best = ts_accuracy
 
