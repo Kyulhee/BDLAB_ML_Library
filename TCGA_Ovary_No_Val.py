@@ -6,27 +6,17 @@ from pandas import DataFrame as df
 
 file_types = [
 
-    "Var_100", "CV_100",
-    "new_Diff_100",
-    "Annotation3000_100",
-    "Var_200", "CV_200",
-    "new_Diff_200",
-    "Annotation3000_200",
-    "Var_400", "CV_400",
-    "new_Diff_400",
-    "Annotation3000_400",
-    "Var_1000", "CV_1000",
-    "new_Diff_1000",
-    "Annotation3000_1000",
-    #"Clin_ch"
-    #"Diff_100", "Diff_200", "Diff_400",
-    #"Annotation40"
-    #"Clin"
-
+    "new_Diff_100", "new_Diff_200", "new_Diff_400", "new_Diff_1000"
+    #,
+    #"Var_100", "Var_200", "Var_400", "Var_1000"
+    #,
+    #"CV_100", "CV_200", "CV_400", "CV_1000"
+    #,
+    #"Annotation3000_100", "Annotation3000_200", "Annotation3000_400", "Annotation3000_1000"
     ]
 
 num=0
-
+find_best=0
 
 for file_type in file_types:
     file_name = "sum_OV_"+file_type+".csv"
@@ -202,6 +192,10 @@ for file_type in file_types:
                     ts_accuracy_box.append(best_test_acc)
                     ts_sensitivity_box.append(ts_TP/(ts_TP+ts_FN))
                     ts_specificity_box.append(ts_TN/(ts_TN+ts_FP))
+
+                    if tr_accuracy >= ts_accuracy && ts_accuracy > find_best:
+                        print('################ find! best model in '+file_type+'. tr_accuracy: '+ str(best_train_acc)+', ts_accuracy: '+str(best_test_acc)+ '.\ncount: '+count_limit+"\nnode: "+str(node), "\nlearning_rate: "+str(learning_rate)+"\nbatch_size: "+str(batch_size))
+                        find_best = ts_accuracy
 
                     counts_box.append(count_limit)
 
