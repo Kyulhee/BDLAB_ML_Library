@@ -13,7 +13,7 @@ file_types = [
 #    ,
 #    "Annotation3000_100", "Annotation3000_200", "Annotation3000_400", "Annotation3000_1000"
 #	,
-	"Clin_idx12", "SNV_400_idx12"
+    "Clin_idx12", "SNV_400_idx12"
     ]
 
 num=0
@@ -31,7 +31,7 @@ for file_type in file_types:
 
     # make index as rep of 1:5
     #fivefold = dp.n_fold(raw_data, 'index', 5)
-	fivefold = list(data_1.iloc[:,-1]!=1)
+    fivefold = list(data_1.iloc[:,-1]!=1)
 
     # devide train & test
     xdata_five, ydata_five = dp.divide_xy_train(fivefold, 'Platinum_Status', True, 1, -2)
@@ -39,8 +39,8 @@ for file_type in file_types:
     train_y, test_y = dp.train_test(ydata_five, 0)
     train_y = dp.one_hot_encoder(train_y)
     test_y = dp.one_hot_encoder(test_y)
-print(train_x.shape+", "+test_x.shape) 
-break
+    print(train_x.shape+", "+test_x.shape) 
+    break
     #set hyperparameters - node, learning rate, batch size
     #'''
     nodes = [[100,100,100], [200,200,200], [200,300,200], [300, 300, 300], [100, 100, 100, 100]]
