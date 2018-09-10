@@ -5,31 +5,33 @@ import lib.deepLearning as dl
 from pandas import DataFrame as df
 
 file_types = [
-
-    "new_Diff_100", "new_Diff_200", "new_Diff_400", "new_Diff_1000"
-    #,
-    #"Var_100", "Var_200", "Var_400", "Var_1000"
-    #,
-    #"CV_100", "CV_200", "CV_400", "CV_1000"
-    #,
-    #"Annotation3000_100", "Annotation3000_200", "Annotation3000_400", "Annotation3000_1000"
+#    "new_Diff_100", "new_Diff_200", "new_Diff_400", "new_Diff_1000"
+#    ,
+#    "Var_100", "Var_200", "Var_400", "Var_1000"
+#    ,
+#    "CV_100", "CV_200", "CV_400", "CV_1000"
+#    ,
+#    "Annotation3000_100", "Annotation3000_200", "Annotation3000_400", "Annotation3000_1000"
+#	,
+	"Clin_idx12", "SNV_400_idx12"
     ]
 
 num=0
 find_best=0
 
 for file_type in file_types:
-    file_name = "sum_OV_"+file_type+".csv"
+    file_name = "OV_"+file_type+".csv"
     print("file type: "+file_type)
 
-    raw_data = pd.read_csv('/home/tjahn/TCGA_Ovary/01.Data/DNN/TC_GEO_TCGA_subsamples/'+file_name)
+    raw_data = pd.read_csv('/home/tjahn/TCGA_Ovary/01.Data/DNN/'+file_name)
 
-    shuffled_data = raw_data
+    shuffled_data = list(data_1.iloc[:,-1]!=1)
     #shuffle option: for shuffling index. For experiment or reproduction, turn off this option.
     #shuffled_data['index'] = dp.shuffle_index(shuffled_data)
 
     # make index as rep of 1:5
-    fivefold = dp.n_fold(raw_data, 'index', 5)
+    #fivefold = dp.n_fold(raw_data, 'index', 5)
+	fivefold = list(data_1.iloc[:,-1]!=1)
 
     # devide train & test
     xdata_five, ydata_five = dp.divide_xy_train(fivefold, 'Platinum_Status', True, 1, -2)
@@ -37,13 +39,14 @@ for file_type in file_types:
     train_y, test_y = dp.train_test(ydata_five, 0)
     train_y = dp.one_hot_encoder(train_y)
     test_y = dp.one_hot_encoder(test_y)
-
+print(train_x.shape+", "+test_x.shape) 
+break
     #set hyperparameters - node, learning rate, batch size
     #'''
     nodes = [[100,100,100], [200,200,200], [200,300,200], [300, 300, 300], [100, 100, 100, 100]]
     learning_rates = [0.01, 0.005, 0.001]
     batch_sizes = [10, 20, 50]
-    counts = [3, 5, 7, 10]
+    counts = [10, 15]
     #'''
     #for larger data
     '''
