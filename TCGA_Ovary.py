@@ -7,17 +7,17 @@ from pandas import DataFrame as df
 file_types = [
 
     "Var_100", "CV_100",
-    "new_Diff_100",
-    "Annotation3000_100",
-    "Var_200", "CV_200",
-    "new_Diff_200",
-    "Annotation3000_200",
-    "Var_400", "CV_400",
-    "new_Diff_400",
-    "Annotation3000_400",
-    "Var_1000", "CV_1000",
-    "new_Diff_1000",
-    "Annotation3000_1000",
+    #"new_Diff_100",
+    #"Annotation3000_100",
+    #"Var_200", "CV_200",
+    #"new_Diff_200",
+    #"Annotation3000_200",
+    #"Var_400", "CV_400",
+    #"new_Diff_400",
+    #"Annotation3000_400",
+    #"Var_1000", "CV_1000",
+    #"new_Diff_1000",
+    #"Annotation3000_1000",
     #"Clin_ch"
 	#"Diff_100", "Diff_200", "Diff_400", 
 	"Annotation40"
@@ -28,10 +28,10 @@ num=0
 
 
 for file_type in file_types:
-    file_name = "sum_OV_"+file_type+".csv"
+    file_name = "inter_OV_"+file_type+".csv"
     print("file type: "+file_type)
 
-    raw_data = pd.read_csv('/home/tjahn/TCGA_Ovary/01.Data/DNN/TC_GEO_TCGA_subsamples/'+file_name)
+    raw_data = pd.read_csv('../subsamples/TC_intersect_subsamples/'+file_name)
 
     shuffled_data = raw_data
     #shuffle option: for shuffling index. For experiment or reproduction, turn off this option.
@@ -48,11 +48,11 @@ for file_type in file_types:
     test_y = dp.one_hot_encoder(test_y)
 
     #set hyperparameters - node, learning rate, batch size
-    #'''
+    '''
     nodes = [[100,100,100], [200,200,200], [200,300,200], [300, 300, 300], [100, 100, 100, 100]]
     learning_rates = [0.01, 0.005, 0.001, 0.0005]
     batch_sizes = [10, 20, 50]
-    #'''
+    '''
     #for larger data
     '''
     nodes = [[400,400,400], [150,200,200,150], [150, 150, 150, 150], [150, 200, 300, 400], [100,100,100,100,100]]
@@ -60,11 +60,11 @@ for file_type in file_types:
     batch_sizes = [10, 50, 75, 100]
     '''
     #for fast experiment
-    '''
+    #'''
     nodes = [[100,150,200]]
     learning_rates = [0.001]
     batch_sizes = [20]
-    '''
+    #'''
 
     nodes_box = []
     learning_rate_box = []
@@ -148,6 +148,9 @@ for file_type in file_types:
 
                     test_h, test_p, test_a = sess.run([hypothesis, predicted, accuracy],
                                                       feed_dict={X: test_x, Y: test_y, keep_prob:1.0 , phase:False})
+                    print("########################### test_h ##################################")
+                    print(test_h)
+                
                     print("########## Test Accuracy: ", test_a)
                     best_test_acc = test_a
 
