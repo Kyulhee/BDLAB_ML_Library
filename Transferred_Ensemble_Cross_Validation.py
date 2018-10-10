@@ -23,6 +23,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn import metrics
+from pandas import DataFrame as df
 
 np.random.seed(777)
 
@@ -231,8 +232,8 @@ def model_performance(information=False, Input_Prediction_Passively=False, using
 types = ["OV_six_fold_Annotation3000_100", 
          "OV_six_fold_CV_100", 
          "OV_six_fold_Var_100", "OV_six_fold_new_Diff_100",
-         "OV_Clin_ch_six_fold", 
-         "OV_SNV_six_fold_sam" 
+         "OV_six_fold_Clin", 
+         "OV_six_fold_SNV" 
          ]
 
 # input pathes
@@ -273,605 +274,146 @@ data_list  = [data_1,  data_2,  data_3,  data_4, data_5,  data_6]
 inter_data_list  = [inter_data_1,  inter_data_2,  inter_data_3,  inter_data_4, inter_data_5,  inter_data_6]
 
 # for selection
-select = [1, 3, 4, 5]
+select = [3, 4, 4]
 
 select_types = []
 select_data = []
 select_inter_data = []
+parameter_list = {"lr":[0.003, 0.001, 0.001], "batch_size" :[5, 10, 5],"Batch_Normalize":[False, False, True], "input_drop_out":[0.5,0.5,0.3], "drop_out":[0.5,0.5,0],  "layers":[[150,200,200], [100, 200, 200], [100]]}
 
-for i in select:
-    select_types.append(types[i-1])
-    select_data.append(data_list[i-1])
-    select_inter_data.append(inter_data_list[i-1])
-    print(str(len(select_types))+"file_name: "+ types[i-1]+"\nsample(full) : "+str(data_list[i-1].shape[0])+"\nsample(inter) : "+str(inter_data_list[i-1].shape[0])+"\nfeatures : "+str(data_list[i-1].shape[1]))
-        
+model_num_list = []
+test_index_list = []
+tr_acc_list = []
+ts_acc_list = []
+tr_sensitivity_list = []
+ts_sensitivity_list = []
+tr_specificity_list = []
+ts_specificity_list = []
+tr_auc_list = []
+ts_auc_list = []
+tot_auc_list = []
+
+for s in select:
+    select_types.append(types[s-1])
+    select_data.append(data_list[s-1])
+    select_inter_data.append(inter_data_list[s-1])
+    print(str(len(select_types))+"file_name: "+ types[s-1]+"\nsample(full) : "+str(data_list[s-1].shape[0])+"\nsample(inter) : "+str(inter_data_list[s-1].shape[0])+"\nfeatures : "+str(data_list[s-1].shape[1]))
+    
 
 for ts_i in range(1,6):
     
+    print("test index: " + str(ts_i))
     dataset = {"train_data":[], "test_data":[], "tr_y_val":[], "tr_x_val":[], "ts_y_val":[], "ts_x_val":[]}
-    val_name = ["train_data":, "test_data", "tr_y_val", "tr_x_val", "ts_y_val", "ts_x_val"]
+    val_name = ["train_data", "test_data", "tr_y_val", "tr_x_val", "ts_y_val", "ts_x_val"]
 
-    parameter = {"lr"=[], "Batch_Normalize"=[], "input_dropout"=[], "drop_out"=[],  "layers "= []}
-    
     for s_d in select_data:
         train_data, test_data, tr_y_val, tr_x_val, ts_y_val, ts_x_val = data_split(raw_data = s_d, index_col = -1, test_index = ts_i)
         dataset['train_data'].append(train_data)
         dataset['test_data'].append(test_data)
         dataset['tr_x_val'].append(tr_x_val)
         dataset['tr_y_val'].append(tr_y_val)
-        dataset['ts_x_val'].append(ts_x_va)
-        dataset['ts_y_val'].append(ts_y_val')
-
-    for i in select:
+        dataset['ts_x_val'].append(ts_x_val)
+        dataset['ts_y_val'].append(ts_y_val)        
         
-
     model_list = []
     for  t in range(len(select)):
-        print("Model "+str(select+1)+": "+str(select_types[t]))
+        print("Model "+str(t+1)+": "+str(select_types[t]))
 
     #select data
 
-
+    for i in range(len(select)):
+       
+        features = dataset['tr_x_val'][i].shape[1]
+        # 1) parameter setting
+        adam = optimizers.Adam(lr=parameter_list["lr"][i])                                   
+        input_drop_out_m = parameter_list["input_drop_out"][i]
+        drop_out_m = parameter_list["drop_out"][i]
+        BN = parameter_list["Batch_Normalize"][i]                           
         
-
-    # 1) parameter setting
-    adam = optimizers.Adam(lr=0.01)
-    input_drop_out_m_1 = 0.3
-    drop_out_m_1 = 0.5
-    layers = [5]
-    m_1_tr_loss_best = 100 # for saving best loss value 
-    best_m_1_model=[] #for saving best model
-    count=0 # for early stopping
-
-    # 2) model build
-    input_m_1 = Input(shape=(features_1,))
-    m_1_m_dp = Dropout(input_drop_out_m_1)(input_m_1)
-    for i in layers:
-        m_1_m = Dense(i,activation='relu')(m_1_m_dp)
-        m_1_m_dp = Dropout(drop_out_m_1)(m_1_m)
-    m_1_m_final = m_1_m_dp
-    output_m_1 = Dense(1, activation="sigmoid")(m_1_m_final)
-    m_1_model = Model(inputs=input_m_1,outputs=output_m_1)
-    m_1_model.compile(optimizer=adam, 
-                    loss='binary_crossentropy',
-                    metrics=['accuracy'])
-
-    # 3) Training: if no increase of tr_loss three times, stop training.
-    while 1:
-        m_1_model.fit(x_val_1, y_val_1, batch_size=5, nb_epoch=1)
-        m_1_tr_loss=m_1_model.evaluate(x_val_1,y_val_1)[0]
-        if m_1_tr_loss < m_1_tr_loss_best: # new best model. count reset.
-            m_1_tr_loss_best = m_1_tr_loss
-            count=0
-            best_m_1_model = m_1_model
-        if count>10: # no increase three time. stop.
-            m_1_model = best_m_1_model
-            break
-        else: count=count+1
-    print("Model 1 trained.")
-
-    # 4) save model
-    m_1_model.save(save_model_path+"/m_1.h5")
-    print("Model 1 saved.")
-
-    # 5) evaluate model
-    m_1_output_list = model_performance(
-        information = False, using_model=m_1_model,Input_Prediction_Passively = False, 
-        tr_x_val=x_val_1, tr_y_val=y_val_1, ts_x_val=test_x_val_1, ts_y_val=test_y_val_1,
-        output_list=["tr_loss", "tr_accuracy", "tr_sensitivity", "tr_specificity", "tr_predictions",
-                     "labeled_tr_predictions", "tr_predictions_flat", "roc_auc_tr", 
-                     "ts_loss", "ts_accuracy", "ts_sensitivity", "ts_specificity", "ts_predictions",
-                     "labeled_ts_predictions", "ts_predictions_flat", "roc_auc_ts", 
-                     "roc_auc_total"])
-
-    m_1_tr_loss, m_1_tr_accuracy, m_1_tr_sensitivity, m_1_tr_specificity, m_1_tr_predictions, m_1_labeled_tr_predictions, m_1_tr_predictions_flat, m_1_roc_auc_tr, m_1_ts_loss, m_1_ts_accuracy, m_1_ts_sensitivity, m_1_ts_specificity, m_1_ts_predictions,m_1_labeled_ts_predictions, m_1_ts_predictions_flat, m_1_roc_auc_ts, m_1_roc_auc_total = m_1_output_list
-
-    print("Overall AUC: ", m_1_roc_auc_total)
-    print("Train AUC: ", m_1_roc_auc_tr)
-    print("Test AUC: ", m_1_roc_auc_ts)
-
-    print("Train Accuracy: {}".format(m_1_tr_accuracy))
-    print("Train Sensitivities & Specificities : "+str(m_1_tr_sensitivity)+", "+str(m_1_tr_specificity))
-    print("Test Accuracy: {}".format(m_1_ts_accuracy))
-    print("Test Sensitivities & Specificities : "+str(m_1_ts_sensitivity)+", "+str(m_1_ts_specificity))
-
-
-
-
-    # # Build & Evaluate models
-
-    # ## 1) Model 1
-
-    # In[12]:
-
-
-
-
-
-    # In[ ]:
-
-
-    # save prediction result.
-
-    tr_df_m_1 = pd.DataFrame(data={"patient":list(train_data_1.index), "hypothesis 1": list(m_1_tr_predictions_flat), 
-                            "prediction":list(m_1_labeled_tr_predictions), "Platinum_Status":list(y_val_1)})
-    tr_df_m_1.to_csv(save_prediction_path+"prediction_result_m_1_tr.csv", index=False, header=True, columns = ["patient", "hypothesis 1", "prediction", "Platinum_Status"])
-
-    ts_df_m_1 = pd.DataFrame(data={"patient":list(test_data_1.index), "hypothesis 1": list(m_1_ts_predictions_flat), 
-                            "prediction":list(m_1_labeled_ts_predictions), "Platinum_Status":list(test_y_val_1)})
-    ts_df_m_1.to_csv(save_prediction_path+"prediction_result_m_1_ts.csv", index=False, header=True, columns = ["patient", "hypothesis 1", "prediction", "Platinum_Status"])
-
-
-    # ## 2) Model 2
-
-    # In[ ]:
-
-
-    print("Model_2: "+str(types[1]))
-
-    # 1) parameter setting
-    adam = optimizers.Adam(lr=0.01)
-    input_drop_out_m_2 = 0.3
-    drop_out_m_2 = 0.5
-    layers = [5]
-    m_2_tr_loss_best = 100 # for saving best loss value 
-    best_m_2_model=[] #for saving best model
-    count=0 # for early stopping
-
-    # 2) model build
-    input_m_2 = Input(shape=(features_2,))
-    m_2_m_dp = Dropout(input_drop_out_m_2)(input_m_2)
-    for i in layers:
-        m_2_m = Dense(i,activation='relu')(m_2_m_dp)
-        m_2_m_dp = Dropout(drop_out_m_2)(m_2_m)
-    m_2_m_final = m_2_m_dp
-    output_m_2 = Dense(1, activation="sigmoid")(m_2_m_final)
-    m_2_model = Model(inputs=input_m_2,outputs=output_m_2)
-    m_2_model.compile(optimizer=adam, 
-                    loss='binary_crossentropy',
-                    metrics=['accuracy'])
-
-
-    # 3) Training: if no increase of tr_loss three times, stop training.
-    while 1:
-        m_2_model.fit(x_val_2, y_val_2, batch_size=5, nb_epoch=1)
-        m_2_tr_loss=m_2_model.evaluate(x_val_2,y_val_2)[0]
-        if m_2_tr_loss < m_2_tr_loss_best: # new best model. count reset.
-            m_2_tr_loss_best = m_2_tr_loss
-            count=0
-            best_m_2_model = m_2_model
-        if count>3: # no increase three time. stop.
-            m_2_model = best_m_2_model
-            break
-        else: count=count+1
-    print("Model_2 trained.")
-
-    # 4) save model
-    m_2_model.save(save_model_path+"/m_2.h5")
-    print("Model_2 saved.")
-
-    # 5) evaluate model
-    m_2_output_list = model_performance(
-        information = False, using_model=m_2_model,Input_Prediction_Passively = False, 
-        tr_x_val=x_val_2, tr_y_val=y_val_2, ts_x_val=test_x_val_2, ts_y_val=test_y_val_2,
-        output_list=["tr_loss", "tr_accuracy", "tr_sensitivity", "tr_specificity", "tr_predictions",
-                     "labeled_tr_predictions", "tr_predictions_flat", "roc_auc_tr", 
-                     "ts_loss", "ts_accuracy", "ts_sensitivity", "ts_specificity", "ts_predictions",
-                     "labeled_ts_predictions", "ts_predictions_flat", "roc_auc_ts", 
-                     "roc_auc_total"])
-
-    m_2_tr_loss, m_2_tr_accuracy, m_2_tr_sensitivity, m_2_tr_specificity, m_2_tr_predictions, m_2_labeled_tr_predictions, m_2_tr_predictions_flat, m_2_roc_auc_tr, m_2_ts_loss, m_2_ts_accuracy, m_2_ts_sensitivity, m_2_ts_specificity, m_2_ts_predictions,m_2_labeled_ts_predictions, m_2_ts_predictions_flat, m_2_roc_auc_ts, m_2_roc_auc_total = m_2_output_list
-
-    print("Overall AUC: ", m_2_roc_auc_total)
-    print("Train AUC: ", m_2_roc_auc_tr)
-    print("Test AUC: ", m_2_roc_auc_ts)
-
-    print("Train Accuracy: {}".format(m_2_tr_accuracy))
-    print("Train Sensitivities & Specificities : "+str(m_2_tr_sensitivity)+", "+str(m_2_tr_specificity))
-    print("Test Accuracy: {}".format(m_2_ts_accuracy))
-    print("Test Sensitivities & Specificities : "+str(m_2_ts_sensitivity)+", "+str(m_2_ts_specificity))
-
-
-    # In[ ]:
-
-
-    # save prediction result.
-
-    tr_df_m_2 = pd.DataFrame(data={"patient":list(train_data_2.index), "hypothesis 1": list(m_2_tr_predictions_flat), 
-                            "prediction":list(m_2_labeled_tr_predictions), "Platinum_Status":list(y_val_2)})
-    tr_df_m_2.to_csv(save_prediction_path+"prediction_result_m_2_tr.csv", index=False, header=True, columns = ["patient", "hypothesis 1", "prediction", "Platinum_Status"])
-
-    ts_df_m_2 = pd.DataFrame(data={"patient":list(test_data_2.index), "hypothesis 1": list(m_2_ts_predictions_flat), 
-                            "prediction":list(m_2_labeled_ts_predictions), "Platinum_Status":list(test_y_val_2)})
-    ts_df_m_2.to_csv(save_prediction_path+"prediction_result_m_2_ts.csv", index=False, header=True, columns = ["patient", "hypothesis 1", "prediction", "Platinum_Status"])
-
-
-    # ## 3) Model 3 
-
-    # In[ ]:
-
-
-    print("Model_3: "+str(types[2]))
-
-    # 1) parameter setting
-    adam = optimizers.Adam(lr=0.01)
-    input_drop_out_m_3 = 0.3
-    drop_out_m_3 = 0.5
-    layers = [5]
-    m_3_tr_loss_best = 100 # for saving best loss value 
-    best_m_3_model=[] #for saving best model
-    count=0 # for early stopping
-
-    # 2) model build
-    input_m_3 = Input(shape=(features_3,))
-    m_3_m_dp = Dropout(input_drop_out_m_3)(input_m_3)
-    for i in layers:
-        m_3_m = Dense(i,activation='relu')(m_3_m_dp)
-        m_3_m_dp = Dropout(drop_out_m_3)(m_3_m)
-    m_3_m_final = m_3_m_dp
-    output_m_3 = Dense(1, activation="sigmoid")(m_3_m_final)
-    m_3_model = Model(inputs=input_m_3,outputs=output_m_3)
-    m_3_model.compile(optimizer=adam, 
-                    loss='binary_crossentropy',
-                    metrics=['accuracy'])
-
-
-    # 3) Training: if no increase of tr_loss three times, stop training.
-    while 1:
-        m_3_model.fit(x_val_3, y_val_3, batch_size=5, nb_epoch=1)
-        m_3_tr_loss=m_3_model.evaluate(x_val_3,y_val_3)[0]
-        if m_3_tr_loss < m_3_tr_loss_best: # new best model. count reset.
-            m_3_tr_loss_best = m_3_tr_loss
-            count=0
-            best_m_3_model = m_3_model
-        if count>3: # no increase three time. stop.
-            m_3_model = best_m_3_model
-            break
-        else: count=count+1
-    print("Model_3 trained.")
-
-    # 4) save model
-    m_3_model.save(save_model_path+"/m_3.h5")
-    print("Model_3 saved.")
-
-    # 5) evaluate model
-    m_3_output_list = model_performance(
-        information = False, using_model=m_3_model,Input_Prediction_Passively = False, 
-        tr_x_val=x_val_3, tr_y_val=y_val_3, ts_x_val=test_x_val_3, ts_y_val=test_y_val_3,
-        output_list=["tr_loss", "tr_accuracy", "tr_sensitivity", "tr_specificity", "tr_predictions",
-                     "labeled_tr_predictions", "tr_predictions_flat", "roc_auc_tr", 
-                     "ts_loss", "ts_accuracy", "ts_sensitivity", "ts_specificity", "ts_predictions",
-                     "labeled_ts_predictions", "ts_predictions_flat", "roc_auc_ts", 
-                     "roc_auc_total"])
-
-    m_3_tr_loss, m_3_tr_accuracy, m_3_tr_sensitivity, m_3_tr_specificity, m_3_tr_predictions, m_3_labeled_tr_predictions, m_3_tr_predictions_flat, m_3_roc_auc_tr, m_3_ts_loss, m_3_ts_accuracy, m_3_ts_sensitivity, m_3_ts_specificity, m_3_ts_predictions,m_3_labeled_ts_predictions, m_3_ts_predictions_flat, m_3_roc_auc_ts, m_3_roc_auc_total = m_3_output_list
-
-    print("Overall AUC: ", m_3_roc_auc_total)
-    print("Train AUC: ", m_3_roc_auc_tr)
-    print("Test AUC: ", m_3_roc_auc_ts)
-
-    print("Train Accuracy: {}".format(m_3_tr_accuracy))
-    print("Train Sensitivities & Specificities : "+str(m_3_tr_sensitivity)+", "+str(m_3_tr_specificity))
-    print("Test Accuracy: {}".format(m_3_ts_accuracy))
-    print("Test Sensitivities & Specificities : "+str(m_3_ts_sensitivity)+", "+str(m_3_ts_specificity))
-
-
-    # In[ ]:
-
-
-    # save prediction result.
-
-    tr_df_m_3 = pd.DataFrame(data={"patient":list(train_data_3.index), "hypothesis 1": list(m_3_tr_predictions_flat), 
-                            "prediction":list(m_3_labeled_tr_predictions), "Platinum_Status":list(y_val_3)})
-    tr_df_m_3.to_csv(save_prediction_path+"prediction_result_m_3_tr.csv", index=False, header=True, columns = ["patient", "hypothesis 1", "prediction", "Platinum_Status"])
-
-    ts_df_m_3 = pd.DataFrame(data={"patient":list(test_data_3.index), "hypothesis 1": list(m_3_ts_predictions_flat), 
-                            "prediction":list(m_3_labeled_ts_predictions), "Platinum_Status":list(test_y_val_3)})
-    ts_df_m_3.to_csv(save_prediction_path+"prediction_result_m_3_ts.csv", index=False, header=True, columns = ["patient", "hypothesis 1", "prediction", "Platinum_Status"])
-
-
-    # ## 4) Model 4
-
-    # In[ ]:
-
-
-    print("Model_4: "+str(types[3]))
-
-    # 1) parameter setting
-    adam = optimizers.Adam(lr=0.01)
-    input_drop_out_m_4 = 0.3
-    drop_out_m_4 = 0.5
-    layers = [5]
-    m_4_tr_loss_best = 100 # for saving best loss value 
-    best_m_4_model=[] #for saving best model
-    count=0 # for early stopping
-
-    # 2) model build
-    input_m_4 = Input(shape=(features_4,))
-    m_4_m_bn = Dropout(input_drop_out_m_4)(input_m_4)
-    for i in layers:
-        m_4_m = Dense(i)(m_4_m_bn)
-        m_4_m_bn = BatchNormalization(axis=1, epsilon=0.001, center=True, scale=True, beta_initializer='zeros', gamma_initializer='ones')(m_4_m)
-        m_4_m_ac = Activation("relu")(m_4_m_bn)
-    m_4_m_final = m_4_m_ac
-    output_m_4 = Dense(1, activation="sigmoid")(m_4_m_final)
-    m_4_model = Model(inputs=input_m_4,outputs=output_m_4)
-    m_4_model.compile(optimizer=optimizers.Adam(), 
-                    loss='binary_crossentropy',
-                    metrics=['accuracy'])
-
-
-    # 3) Training: if no increase of tr_loss three times, stop training.
-    while 1:
-        m_4_model.fit(x_val_4, y_val_4, batch_size=5, epochs=1)
-        m_4_tr_loss, m_4_tr_accuracy =m_4_model.evaluate(x_val_4,y_val_4)
-        if m_4_tr_loss < m_4_tr_loss_best: # new best model. count reset.
-            m_4_tr_loss_best = m_4_tr_loss
-            count=0
-            best_m_4_model = m_4_model
-            print("best model: "+str(m_4_tr_accuracy))
-        if count>20: # no increase three time. stop.
-            m_4_model = best_m_4_model
-            break
-        else: count=count+1
-    print("Model_4 trained.")
-
-    # 4) save model
-    m_4_model.save(save_model_path+"/m_4.h5")
-    print("Model_4 saved.")
-
-    # 5) evaluate model
-    m_4_output_list = model_performance(
-        information = False, using_model=m_4_model,Input_Prediction_Passively = False, 
-        tr_x_val=x_val_4, tr_y_val=y_val_4, ts_x_val=test_x_val_4, ts_y_val=test_y_val_4,
-        output_list=["tr_loss", "tr_accuracy", "tr_sensitivity", "tr_specificity", "tr_predictions",
-                     "labeled_tr_predictions", "tr_predictions_flat", "roc_auc_tr", 
-                     "ts_loss", "ts_accuracy", "ts_sensitivity", "ts_specificity", "ts_predictions",
-                     "labeled_ts_predictions", "ts_predictions_flat", "roc_auc_ts", 
-                     "roc_auc_total"])
-
-    m_4_tr_loss, m_4_tr_accuracy, m_4_tr_sensitivity, m_4_tr_specificity, m_4_tr_predictions, m_4_labeled_tr_predictions, m_4_tr_predictions_flat, m_4_roc_auc_tr, m_4_ts_loss, m_4_ts_accuracy, m_4_ts_sensitivity, m_4_ts_specificity, m_4_ts_predictions,m_4_labeled_ts_predictions, m_4_ts_predictions_flat, m_4_roc_auc_ts, m_4_roc_auc_total = m_4_output_list
-
-    print("Overall AUC: ", m_4_roc_auc_total)
-    print("Train AUC: ", m_4_roc_auc_tr)
-    print("Test AUC: ", m_4_roc_auc_ts)
-
-    print("Train Accuracy: {}".format(m_4_tr_accuracy))
-    print("Train Sensitivities & Specificities : "+str(m_4_tr_sensitivity)+", "+str(m_4_tr_specificity))
-    print("Test Accuracy: {}".format(m_4_ts_accuracy))
-    print("Test Sensitivities & Specificities : "+str(m_4_ts_sensitivity)+", "+str(m_4_ts_specificity))
-
-
-    # In[ ]:
-
-
-    # save prediction result.
-
-    tr_df_m_3 = pd.DataFrame(data={"patient":list(train_data_3.index), "hypothesis 1": list(m_3_tr_predictions_flat), 
-                            "prediction":list(m_3_labeled_tr_predictions), "Platinum_Status":list(y_val_3)})
-    tr_df_m_3.to_csv(save_prediction_path+"prediction_result_m_3_tr.csv", index=False, header=True, columns = ["patient", "hypothesis 1", "prediction", "Platinum_Status"])
-
-    ts_df_m_3 = pd.DataFrame(data={"patient":list(test_data_3.index), "hypothesis 1": list(m_3_ts_predictions_flat), 
-                            "prediction":list(m_3_labeled_ts_predictions), "Platinum_Status":list(test_y_val_3)})
-    ts_df_m_3.to_csv(save_prediction_path+"prediction_result_m_3_ts.csv", index=False, header=True, columns = ["patient", "hypothesis 1", "prediction", "Platinum_Status"])
-
-
-    # ## 5) Model 5
-
-    # In[ ]:
-
-
-    print("Model_5: "+str(types[0]))
-
-    # 1) parameter setting
-    adam = optimizers.Adam(lr=0.01)
-    input_drop_out_m_5 = 0.3
-    drop_out_m_5 = 0.5
-    layers = [5]
-    m_5_tr_loss_best = 100 # for saving best loss value 
-    best_m_5_model=[] #for saving best model
-    count=0 # for early stopping
-
-    # 2) model build
-    input_m_5 = Input(shape=(features_5,))
-    m_5_m_dp = Dropout(input_drop_out_m_5)(input_m_5)
-    for i in layers:
-        m_5_m = Dense(i,activation='relu')(m_5_m_dp)
-        m_5_m_dp = Dropout(drop_out_m_5)(m_5_m)
-    m_5_m_final = m_5_m_dp
-    output_m_5 = Dense(1, activation="sigmoid")(m_5_m_final)
-    m_5_model = Model(inputs=input_m_5,outputs=output_m_5)
-    m_5_model.compile(optimizer=adam, 
-                    loss='binary_crossentropy',
-                    metrics=['accuracy'])
-
-
-    # 3) Training: if no increase of tr_loss three times, stop training.
-    while 1:
-        m_5_model.fit(x_val_5, y_val_5, batch_size=5, nb_epoch=1)
-        m_5_tr_loss=m_5_model.evaluate(x_val_5,y_val_5)[0]
-        if m_5_tr_loss < m_5_tr_loss_best: # new best model. count reset.
-            m_5_tr_loss_best = m_5_tr_loss
-            count=0
-            best_m_5_model = m_5_model
-        if count>3: # no increase three time. stop.
-            m_5_model = best_m_5_model
-            break
-        else: count=count+1
-    print("Model_5 trained.")
-
-    # 4) save model
-    m_5_model.save(save_model_path+"/m_5.h5")
-    print("Model_5 saved.")
-
-    # 5) evaluate model
-    m_5_output_list = model_performance(
-        information = False, using_model=m_5_model,Input_Prediction_Passively = False, 
-        tr_x_val=x_val_5, tr_y_val=y_val_5, ts_x_val=test_x_val_5, ts_y_val=test_y_val_5,
-        output_list=["tr_loss", "tr_accuracy", "tr_sensitivity", "tr_specificity", "tr_predictions",
-                     "labeled_tr_predictions", "tr_predictions_flat", "roc_auc_tr", 
-                     "ts_loss", "ts_accuracy", "ts_sensitivity", "ts_specificity", "ts_predictions",
-                     "labeled_ts_predictions", "ts_predictions_flat", "roc_auc_ts", 
-                     "roc_auc_total"])
-
-    m_5_tr_loss, m_5_tr_accuracy, m_5_tr_sensitivity, m_5_tr_specificity, m_5_tr_predictions, m_5_labeled_tr_predictions, m_5_tr_predictions_flat, m_5_roc_auc_tr, m_5_ts_loss, m_5_ts_accuracy, m_5_ts_sensitivity, m_5_ts_specificity, m_5_ts_predictions,m_5_labeled_ts_predictions, m_5_ts_predictions_flat, m_5_roc_auc_ts, m_5_roc_auc_total = m_5_output_list
-
-    print("Overall AUC: ", m_5_roc_auc_total)
-    print("Train AUC: ", m_5_roc_auc_tr)
-    print("Test AUC: ", m_5_roc_auc_ts)
-
-    print("Train Accuracy: {}".format(m_5_tr_accuracy))
-    print("Train Sensitivities & Specificities : "+str(m_5_tr_sensitivity)+", "+str(m_5_tr_specificity))
-    print("Test Accuracy: {}".format(m_5_ts_accuracy))
-    print("Test Sensitivities & Specificities : "+str(m_5_ts_sensitivity)+", "+str(m_5_ts_specificity))
-
-
-    # In[ ]:
-
-
-    # save prediction result.
-
-    tr_df_m_3 = pd.DataFrame(data={"patient":list(train_data_3.index), "hypothesis 1": list(m_3_tr_predictions_flat), 
-                            "prediction":list(m_3_labeled_tr_predictions), "Platinum_Status":list(y_val_3)})
-    tr_df_m_3.to_csv(save_prediction_path+"prediction_result_m_3_tr.csv", index=False, header=True, columns = ["patient", "hypothesis 1", "prediction", "Platinum_Status"])
-
-    ts_df_m_3 = pd.DataFrame(data={"patient":list(test_data_3.index), "hypothesis 1": list(m_3_ts_predictions_flat), 
-                            "prediction":list(m_3_labeled_ts_predictions), "Platinum_Status":list(test_y_val_3)})
-    ts_df_m_3.to_csv(save_prediction_path+"prediction_result_m_3_ts.csv", index=False, header=True, columns = ["patient", "hypothesis 1", "prediction", "Platinum_Status"])
-
-
-    # ## 6) Model 6 
-
-    # In[ ]:
-
-
-    print("Model_6: "+str(types[0]))
-
-    # 1) parameter setting
-    adam = optimizers.Adam(lr=0.01)
-    input_drop_out_m_6 = 0.3
-    drop_out_m_6 = 0.5
-    layers = [5]
-    m_6_tr_loss_best = 100 # for saving best loss value 
-    best_m_6_model=[] #for saving best model
-    count=0 # for early stopping
-
-    # 2) model build
-    input_m_6 = Input(shape=(features_6,))
-    m_6_m_dp = Dropout(input_drop_out_m_6)(input_m_6)
-    for i in layers:
-        m_6_m = Dense(i,activation='relu')(m_6_m_dp)
-        m_6_m_dp = Dropout(drop_out_m_6)(m_6_m)
-    m_6_m_final = m_6_m_dp
-    output_m_6 = Dense(1, activation="sigmoid")(m_6_m_final)
-    m_6_model = Model(inputs=input_m_6,outputs=output_m_6)
-    m_6_model.compile(optimizer=adam, 
-                    loss='binary_crossentropy',
-                    metrics=['accuracy'])
-
-
-    # 3) Training: if no increase of tr_loss three times, stop training.
-    while 1:
-        m_6_model.fit(x_val_6, y_val_6, batch_size=5, nb_epoch=1)
-        m_6_tr_loss=m_6_model.evaluate(x_val_6,y_val_6)[0]
-        if m_6_tr_loss < m_6_tr_loss_best: # new best model. count reset.
-            m_6_tr_loss_best = m_6_tr_loss
-            count=0
-            best_m_6_model = m_6_model
-        if count>3: # no increase three time. stop.
-            m_6_model = best_m_6_model
-            break
-        else: count=count+1
-    print("Model_6 trained.")
-
-    # 4) save model
-    m_6_model.save(save_model_path+"/m_6.h5")
-    print("Model_6 saved.")
-
-    # 5) evaluate model
-    m_6_output_list = model_performance(
-        information = False, using_model=m_6_model,Input_Prediction_Passively = False, 
-        tr_x_val=x_val_6, tr_y_val=y_val_6, ts_x_val=test_x_val_6, ts_y_val=test_y_val_6,
-        output_list=["tr_loss", "tr_accuracy", "tr_sensitivity", "tr_specificity", "tr_predictions",
-                     "labeled_tr_predictions", "tr_predictions_flat", "roc_auc_tr", 
-                     "ts_loss", "ts_accuracy", "ts_sensitivity", "ts_specificity", "ts_predictions",
-                     "labeled_ts_predictions", "ts_predictions_flat", "roc_auc_ts", 
-                     "roc_auc_total"])
-
-    m_6_tr_loss, m_6_tr_accuracy, m_6_tr_sensitivity, m_6_tr_specificity, m_6_tr_predictions, m_6_labeled_tr_predictions, m_6_tr_predictions_flat, m_6_roc_auc_tr, m_6_ts_loss, m_6_ts_accuracy, m_6_ts_sensitivity, m_6_ts_specificity, m_6_ts_predictions,m_6_labeled_ts_predictions, m_6_ts_predictions_flat, m_6_roc_auc_ts, m_6_roc_auc_total = m_6_output_list
-
-    print("Overall AUC: ", m_6_roc_auc_total)
-    print("Train AUC: ", m_6_roc_auc_tr)
-    print("Test AUC: ", m_6_roc_auc_ts)
-
-    print("Train Accuracy: {}".format(m_6_tr_accuracy))
-    print("Train Sensitivities & Specificities : "+str(m_6_tr_sensitivity)+", "+str(m_6_tr_specificity))
-    print("Test Accuracy: {}".format(m_6_ts_accuracy))
-    print("Test Sensitivities & Specificities : "+str(m_6_ts_sensitivity)+", "+str(m_6_ts_specificity))
-
-
-    # In[ ]:
-
-
-    # save prediction result.
-
-    tr_df_m_6 = pd.DataFrame(data={"patient":list(train_data_6.index), "hypothesis 1": list(m_6_tr_predictions_flat), 
-                            "prediction":list(m_6_labeled_tr_predictions), "Platinum_Status":list(y_val_6)})
-    tr_df_m_6.to_csv(save_prediction_path+"prediction_result_m_6_tr.csv", index=False, header=True, columns = ["patient", "hypothesis 1", "prediction", "Platinum_Status"])
-
-    ts_df_m_6 = pd.DataFrame(data={"patient":list(test_data_6.index), "hypothesis 1": list(m_6_ts_predictions_flat), 
-                            "prediction":list(m_6_labeled_ts_predictions), "Platinum_Status":list(test_y_val_6)})
-    ts_df_m_6.to_csv(save_prediction_path+"prediction_result_m_6_ts.csv", index=False, header=True, columns = ["patient", "hypothesis 1", "prediction", "Platinum_Status"])
-
-
-    # ## Performance Comparison
-
-    # In[ ]:
-
-
-    label = []
-    tr_accuracy_list = [m_1_tr_accuracy, m_2_tr_accuracy, m_3_tr_accuracy, m_4_tr_accuracy, m_5_tr_accuracy, m_6_tr_accuracy]
-    ts_accuracy_list = [m_1_ts_accuracy, m_2_ts_accuracy, m_3_ts_accuracy, m_4_ts_accuracy, m_5_ts_accuracy, m_6_ts_accuracy]
-
-    for i in range(1,7):
-        label.append("model"+str(i))
-
-    for model_num in range(len(label)):
-        print("< "+label[model_num]+" > tr: "+str(tr_accuracy_list[model_num])+", ts: "+str(ts_accuracy_list[model_num]))
-
-
-    # In[ ]:
-
-
-    def plot_bar_x():
-        # this is for plotting purpose
-        plt.figure(figsize=(30,20))
-        axes = plt.gca()
-        axes.set_ylim([min(ts_accuracy_list)-0.02, max(ts_accuracy_list)+0.02])
-        index = np.arange(len(label))
-        plt.bar(index, ts_accuracy_list,color=['red', 'orange', 'yellow', "green",'blue', 'purple'],alpha=0.5,width=0.3)
-        plt.xlabel('Method', fontsize=35)
-        plt.ylabel('Accuracy', fontsize=35)
-        plt.yticks(fontsize=30)    
-        plt.xticks(index, types, fontsize=30, rotation=90)
-        plt.title('Performance Comparison for each Models',fontsize=40)
-        plt.show()
-
-
-    # In[ ]:
-
-
-    plot_bar_x()
-
-
-    # In[ ]:
-
-
-
-
-
-    # In[ ]:
-
-
-
-
+        layers = parameter_list["layers"][i]
+        m_tr_loss_best = 100 # for saving best loss value 
+        best_m_model=[] #for saving best model
+        count=0 # for early stopping
+
+        # 2) model build
+        input_m = Input(shape=(features,))
+        m_m_dp = Dropout(input_drop_out_m)(input_m)
+        for l in layers:
+            if BN == True:
+                m_m = Dense(l)(m_m_dp)
+                m_m_bn = BatchNormalization(axis=1, epsilon=0.001, center=True, scale=True, beta_initializer='zeros', gamma_initializer='ones')(m_m)
+                m_m_dp = Activation("relu")(m_m_bn)
+            else:
+                m_m = Dense(l,activation='relu')(m_m_dp)
+                m_m_dp = Dropout(drop_out_m)(m_m)
+                               
+        m_m_final = m_m_dp
+        output_m = Dense(1, activation="sigmoid")(m_m_final)
+        m_model = Model(inputs=input_m,outputs=output_m)
+        m_model.compile(optimizer=adam, 
+                        loss='binary_crossentropy',
+                        metrics=['accuracy'])
+
+        # 3) Training: if no increase of tr_loss three times, stop training.
+        while 1:
+            m_model.fit(dataset['tr_x_val'][i], dataset['tr_y_val'][i], batch_size=parameter_list["batch_size"][i], nb_epoch=1)
+            m_tr_loss=m_model.evaluate( dataset['tr_x_val'][i], dataset['tr_y_val'][i])[0]
+            if m_tr_loss < m_tr_loss_best: # new best model. count reset.
+                m_tr_loss_best = m_tr_loss
+                count=0
+                best_m_model = m_model
+            if count>10: # no increase three time. stop.
+                m_model = best_m_model
+                break
+            else: count=count+1
+        print("Model " + str(i)+"-"+str(ts_i) + " trained.")
+
+        # 4) save model
+        model_list.append(m_model)
+        m_model.save(save_model_path+"/m_"+str(i)+"-"+str(ts_i)+".h5")
+        print("Model "+ str(i)+"-"+str(ts_i) + " saved.")
+
+        # 5) evaluate model
+        m_output_list = model_performance(
+            information = False, using_model=m_model,Input_Prediction_Passively = False, 
+            tr_x_val=dataset['tr_x_val'][i], tr_y_val=dataset['tr_y_val'][i], ts_x_val=dataset['ts_x_val'][i], ts_y_val=dataset['ts_y_val'][i],
+            output_list=["tr_loss", "tr_accuracy", "tr_sensitivity", "tr_specificity", "tr_predictions",
+                         "labeled_tr_predictions", "tr_predictions_flat", "roc_auc_tr", 
+                         "ts_loss", "ts_accuracy", "ts_sensitivity", "ts_specificity", "ts_predictions",
+                         "labeled_ts_predictions", "ts_predictions_flat", "roc_auc_ts", 
+                         "roc_auc_total"])
+
+        m_tr_loss, m_tr_accuracy, m_tr_sensitivity, m_tr_specificity, m_tr_predictions, m_labeled_tr_predictions, m_tr_predictions_flat, m_roc_auc_tr, m_ts_loss, m_ts_accuracy, m_ts_sensitivity, m_ts_specificity, m_ts_predictions,m_labeled_ts_predictions, m_ts_predictions_flat, m_roc_auc_ts, m_roc_auc_total = m_output_list
+
+        print("Overall AUC: ", m_roc_auc_total)
+        print("Train AUC: ", m_roc_auc_tr)
+        print("Test AUC: ", m_roc_auc_ts)
+
+        print("Train Accuracy: {}".format(m_tr_accuracy))
+        print("Train Sensitivities & Specificities : "+str(m_tr_sensitivity)+", "+str(m_tr_specificity))
+        print("Test Accuracy: {}".format(m_ts_accuracy))
+        print("Test Sensitivities & Specificities : "+str(m_ts_sensitivity)+", "+str(m_ts_specificity))
+
+        model_num_list.append(i)
+        test_index_list.append(ts_i)
+        tr_acc_list.append(m_tr_accuracy)
+        ts_acc_list.append(m_ts_accuracy)
+        tr_sensitivity_list.append(m_tr_sensitivity)
+        ts_sensitivity_list.append(m_ts_sensitivity)
+        tr_specificity_list.append(m_tr_specificity)
+        ts_specificity_list.append(m_ts_specificity)
+        tr_auc_list.append(m_roc_auc_tr)
+        ts_auc_list.append(m_roc_auc_ts)
+        tot_auc_list.append(m_roc_auc_total)
+
+        # save prediction result.
+
+        tr_df_m = pd.DataFrame(data={"patient":list(dataset['train_data'][i].index), "hypothesis 1": list(m_tr_predictions_flat), 
+                                "prediction":list(m_labeled_tr_predictions), "Platinum_Status":list(dataset['tr_y_val'][i])}) 
+        tr_df_m.to_csv(save_prediction_path+"prediction_result_m_"+str(i)+"-"+str(ts_i)+"_tr.csv", index=False, header=True, columns = ["patient", "hypothesis 1", "prediction", "Platinum_Status"])
+
+        ts_df_m = pd.DataFrame(data={"patient":list(dataset['test_data'][i].index), "hypothesis 1": list(m_ts_predictions_flat), 
+                                "prediction":list(m_labeled_ts_predictions), "Platinum_Status":list(dataset['ts_y_val'][i])})
+        ts_df_m.to_csv(save_prediction_path+"prediction_result_m_"+str(i)+"-"+str(ts_i)+"_ts.csv", index=False, header=True, columns = ["patient", "hypothesis 1", "prediction", "Platinum_Status"])
+
+df = df(data = {'test_index':test_index_list , 'model_numbers':model_num_list, 'tr_accuracy':tr_acc_list, 'tr_sensitivity':tr_sensitivity_list, 'tr_specificity':tr_specificity_list, 'ts_accuracy': ts_acc_list, 'ts_sensitivity':ts_sensitivity_list, 'ts_specificity':ts_specificity_list, "tr_auc":tr_auc_list, "ts_auc":ts_auc_list, "total_auc":tot_auc_list}, columns =['test_index', 'model_numbers', 'tr_accuracy', 'tr_sensitivity', 'tr_specificity', 'ts_accuracy', 'ts_sensitivity', 'ts_specificity', "tr_auc", "ts_auc", "total_auc"])
