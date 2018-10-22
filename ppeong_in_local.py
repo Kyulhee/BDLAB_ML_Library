@@ -51,11 +51,11 @@ model_numbers=[]
 #if __name__ == "__main__":
 #model_numbers = sys.argv[1:]
 while(1):
-    ch = Input("model number('q' for stop): ")
+    ch = input("model number('q' for stop): ")
     if (ch =='q'):
         break
     else:
-        model_numbers.append(int(m_num))
+        model_numbers.append(int(ch))
 if len(model_numbers) == 0:
     raise ValueError("Model Numbers have to be >1.")
 for i in range(len(model_numbers)):
@@ -63,17 +63,18 @@ for i in range(len(model_numbers)):
 
 input_directory = 'C:/test/ppeong/'
 model_directory = 'C:/test/ppeong/'
-
+output_dir = "C:/test/ppeong/output/"
 '''
 input_directory = '/home/tjahn/Data/input_ensemble/'
 model_directory = './model/'
+output_dir = 'home/tjahn/Git2/Users/kyulhee/'
 '''
 '''data processing'''
 models = []
 inputfiles = []
 for i in range(len(model_numbers)):
-    models.append(model_directory + 'model' + str(model_numbers[i]) + '.h5')
-    inputfiles.append(input_directory + 'selected_model_' + str(i) + '_data.csv')
+    models.append(model_directory + 'model_' + str(model_numbers[i]) + '.h5')
+    inputfiles.append(input_directory + 'selected_model_' + str(model_numbers[i]) + '_data.csv')
 
 test_x_list = []
 test_y_list = []
@@ -84,9 +85,9 @@ cancercode_list = []
 for inputfile in inputfiles:
     raw_data = pd.read_csv(inputfile)
     patient = list(raw_data.loc[:, 'patient'])
-    genenames = list(raw_data)[1:-3]
+    genenames = list(raw_data)[1:-2]
     cancercode = list(raw_data.loc[:, 'cancer_code'])
-    test_x, test_y = dp.test_divide_DNN(raw_data, 'result')
+    test_x, test_y = dp.test_divide_DNN(raw_data, 'result', 1, -2)
     test_y = dp.one_hot_encoder(test_y)
 
     test_x_list.append(test_x)
@@ -100,12 +101,6 @@ print("DATA PROCESSING END")
 test_prob = pd.DataFrame()
         ### Peong Start ####
 for model_num in range(len(model_numbers)):
-    #nodes = [1000, 500, 500, 200]
-    #learning_rate = 0.001
-    #batch_size = 100
-
-    #X, Y, weights, bias, hidden_layers, logits, hypothesis, cost, train, predicted, correct_prediction, accuracy, keep_prob = dl.set_model(
-     #   test_x_list[i], test_y_list[i], nodes, learning_rate) 아마 필요없을
 
     test_x = test_x_list[model_num]
     test_y = test_y_list[model_num]
@@ -121,11 +116,11 @@ for model_num in range(len(model_numbers)):
     num_of_samples=int(test_x.shape[0])
 
     for p in range(num_of_samples):
-        print("sample: ",p,"model: ",model_num)
+        print("sample: "+patient[p]+ ", " + str(p+1)+"/"+str(num_of_samples))
         cc = cancercode[p]
         result={}
         for g in range(num_of_genes):
-            print("gene: ",model_num)
+            #print("gene: ",genenames[g], ", ", str(g+1), "/", str(num_of_genes))
             ppeong_test_x = copy.deepcopy(test_x)
 
             min_gene_expression = min(ppeong_test_x[:, g])
@@ -138,20 +133,22 @@ for model_num in range(len(model_numbers)):
             prob_change = []
             min_prob = 1
             max_prob = 0
+
             for j in range(iteration):
                 changed_gene_expression = min_gene_expression+step*j
                 # change expression
                 ppeong_test_x[:, g] = changed_gene_expression
                 # predict cancer probability of 'p'th patient
                 ppeong_test_h = l_model.predict(ppeong_test_x[p:p+1,:], batch_size=None, verbose=0, steps=None)
-                #'''
+                '''
                 print("################################################### for debug ###################################################")
                 print(ppeong_test_h)
-                #'''
+                '''
     
-                new_prob = ppeong_test_h[1]### new prob of being cancer
+                new_prob = ppeong_test_h[0,0]### new prob of being cancer
                 if min_prob >= new_prob:
                     min_prob = new_prob
+                    min_prob_expression = changed_gene_expression
                 if max_prob <= new_prob:
                     max_prob = new_prob
 
@@ -159,6 +156,8 @@ for model_num in range(len(model_numbers)):
 
             # gene impact = original cancer prob - min cancer prob
             gene_impact = test_h[p, 0]-min_prob
+            # gene impact vector
+            gene_impact_vector = gene_impact * (abs(original_gene_expression - min_prob_expression) / ( original_gene_expression - min_prob_expression))
                                       
             prob_change.append(test_h[p, 0])
             prob_change.append(test_y[p,0])
@@ -166,22 +165,24 @@ for model_num in range(len(model_numbers)):
             prob_change.append(min_gene_expression)
             prob_change.append(max_gene_expression)
             prob_change.append(gene_impact)
+            prob_change.append(gene_impact_vector)
 
             result[genenames[g]] = prob_change
 
-            output_file = pd.DataFrame.from_dict(result,orient = 'index')
-            col_names = ["step_"+str(i) for i in range(iteration)]
-            col_names.append("original_prob")
-            col_names.append("real_Y")
-            col_names.append("original_x")
-            col_names.append("min_x")
-            col_names.append("max_x")
-            col_names.append("gene_impact")
+        output_file = pd.DataFrame.from_dict(result,orient = 'index')
+        col_names = ["step_"+str(i) for i in range(iteration)]
+        col_names.append("original_prob")
+        col_names.append("real_Y")
+        col_names.append("original_x")
+        col_names.append("min_x")
+        col_names.append("max_x")
+        col_names.append("gene_impact")
+        col_names.append("gene_impact_vector")
 
-            output_file.columns = col_names
+        output_file.columns = col_names
 
-            filename = "ppeong_model"+str(model_num)+"_"+str(patient[p])+"_"+str(cc)+".csv"
-            print(filename)
-            output = "/home/tjahn/kyulhee/feature_impact/"+filename
-            print(output)
-            output_file.to_csv(output,sep=",")
+        filename = "ppeong_model"+str(model_num)+"_"+str(patient[p])+"_"+str(cc)+".csv"
+        print(filename)
+        output = output_dir+filename
+        #print(output)
+        output_file.to_csv(output,sep=",")
