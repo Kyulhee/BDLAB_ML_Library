@@ -362,7 +362,7 @@ for ts_i in range(1,6):
                 m_tr_loss_best = m_tr_loss
                 count=0
                 best_m_model = m_model
-            if count>10: # no increase three time. stop.
+            if count>20: # no increase 20 time. stop.
                 m_model = best_m_model
                 break
             else: count=count+1

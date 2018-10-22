@@ -1,6 +1,5 @@
 *.csv
 *.log
-*.ipynb
 *.gmt
 *.ckpt.*
 *.tfevents.*
